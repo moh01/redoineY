@@ -12,7 +12,7 @@ if($_SERVER['SERVER_NAME'] =="test"){
     ),
 	);
 }
-else if ($_SERVER['SERVER_NAME']=="127.0.0.1"){
+if ($_SERVER['SERVER_NAME']=="127.0.0.1"){
 	return array(
 	    'db' => array(
 	        'driver'         => 'Pdo_mysql',
