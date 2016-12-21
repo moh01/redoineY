@@ -71,11 +71,10 @@ $this->headMeta()
         <!-- D&eacute;but accordeon -->
 
         <?php
-        if(file_exists('public/nouveaute_txt/Nouveaute_'.$marque_upper.'.txt')){
-          include('public/nouveaute_txt/Nouveaute_'.$marque_upper.'.txt');
-        }
-      
-        //echo htmlspecialchars(include('public/nouveaute_txt/Nouveaute_'.$marque.'.txt'), ENT_COMPAT,'ISO-//8859-1', true)
+
+        echo '<h1>'.$article[0]["titre"].'</h1>';
+        echo '<img src="images/photos/'.$article[0]["image"].'"><br/><br/>';
+        echo $article[0]["paragraphe"];
       ?>
       
     </div>

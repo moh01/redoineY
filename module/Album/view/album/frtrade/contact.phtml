@@ -71,10 +71,10 @@ $this->headMeta()
     <h1 class="titre_page">Tout savoir sur les lampes de vidéoprojecteurs</h1>
     <?php
     $form = $this->form;
-    $form->setAttribute('action', '');
+    $form->setAttribute('action', $this->url('contact'));
     $form->setAttribute('value', 'Contactez-nous');
     $form->prepare();
-    echo $this->form()->openTag($form);                 // Ouverture de la balise form
+    echo $this->form()->openTag($form);               // Ouverture de la balise form
     ?>
         <span>Contactez-nous</span>
         <div class="formulaire">
@@ -103,8 +103,8 @@ $this->headMeta()
                                 <?php 
                                 //echo $this->formElementErrors($form->get('Mailfrom'), array('class' => 'error_list'));?>
                                 </p>
-                            </div>
-                             <div >
+                            </div> 
+                             <div style="float: right;">
                                 <?php echo $this->formSubmit($form->get('submit')); ?>
                             </div>
                             <p id="erreur_form" style="margin-left:420px">

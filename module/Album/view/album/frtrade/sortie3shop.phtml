@@ -1,10 +1,17 @@
+<?php  
+$this->layout()->title = 'Lampe videoprojecteur - '.$marque; 
+$this->headMeta()
+                ->appendName('keywords', "lampe videoprojecteur")
+                ->appendName('description', "Le site d'informations sur le vidéoprojecteur et la lampe du projecteur. Prix, durée de vie, où acheter, infos nouveautés.");
+?>
+
 <SCRIPT type="text/javascript">
 $(document).ready(function() {
   $(function() {
     var redirTime = 5;
     setInterval(function() {
       if(redirTime>=0){
-        $("#redir").text("Redirection dans " + redirTime + " secondes. A bientôt   !");
+        $("#redir").text("Redirection dans " + redirTime + " secondes. A bientôt !");
         redirTime--;
       }
     }, 1000);
@@ -26,7 +33,8 @@ $(document).ready(function() {
   <div  class="contenu" style="background:white;width:100%;text-align:center;height:50%;font-size:28px;font-weight:bold;color:#a6a6a6;" >
     <div id="redir" style="position:absolute;color:#a6a6a6;margin-top:1%;font-weight:bold;font-size:28px;margin-left:32%;width:520px">Redirection dans  5 secondes. A bient&ocirc;t !
     </div>
-    <div  style="text-align:center;margin-top:7%;margin-left:-2%" >
+    <div  style="text-align:center;margin-top:7%;" >
+    <img src="images/load.gif"/><br/>
     <img src="images/lampe-video.jpg"/>
   </div>
   </div>

@@ -16,7 +16,7 @@ use Zend\Db\Adapter\Driver\StatementInterface;
 use Zend\Db\Adapter\Driver\ResultInterface;
 use Zend\Db\Adapter\Driver\DriverInterface;
 
- use Zend\Mail;
+use Zend\Mail;
 use Zend\InputFilter\InputFilterAwareInterface;
 use Zend\InputFilter\InputFilter;
 
@@ -165,6 +165,25 @@ class FrtradeTable extends AbstractTableGateway
         FROM rqdlcomposant where libelle_constructeur = ?';
         $result = $this->adapter->query($sql)->execute(array($marque));
         $return = array();
+        $lengthResult = $result->count();
+        for($i=0; $i<$lengthResult; $i++){
+            $return[] = $result->current();
+            $result->next();
+        }
+        return $return;
+    }
+
+    public function getArticle($marque)
+   {
+      if (isset($marque)) {
+        $sql = "SELECT * FROM articles where constructeur = ? ";
+      }
+      else 
+        $sql = "SELECT * FROM articles ORDER BY date_creation DESC limit 8";
+    
+      $result = $this->adapter->query($sql)->execute(array($marque));
+      $return = array();
+
         $lengthResult = $result->count();
         for($i=0; $i<$lengthResult; $i++){
             $return[] = $result->current();

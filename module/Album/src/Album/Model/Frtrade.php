@@ -6,9 +6,8 @@ use Zend\InputFilter\Factory as InputFactory;
 use Zend\InputFilter\InputFilter;
 use Zend\InputFilter\InputFilterAwareInterface;
 use Zend\InputFilter\InputFilterInterface;
-use Zend\Db\ResultSet\Row;
 
-class Frtrade implements  InputFilterAwareInterface
+class Frtrade implements InputFilterAwareInterface
 {
 
 	public $id;

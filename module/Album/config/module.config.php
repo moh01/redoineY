@@ -91,11 +91,6 @@ return array(
                                             ),
                                         ), 
                         ),
-                       
-                       
-                        
-                        
-                        
 
                         'contact' => array(
                                 'type'    => 'literal',
@@ -137,7 +132,7 @@ return array(
                         'sortie3shop' => array(
                                 'type'    => 'segment',
                                 'options' => array(
-                                    'route'    => '/sortie3shop-[:id1]-[:id2]-[:id3].php',
+                                    'route'    => '/sortie3shop-[:id1]_[:id2]_[:id3].php',
                                         'defaults' => array(
                                         'controller' => 'Album\Controller\Frtrade',
                                         'action'     => 'sortie3shop',
@@ -290,7 +285,7 @@ return array(
                         'afficher' => array(
                                 'type'    => 'segment',
                                 'options' => array(
-                                    'route'    => '/ficheProduit_[:id2]_[:id].php',
+                                    'route'    => '/ficheProduit_[:id2]_[:id].html',
                                     'defaults' => array(
                                         'controller' => 'Album\Controller\Frtrade',
                                         'action'     => 'afficher',

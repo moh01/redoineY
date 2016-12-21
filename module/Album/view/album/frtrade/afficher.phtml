@@ -40,15 +40,15 @@ if(!empty($stock[0]['qty'])){
 ?>    
         <div class="bloc_produit">
             <div class="left-bloc">
-                <a href=<?php echo "sortie3shop-rqdl-".$rqdl['libelle_constructeur']."-".$rqdl['libelle_produit'].".php"; ?> target="_blank" title="" title="Lampe VideoProjecteur infos" class="photo-produit fancybox" rel="group"><img src="<?php echo $file; ?>" width="160px" height="160px"/> </a>
+                <a href=<?php echo "sortie3shop-rqdl_".$rqdl['libelle_constructeur']."_".str_replace(" ", "%20", $rqdl['libelle_produit']).".php"; ?> target="_blank" title="" title="Lampe VideoProjecteur infos" class="photo-produit fancybox" rel="group"><img src="<?php echo $file; ?>" width="160px" height="160px"/> </a>
                 
             </div>
             <div class="right-bloc">
 
                 <h2><?php echo $type; ?> de rechange  <?php echo $rqdl['libelle_constructeur']." ".$rqdl['libelle_produit'];?> </h2>
                 <p class="bouton-produit">
-                    <a href=<?php echo "sortie3shop-rqdl-".$rqdl['libelle_constructeur']."-".$rqdl['libelle_produit'].".php"; ?> target="_blank" class="view-product"><span>VOIR</span></a>
-                    <a href=<?php echo "sortie3shop-rqdl-".$rqdl['libelle_constructeur']."-".$rqdl['libelle_produit'].".php"; ?> target="_blank" class="prix-produit" style="position:absolute;margin-left:360px;color:#FD871A"><span><?php echo round($ttc); ?> &euro;</span></a>
+                    <a href=<?php echo "sortie3shop-rqdl_".$rqdl['libelle_constructeur']."_".str_replace(" ", "%20", $rqdl['libelle_produit']).".php"; ?> target="_blank" class="view-product"><span>VOIR</span></a>
+                    <a href=<?php echo "sortie3shop-rqdl_".$rqdl['libelle_constructeur']."_".str_replace(" ", "%20", $rqdl['libelle_produit']).".php"; ?> target="_blank" class="prix-produit" style="position:absolute;margin-left:360px;color:#FD871A"><span><?php echo round($ttc); ?> &euro;</span></a>
                 </p>
                 <p>Remplacer <?php echo $type2; ?> des vidéoprojecteurs <?php echo $rqdl['libelle_constructeur'];?> <?php echo $rqdl['libelle_produit'];?>, <?php echo $rqdl['libelle_produit'];?>. Livraison gratuite. 
                 </p>
@@ -63,10 +63,10 @@ if(!empty($stock[0]['qty'])){
                     <span class="spacer">&nbsp;</span>
                 </div>
                 <div class="owner-product">
-                    <a href=<?php echo "sortie3shop-rqdl-".$rqdl['libelle_constructeur']."-".$rqdl['libelle_produit'].".php"; ?> target="_blank" title=<?php 
+                    <a href=<?php echo "sortie3shop-rqdl_".$rqdl['libelle_constructeur']."_".str_replace(" ", "%20", $rqdl['libelle_produit']).".php"; ?> target="_blank" title=<?php 
                     echo "Lampe pour vid&eacute;o proj&eacute;cteur ".$rqdl['libelle_constructeur']."-".$rqdl['libelle_produit']; 
                     ?> class="lien-partenaire">Rienquedeslampes.fr</a>
-                     <a href=<?php echo "sortie3shop-rqdl-".$rqdl['libelle_constructeur']."-".$rqdl['libelle_produit'].".php"; ?> target="_blank" title=<?php 
+                     <a href=<?php echo "sortie3shop-rqdl_".$rqdl['libelle_constructeur']."_".str_replace(" ", "%20", $rqdl['libelle_produit']).".php"; ?> target="_blank" title=<?php 
                     echo "Lampe pour vid&eacute;o proj&eacute;cteur ".$rqdl['libelle_constructeur']."-".$rqdl['libelle_produit']; 
                     ?> ><img src="img/site/rqdl.png" alt="" /></a>
                 </div>
@@ -84,13 +84,13 @@ if(!empty($stock[0]['qty'])){
 ?>    
         <div class="bloc_produit">
             <div class="left-bloc">
-                <a href=<?php echo "sortie3shop-lvp-".$rqdl['libelle_constructeur']."-".$rqdl['libelle_produit'].".php"; ?> target="_blank" title="" class="photo-produit fancybox" rel="group"><img src="<?php echo $file; ?>" width="160px" height="160px"/></a>
+                <a href=<?php echo "sortie3shop-lvp_".$rqdl['libelle_constructeur']."_".str_replace(" ", "%20", $rqdl['libelle_produit']).".php"; ?> target="_blank" title="" class="photo-produit fancybox" rel="group"><img src="<?php echo $file; ?>" width="160px" height="160px"/></a>
             </div>
             <div class="right-bloc">
                 <h2><?php echo $type; ?> pour  vid&eacute;oprojecteur <?php echo $rqdl['libelle_constructeur']." ".$rqdl['libelle_produit'];?> <?php echo $existe[0]; ?></h2>
                  <p class="bouton-produit">
-                    <a href=<?php echo "sortie3shop-lvp-".$rqdl['libelle_constructeur']."-".$rqdl['libelle_produit'].".php"; ?> target="_blank" class="view-product"><span>VOIR</span></a>
-                    <a href=<?php echo "sortie3shop-lvp-".$rqdl['libelle_constructeur']."-".$rqdl['libelle_produit'].".php"; ?> target="_blank" class="prix-produit" style="position:absolute;margin-left:360px;color:#FD871A"><span><?php echo round($ttc); ?> &euro;</span></a>
+                    <a href=<?php echo "sortie3shop-lvp_".$rqdl['libelle_constructeur']."_".str_replace(" ", "%20", $rqdl['libelle_produit']).".php"; ?> target="_blank" class="view-product"><span>VOIR</span></a>
+                    <a href=<?php echo "sortie3shop-lvp_".$rqdl['libelle_constructeur']."_".str_replace(" ", "%20", $rqdl['libelle_produit']).".php"; ?> target="_blank" class="prix-produit" style="position:absolute;margin-left:360px;color:#FD871A"><span><?php echo round($ttc); ?> &euro;</span></a>
                 </p>
                 <p><?php echo $rqdl['libelle_produit'];?>, <?php echo $type2;?> de remplacement pour vidéoprojecteur <?php echo $rqdl['libelle_constructeur'];?> <?php echo $rqdl['libelle_produit'];?>, <?php echo $rqdl['libelle_produit'];?>. GARANTIE 3 MOIS 
                 </p>
@@ -105,10 +105,10 @@ if(!empty($stock[0]['qty'])){
                     <span class="spacer">&nbsp;</span>
                 </div>
                 <div class="owner-product">
-                    <a href=<?php echo "sortie3shop-lvp-".$rqdl['libelle_constructeur']."-".$rqdl['libelle_produit'].".php"; ?> target="_blank" title=<?php 
+                    <a href=<?php echo "sortie3shop-lvp_".$rqdl['libelle_constructeur']."_".str_replace(" ", "%20", $rqdl['libelle_produit']).".php"; ?> target="_blank" title=<?php 
                     echo $type2." pour vid&eacute;o proj&eacute;cteur ".$rqdl['libelle_constructeur']."-".$rqdl['libelle_produit']; 
                     ?> class="lien-partenaire">Lampevideoprojecteur.fr</a>
-                     <a href=<?php echo "sortie3shop-lvp-".$rqdl['libelle_constructeur']."-".$rqdl['libelle_produit'].".php"; ?> target="_blank" title=<?php 
+                     <a href=<?php echo "sortie3shop-lvp_".$rqdl['libelle_constructeur']."_".str_replace(" ", "%20", $rqdl['libelle_produit']).".php"; ?> target="_blank" title=<?php 
                     echo $type2." pour vid&eacute;o proj&eacute;cteur ".$rqdl['libelle_constructeur']."-".$rqdl['libelle_produit']; 
                     ?> ><img src="img/site/lvp.png" alt="" /></a>
                 </div>
@@ -125,14 +125,14 @@ if(!empty($stock[0]['qty'])){
 ?>    
         <div class="bloc_produit">
             <div class="left-bloc">
-                <a href=<?php echo "sortie3shop-hpl-".$rqdl['libelle_constructeur']."-".$rqdl['libelle_produit'].".php"; ?> target="_blank" title="" class="photo-produit fancybox" rel="group"><img src="<?php echo $file; ?>" width="160px" height="160px"/> </a>
+                <a href=<?php echo "sortie3shop-hpl_".$rqdl['libelle_constructeur']."_".str_replace(" ", "%20", $rqdl['libelle_produit']).".php"; ?> target="_blank" title="" class="photo-produit fancybox" rel="group"><img src="<?php echo $file; ?>" width="160px" height="160px"/> </a>
             </div>
             <div class="right-bloc">
                 <h2><?php echo $type; ?> <?php echo $rqdl['libelle_produit'];?> 
                 pour vidéoprojecteur <?php echo $rqdl['libelle_constructeur'];?> <?php echo $rqdl['libelle_produit'];?> </h2>
                  <p class="bouton-produit">
-                    <a href=<?php echo "sortie3shop-hpl-".$rqdl['libelle_constructeur']."-".$rqdl['libelle_produit'].".php"; ?> target="_blank" class="view-product"><span>VOIR</span></a>
-                    <a href=<?php echo "sortie3shop-hpl-".$rqdl['libelle_constructeur']."-".$rqdl['libelle_produit'].".php"; ?> target="_blank" class="prix-produit" style="position:absolute;margin-left:360px;color:#FD871A"><span><?php echo round($ttc); ?> &euro;</span></a>
+                    <a href=<?php echo "sortie3shop-hpl_".$rqdl['libelle_constructeur']."_".str_replace(" ", "%20", $rqdl['libelle_produit']).".php"; ?> target="_blank" class="view-product"><span>VOIR</span></a>
+                    <a href=<?php echo "sortie3shop-hpl_".$rqdl['libelle_constructeur']."_".str_replace(" ", "%20", $rqdl['libelle_produit']).".php"; ?> target="_blank" class="prix-produit" style="position:absolute;margin-left:360px;color:#FD871A"><span><?php echo round($ttc); ?> &euro;</span></a>
                 </p>
                 <p><?php echo $type; ?> <?php echo $rqdl['libelle_constructeur'];?> <?php echo $rqdl['libelle_produit'];?>  pour vidéoprojecteurs <?php echo $rqdl['libelle_constructeur'];?> <?php echo $rqdl['libelle_produit'];?>, <?php echo $rqdl['libelle_produit'];?>. Bulbe original  garanti.
                 </p>
@@ -147,10 +147,10 @@ if(!empty($stock[0]['qty'])){
                     <span class="spacer">&nbsp;</span>
                 </div>
                 <div class="owner-product">
-                    <a href=<?php echo "sortie3shop-hpl-".$rqdl['libelle_constructeur']."-".$rqdl['libelle_produit'].".php"; ?> target="_blank" title=<?php 
+                    <a href=<?php echo "sortie3shop-hpl_".$rqdl['libelle_constructeur']."_".str_replace(" ", "%20", $rqdl['libelle_produit']).".php"; ?> target="_blank" title=<?php 
                     echo $type2." pour vid&eacute;o proj&eacute;cteur ".$rqdl['libelle_constructeur']."-".$rqdl['libelle_produit']; 
                     ?> class="lien-partenaire">Hotprojectorlamps.fr</a>
-                     <a href=<?php echo "sortie3shop-hpl-".$rqdl['libelle_constructeur']."-".$rqdl['libelle_produit'].".php"; ?> target="_blank" title=<?php 
+                     <a href=<?php echo "sortie3shop-hpl_".$rqdl['libelle_constructeur']."_".str_replace(" ", "%20", $rqdl['libelle_produit']).".php"; ?> target="_blank" title=<?php 
                     echo $type2." pour vid&eacute;o proj&eacute;cteur ".$rqdl['libelle_constructeur']."-".$rqdl['libelle_produit']; 
                     ?> ><img src="img/site/hpl.png" alt="" /></a>
                 </div>

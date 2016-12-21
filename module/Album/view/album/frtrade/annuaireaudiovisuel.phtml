@@ -170,23 +170,23 @@ $this->headMeta()
             <form>
                     <div>
                         <label>Nom de votre site :</label>
-                        <input type="text" value="" />
+                        <input type="text" value="" required />
                     </div>
                     <div>
                         <label>URL de votre site sans / à la fin </label>
-                        <input type="text" value="" />
+                        <input type="text" value="" required />
                     </div>
                     <div>
                         <label>URL de la page de votre site où est affiché le lien vers <u>www.lampe-videoprojecteur.info</u></label>
-                        <input type="text" value="" />
+                        <input type="text" value="" required />
                     </div>
                     <div>
                         <label>Description de vote site (80 caractères max.) </label>
-                        <textarea></textarea>
+                        <textarea maxlength="80" required></textarea>
                     </div>
                     <div>
                         <label>Votre adresse email </label>
-                        <input type="text" value="" />
+                        <input type="email" value="" required />
                     </div>
                      <div>
                         <input type="submit" class="enregistrer" value="Enregistrer votre site" />

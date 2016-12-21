@@ -19,10 +19,12 @@ class FrtradeController extends AbstractActionController
         $this->layout()->title = 'Lampe videoprojecteur : Toutes les infos utiles';
         return new ViewModel(array(
             'categories' => $this->getFrtradeTable()->getCategorie(), 
+            'article' => $this->getFrtradeTable()->getArticle($marque),
+
         ));
     }
 	
-     public function sortie3shopAction(){ //
+    public function sortie3shopAction(){
         return new ViewModel(array(
             'site' => $this->params('id1'),
             'marque' => $this->params('id2'),
@@ -122,8 +124,8 @@ class FrtradeController extends AbstractActionController
     public function nouveautesvideoprojecteurAction(){
         $marque = $this->params('id');
         return new ViewModel(array(
-            "marque" => $marque,
-            ));    
+            "article" => $this->getFrtradeTable()->getArticle($marque), "marque" => $marque ,
+            ));
     }
 
     public function achatenligneAction(){
@@ -242,6 +244,7 @@ class FrtradeController extends AbstractActionController
             
             $frtrade= new Frtrade();
             }
+
             return new ViewModel(
                 array(
                     'form' => $formFrtrade
