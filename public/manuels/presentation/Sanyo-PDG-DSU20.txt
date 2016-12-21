@@ -1,0 +1,16 @@
+Projecteur numérique portable<br>
+Dimension minimum de l'image 0.76m<br>
+Dimensions maximum de l'image 7.62m<br>
+Distance de l'écran maxi 12m<br>
+Distance de l'écran mini 1.2m<br>
+Résolution maxi 800 x 600<br>
+Type de lampe UHP<br>
+Luminosité d ' image ANSI lumens 2000<br>
+Rapport de contraste 2000:1<br>
+Format de vidéo analogique SECAM<br>
+Entrée vidéo / Vidéo supportée Vidéo composite<br>
+Sortie audio Haut-parleur(s)<br>
+Largeur 27.1cm / Profondeur 23.3cm / Hauteur 9.5cm / Poids 2.5 kg<br>Compatibilité PC<br>
+Utilisation recommandée du projecteur : Présentations et multimédia<br>
+Format image natif 4:3<br>
+Puissance : 260W<br>

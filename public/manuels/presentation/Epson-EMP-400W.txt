@@ -1,0 +1,143 @@
+<p align="justify">
+
+L'Epson EMP-400W est le tout nouveau projecteur à focale ultracourte destiné aux présentations professionnelles. 
+
+<br>
+
+Simple à utiliser et flexible, il vous permet de diffuser des présentations sur grand écran même à des distances de projection courtes. 
+<br><br>
+> Une projection sans ombre <br>
+Ce projecteur à focale ultracourte génère des images nettes de 60", à seulement 65 cm de la surface de projection. Il élimine également les effets d'ombre provoqués par les personnes et les objets placés devant l'écran. 
+<br><br>
+> Des images larges et lumineuses dont votre public se rappellera <br>
+Lorsque le projecteur Epson EMP-400W affiche une image en plein écran, il détecte et redimensionne automatiquement tous les rapports (4:3/16:10/16:9). L'espace horizontal supplémentaire qu'il génère vous permet d'utiliser une plus grande surface de projection. 
+<br><br>
+> La solution idéale pour une utilisation avec des tableaux blancs interactifs <br>
+L'Epson EMP-400W s'intègre parfaitement dans un cadre scolaire avec des tableaux blancs interactifs. Grâce aux tableaux blancs numériques, les enseignants ont la possibilité de capturer des notes, les enregistrer, les publier, les imprimer ou encore les envoyer par courrier électronique. 
+<br><br>
+> Une maintenance simplifiée avec surveillance et contrôle via le réseau <br>
+Le logiciel Epson EMP Monitor&trade; vous permet de configurer et de commander le projecteur à distance via votre réseau. Vous avez également la possibilité de définir une alerte par courrier électronique sur la température interne de votre projecteur, ou encore de surveiller l'état de la lampe afin d'anticiper tout problème susceptible de perturber vos présentations.
+
+<br><br>
+L’Epson EMP-400W est aussi équipé d’une lampe disposant d’une durée de vie de 4000 heures.
+
+<br><br>
+
+
+Caractéristiques Principales 
+
+
+<br><br>
+
+Système de projection: 3LCD (3x TFT 0,56")<br>
+
+Résolution Native: WXGA (1280 x 800)<br>
+
+Résolutions Supportées: VXGA à UXGA<br>
+
+Luminosité: 1800 ANSI Lumens, 1420 ANSi Lumens Mode Basse Luminosité<br>
+
+Taux de Contraste: 500 :1 <br>
+
+Niveau sonore: 35db dBA (Mode Haute Luminosité), 28 dB dBA (Mode Basse Luminosité)<br>
+
+Type de Lampe: UHE 170W (E-TORL), remplaçable par l'utilisateur<br>
+
+Durée de vie de la Lampe: 4000 heures <br>
+
+Dimensions: 258 x 327 x 95 mm (sans les pieds)<br>
+
+Poids : 3,6 kg<br><br>
+
+Autres Caractéristiques 
+
+
+<br><br>
+
+Taille de l'image (Diagonale): 1,27m à 2,79m <br>
+
+Format d’Affichage: 16:10, Compatible 16:9 et 4 :3 <br>
+
+Zoom: numérique x 1,35<br>
+
+Objectif: F 1,8 f 6,48mm<br>
+
+Distance de Projection : 0,54m – 1,22m <br>
+
+Audio: haut-parleur 10W mono<br>
+
+Correction trapézoïdale : Verticale +/- 15 degrés
+<br><br>
+
+Connectique 
+
+
+<br><br>
+
+Entrées: <br>
+
+2 x RGB analogique D-Sub 15<br>
+
+1 x S-Vidéo Mini DIN <br>
+
+1 x Composite Vidéo RCA<br>
+
+2 x Audio RCA (blanc/rouge)<br>
+
+2 x Audio mini jack<br>
+
+Sorties : <br>
+
+1 x RGB analogique D-Sub 15 (retour écran / moniteur)<br>
+
+1 x audio mini jack<br>
+
+Contrôle : <br>
+
+1 x Interface RS232C<br><br>
+
+
+Fonctions Supplémentaires
+
+<br><br>
+
+
+Barre de sécurité/cadenas et verrou Kensington <br>
+
+Recherche de la source<br>
+
+Détection automatique du RVB<br>
+
+Fonction de protection du panneau de commande<br>
+
+Fonction de protection par mot de passe,<br>
+
+8 modes couleur<br>
+
+Mode haute altitude<br>
+
+Affichage logo utilisateur<br>
+
+Arrêt sur image (freeze)<br>
+
+A/V Mute<br>
+
+E-Zoom<br>
+Contrôle et gestion du projecteur via le réseau <br>
+
+Fonction notification par courrier électronique<br>
+
+SNMP<br>
+
+Contrôle Web<br>
+
+PJ-Link <br>
+
+Aide
+
+
+</p>
+
+
+<p align="right"><i>
+Avec la participation de<br><a href="http://www.projopourtous.com" target="_blank"><font color="#8080FF">www.ProjoPourTous.com - le sp&eacute;cialiste du vid&eacute;oprojecteur</font></a></font>.</i><br><font size="-2">&copy; Tous droits r&eacute;serv&eacute;s</font>

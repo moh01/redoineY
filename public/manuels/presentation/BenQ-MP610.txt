@@ -1,0 +1,5 @@
+<b>Pour r&eacute;initialiser le compteur d'heures de la lampe :</b><br><br>
+
+Maintenir appuy&eacute;e la touche EXIT (sur l'appareil) pendant 5 secondes, ceci affiche le nombre d'heures d'utilisation de la lampe. Peut &ecirc;tre pratique si on veut savoir o&ugrave; on en est sans passer par le menu.<br><br>
+
+Ensuite, appuyer sur la touche AUTO : le compteur d'heures revient &agrave; zero, et le message de changement de lampe dispara&icirc;t.

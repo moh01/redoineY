@@ -1,0 +1,197 @@
+<p align="justify">
+
+
+Le projecteur Epson EB-G5150 est un vidéoprojecteur puissant et lumineux qui conviendra à tous types d'installations: salles de réunions, salles de conférences, auditoriums, théâtres, cinémas, salons professionnels, surfaces commerciales, showrooms, etc...
+<br><br>
+
+Il est équipé d'une excellente matrice 3LCD Epson qui génère des images vives, colorées et naturelles et d'un filtre de compensation Epson qui garantit un taux de contraste élevé pour un vidéoprojecteur LCD.
+<br><br>
+
+L'Epson EB-G5150 s'installe aisément grâce à son poids modique pour un vidéoprojecteur d'installation (6.7kg) et à son décalage de l'objectif (lens-shift) couplé à une correction trapèzoidale verticale et horizontale.
+
+<br><br>
+Il peut aussi être équipé de 5 objectifs différents Epson en option pour pouvoir vraiment s'adapter à toutes les configurations. Ces objectifs interchangeables sont particulièrement rapide à mettre en place et peuvent être sécurisés grâce à une vis de sécurité livrée avec l'objectif.
+<br><br>
+
+L'Epson EB-G5150 intègre aussi un lecteur de carte SD et d'un port USB pour vous permettre d'effectuer des projections directement à partir d'un clef USB ou d'une carte SD. Plus besoin d'ordinateur! Cette fonction est particulièrement appréciée dans les salles de réunions lorsque les présentations de différents intervenants se succèdent. 
+<br><br>
+
+Le G5150 est également équipé de la technologie Epson Easy MP qui permet de connecter le videoprojecteur à l'ordinateur par connexion sans fil sure et rapide grâce à un logiciel livré avec le videoprojecteur. Grâce à Easy MP vous pourrez relier jusqu'à 4 G5150 à un ordinateur et projeter simultanément à distance. Easy MP est compatible avec la fonction projecteur réseau de windows vista qui prend directement en charge le videoprojecteur.   
+<br><br>
+
+Facile d'utilisation il dispose également de fonctionnalités réseau avancées qui vous permettent de le contrôler à distance à travers votre réseau: vous pourrez ainsi le mettre sous/hors tension à travers le réseau, surveiller l'Etat de la lampe, de la température et meme recevoir des messages d'alerte par courrier électronique SNMP.
+<br><br>
+
+L'EB-5150 intègre un haut-parleur de 7W, suffisament puissant pour vehiculer le son accompagnant votre présentation dans une salle moyennea et dispose aussi dune télécommande à longue portée qui s'adapte à tous types de salles de projection.
+
+<br><br>
+
+
+Caractéristiques Principales
+
+
+<br><br>
+
+Système de projection: Epson 3LCD (TFT 0,8" avec MLA)<br>
+
+Résolution Native: XGA (1024 x 768)<br>
+
+Résolutions Supportées: VGA/SVGA/SXGA/UXGA<br>
+
+Luminosité: 4000 ANSI Lumens (3200 ANSI Lumens Mode Éco)<br>
+
+Taux de Contraste: 1000:1 <br>
+Couleurs: 16.7 millions<br>
+
+Niveau sonore: 35 dBA (Mode Standard), 29 dBA (Mode Éco)<br>
+
+Type de Lampe: UHE 210 W, remplaçable par l'utilisateur<br>
+
+Durée de vie de la Lampe: 2000 heures (Mode Standard), 3000 heures (Mode Éco)<br>
+
+Dimensions: 381 x 470 x 135 mm (sans les pieds)<br>
+
+Poids : 6.6 kg<br><br>
+
+
+
+Autres Caractéristiques
+
+
+<br><br>
+
+Format d'Affichage: 4:3, compatible 16:9<br>
+
+Zoom: zoom manuel x1.81<br>
+
+Objectif: 5 choix d'objectifs possibles: ELPLS03, ELPLR03, ELPLM04, ELPLM05, ELPLL06.<br>
+
+Pour un comparatif des objectifs consultez la Fiche Technique Constructeur disponible ici.<br>
+
+Tous ces objectifs sont également proposés sur ProjoPourTous.com ici.<br>
+
+Lens Shift: vertical +/- 50% ; horizontal +/- 10%<br>
+
+Distance de Projection: n/c (voire calculateur d'écran Epson disponible en cliquant ici.) <br>
+
+Audio: Haut-parleur intégré (7 Watt mono)<br>
+
+Correction trapézoïdale : verticale +/- 20° , horizontale +/- 40°<br>
+
+Compatibilité Informatique : PC et Compatibles, VGA/SVGA/SXGA/UXGA, Mac<br>
+
+Compatibilité Vidéo: jusqu'à 720p/1080p<br><br>
+
+
+Connectique
+
+
+<br><br>
+
+Entrées:<br>
+
+1 x HDMI<br>
+
+2 x D-Sub 15 broches (VGA)<br>
+
+1 x 5 BNC RGBHV<br>
+
+1 x Composite vidéo RCA<br>
+
+1 x Vidéo composante<br>
+
+1 x S-Vidéo<br>
+
+1 x Audio Mini Jack<br>
+
+2 x RCA audio (rouge/blanc)<br>
+
+1 x USB type A <br>
+
+1 x USB type B<br>
+
+1 x lecteur de carte SD<br>
+
+1 x Module WIFI<br><br>
+
+
+
+
+Sorties:<br>
+
+1 x D-Sub 15 broches<br>
+
+1 x Audio Mini Jack<br>
+
+
+
+
+Contrôle <br>
+
+1 x RS23C<br>
+
+1 x RJ45 (uniquement pour le contrôle du vidéoprojecteur à travers le réseau)<br><br>
+
+
+
+
+Fonctions Supplémentaires
+
+
+<br><br>
+
+Détection automatique de la source<br>
+
+Protection par mot de passe sécurisé<br>
+
+Barre de sécurité<br>
+
+Encoche kensington<br>
+
+Vis de protection antivol pour l'objectif<br>
+
+Lens Shift<br>
+
+8 modes couleurs<br>
+
+E-zoom<br>
+
+Affichage logo utilisateur<br>
+
+Fonction arrêt sur image<br>
+
+Slide-Cover<br>
+
+Projection USB autonome<br>
+
+Projection carte SD Autonome<br>
+
+Projection sans-fil easy MP <br>
+
+Affichage multi-écrans avec Windows 2000, XP, Vista<br>
+
+Fonction de réglage de couleur multi-écran<br>
+
+Découverte de périphériques AMX<br>
+
+Fonction d'identifiant de projecteur à distance<br>
+
+Gestion du Projecteur à travers le réseau<br>
+
+Mise sous/hors tension à travers le réseau<br>
+
+Arret des ventilateurs à la mise en veille du réseau<br>
+
+Alertes par courrier électronique SNMP<br>
+
+Surveillance de la lampe, la température et des informations d'erreurs à travers le réseau<br>
+
+Contrôle Web<br>
+
+Installation plafond possible avec kit en option
+
+</p>
+
+
+<p align="right"><i>
+Avec la participation de<br><a href="http://www.projopourtous.com" target="_blank"><font color="#8080FF">www.ProjoPourTous.com - le sp&eacute;cialiste du vid&eacute;oprojecteur</font></a></font>.</i><br><font size="-2">&copy; Tous droits r&eacute;serv&eacute;s</font>

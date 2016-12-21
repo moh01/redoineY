@@ -1,0 +1,3 @@
+Projecteur LCD,<br>
+Luminosité (ANSI lumens) : 700,<br>
+Résolution : 960 x 540 

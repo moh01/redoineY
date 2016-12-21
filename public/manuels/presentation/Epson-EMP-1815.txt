@@ -1,0 +1,164 @@
+<p align="justify">
+
+Le vidéoprojecteur Epson EMP-1815 développe 3500 ANSI Lumens et ne pèse que 2.9 kg. Ce projecteur XGA est un concentré de nouvelles technologies idéal pour les grandes salles de réunion en déplacement comme en installation fixe.
+
+<br><br>
+
+L'EMP-1815 partage les mêmes qualités que son petit cousin, l’EMP-1810 mais est en plus doté d’un véritable arsenal de fonctionnalités pratiques.
+
+<br><br>
+
+Il dispose également de la fonction Quick Setup qui permet de régler l'image de façon automatique ou que vous soyez en moins de 6 secondes. Vous obtenez ainsi des images toujours parfaites sans stress et sans réglages fastidieux. Enfin, grâce à l’arrêt ultra rapide, vous pouvez débrancher et ranger directement votre projecteur.
+
+<br><br>
+
+L’Epson EMP-1815 vous permet aussi de gagner encore du temps en connectant votre PC au projecteur via un simple câble USB. Désormais vous n’avez plus besoin du câble VGA traditionnel ni de manipuler votre PC car la connexion USB le fait automatiquement. Le projecteur reconnaîtra le signal et démarrera automatiquement la projection.
+
+<br><br>
+
+L’EMP-1815 vous permet meme de vous passer de PC grâce à sa fonction PC Less ! La présentation sans PC permet de projeter directement l’information contenue sur une clef USB ou même d’un support SD, Memory Stick ou MicroDrive (avec adaptateurs non fournis). 
+
+<br><br>
+
+Les performances sans fil de l’EMP-1815 ne sont pas de reste : il peut être intégré rapidement et simplement à votre réseau local grâce à sa capacité de connexion RJ45 directe. Contrôlez entièrement votre projecteur à distance, surveillez son état et projetez vos présentations via le réseau. En outre, Epson fournit une excellente sécurité de réseau sans fil. 
+
+
+
+<br><br>
+
+Caractéristiques Principales 
+
+
+<br><br>
+
+Système de projection: 3LCD (Matrice 0.8 pouce avec MLA (x3) D5 TFT)<br>
+
+Résolution Native: XGA (1024 x 768)<br>
+
+Résolutions Supportées: VGA/SVGA/SXGA/UXGA<br>
+
+Luminosité: 3500 ANSI Lumens, 2700 en mode Éco<br>
+
+Taux de Contraste: 500:1 <br>
+Couleurs: 16.7 millions <br>
+
+Niveau sonore: 40 dBA (Mode Standard), 35 dBA (mode Éco)<br>
+
+Type de Lampe: UHE 210 W, remplaçable par l'utilisateur<br>
+
+Durée de vie de la Lampe: 3000 heures (Mode Standard), 2500 heures (mode Éco)<br>
+
+Dimensions: 257 x 345 x 86 mm<br>
+
+Poids : 2.9 kg <br><br>
+
+Autres Caractéristiques 
+
+
+<br><br>
+
+Taille de l'image: 0.5m – 8.1m<br>
+
+Format d'Affichage: 4:3, Compatible 16:9 <br>
+
+Zoom: Manuel x1.6<br>
+
+Objectif: F=1,75 - 2,42 f= 24 mm - 38,2 mm<br>
+
+Audio: Haut-parleur intégré 1x 5W<br>
+
+Distance de Projection : 1.2 m – 12.1 m<br>
+
+Rapport de Projection : n/c<br>
+
+Correction trapézoïdale : Automatique Verticale +/- 45 degrés et Horizontale +/- 30 degrés<br>
+
+Compatibilité Informatique : PC et Compatibles<br>
+
+Compatibilité Vidéo: NTSC / NTSC 4.43 / PAL / M-PAL / N-PAL / PAL60/ SECAM<br><br>
+
+Connectique 
+
+
+<br><br>
+
+Entrées<br>
+
+2x D-SUB 15 broches (dont 1 partagé retour écran)<br>
+
+1x S-Vidéo<br>
+
+1xComposite Vidéo RCA<br>
+
+2x mini jack stéréo<br>
+
+USB type A<br>
+
+Sorties<br>
+1x D-SUB 15pin (retour écran)<br>
+
+Contrôle:<br>
+
+RS232C<br>
+
+USB Type B<br>
+
+USB Type A <br>
+
+Réseau<br><br>
+
+
+Fonctions Supplémentaires
+
+
+<br><br>
+
+Quick Setup : permet d’afficher vos projections en moins de 6 secondes. Le projecteur effectue lui-même tous les réglages pour obtenir une image parfaite.
+<br>
+Fonction A/V Mute Slide : permet d’éteindre immédiatement le projecteur en déplaçant le cache objectif.
+<br>
+Lecteur de cartes mémoire.<br>
+
+Contrôle et gestion du projecteur via le réseau<br>
+
+LAN sans fil (802.11a/b/g)<br>
+
+SNMP<br>
+
+Mode sans PC<br>
+
+PJ-Link<br>
+
+Contrôle via le Web<br>
+
+Présentation du réseau (réseau et USB)<br>
+
+Transfert ou écriture de fichiers sur la carte mémoire à partir du réseau<br>
+
+Mise sous/hors tension directe <br>
+
+Arrêt instantané<br>
+
+6 modes colorimétriques<br>
+
+Correction trapézoïdale automatique <br>
+
+Fonctions de sécurité (logo utilisateur, verrouillage horaire, réseau)<br>
+
+Fonction de protection du panneau de commande<br>
+
+Réglage multi écran couleur<br>
+
+Affichage logo utilisateur <br>
+
+Antivol et verrou Kensington
+
+
+
+
+
+</p>
+
+
+<p align="right"><i>
+Avec la participation de<br><a href="http://www.projopourtous.com" target="_blank"><font color="#8080FF">www.ProjoPourTous.com - le sp&eacute;cialiste du vid&eacute;oprojecteur</font></a></font>.</i><br><font size="-2">&copy; Tous droits r&eacute;serv&eacute;s</font>

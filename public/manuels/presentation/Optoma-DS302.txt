@@ -1,0 +1,36 @@
+Vidéoprojecteur DLP - DS302
+<br><br>
+Présentation - Vidéoprojecteur DLP - DS302Vidéoprojecteur DLP - OPTOMA DS302
+<br>
+Ergonomique et extrêmement polyvalent, le DS302 offre une prestation haut de gamme pour un prix défiant toute concurrence.
+<br>
+Il affiche une luminosité de 1700 lumens ainsi qu'un taux de contraste exceptionnel de 2000:1 pour des images vives aux couleurs profondes quelque soit les conditions de projection.
+<br>
+Vous retrouverez également une prise VGA, la fonction de correction de trapèze ainsi qu'une interface de contrôle RS232.<br><br>
+Caractéristiques techniques - Vidéoprojecteur DLP - DS302<br>
+Type : DLP<br>
+Luminosité (ansi lumens) : 1700<br>
+Ratio de contraste : 2000 : 1<br>
+Résolution : <br>
+Native : 800 x 600<br>
+Compatible : jusqu'à 1280 x 1024<br>
+<br>
+Format d'image : 4/3<br>
+Compatible 16/9<br>
+<br>
+Niveau sonore : 27 dB<br>
+Lampe puissance / durée de vie : 180 W / 3000 heures<br>
+Correction de trapèze horizontale / verticale : ±16° (vertical)<br>
+Optique : f=21.8 - 23.81mm, F/2.35 - 2.47<br>
+Taille d'image : 0.88m - 7.9m<br>
+Distance de projection : 1.5m -12m<br><br>
+Connectique : <br>
+15 Pin D-Sub VGA<br>
+Entrée S-vidéo<br>
+Entrée vidéo composite<br>
+Interface RS232<br>
+<br>
+Dimensions : 230 x 95 x 210 mm<br>
+Poids : 2 Kg
+<br>
+Consommation en marche / en veille : 260W

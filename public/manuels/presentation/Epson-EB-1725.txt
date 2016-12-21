@@ -1,0 +1,171 @@
+<p align="justify">
+
+
+L'Epson EB-1725 est un vidéoprojecteur compact et ultra-portable qui intègre le meilleur des technologies de projection Epson. Plus petit qu'une feuille A4, il sera idéal pour les professionnels en déplacement à la recherche d'une solution efficace et particulièrement performante. Il peut aussi bien entendu trouver sa place pour une utilisation fixe dans une salle de réunion. 
+
+<br><br>
+
+Doté d'une haute luminosité de 3000 Lumens grâce à la lampe E-Torl dont il est équipé, l'EB-1725 intègre aussi une focale courte. Ces deux atouts, rarement combinés dans un projecteur ultra-portable, vous permettront d'effectuer vos projections sans avoir à vous soucier de la taille de la salle de projection ou des conditions de luminosité.
+<br><br>
+
+L'EB-1725 est équipé d'un module Wifi (802a/b/g) pour vous permettre d'effectuer des projections sans fil à partir de votre ordinateur. La suite de logiciels Easy MP, livrée avec le projecteur vous permet d'afficher une multitude de formats (voire les caractéristique techniques ci-dessous pour une liste exhaustive). 
+
+<br><br>
+L'Epson EB-1725 peut aussi être relié à votre ordinateur par un câble USB type B. Grâce à sa fonction USB 3 en 1 un seul câble USB véhiculera le son, l'image et le contrôle du projecteur.
+<br>
+
+Il dispose aussi d'une fonction USB autonome pour vous permettre d'effectuer vos présentations sans ordinateur, directement à partir de votre clé USB. Particulièrement efficace lors de vos déplacements pour lancer une présentation en un clin d'oeil!
+
+<br>
+Partout ou vous irez, l'EB-1720 parviendra à trouver rapidement et sans effort sa place grâce à sa fonction Instant Power On/Off qui vous permet de lancer votre présentation en un temps record et de l'interrompre sans avoir à attendre que la lampe se refroidisse. Son cache objectif coulissant permet également de couper la projection d'un geste pour retenir l'attention de votre auditoire sur un détail. Enfin, sa correction trapèzoidale automatique de +/- 30° qui est là pour vous garantir une image parfaitement rectangulaire sans règlages manuels fastidieux.
+ <br>
+L'Epson EB-1725 est livré avec sa télécommande, son module Wifi pour effectuer vos projections sans fil, une clé USB pour des projections sans ordinateur et sa sacoche de transport.
+
+<br><br>
+
+
+Caractéristiques Techniques
+
+
+<br><br>
+
+Système de projection: Epson 3LCD (TFT 0,7" avec MLA)<br>
+
+Résolution Native: XGA (1024 x 768)<br>
+
+Résolutions Supportées: VGA/SVGA/SXGA/UXGA<br>
+
+Luminosité: 3000 ANSI Lumens (1900 ANSI Lumens Mode Éco)<br>
+
+Taux de Contraste: 2000:1 <br>
+Couleurs: 16.7 millions<br>
+
+Niveau sonore: 39 dBA (Mode Standard), 30 dBA (Mode Éco)<br>
+
+Type de Lampe: UHE 170 W E-TORL, remplaçable par l'utilisateur<br>
+
+Durée de vie de la Lampe: 3000 heures (Mode Standard), 4000 heures (Mode Éco)<br>
+
+Dimensions: 202 x 284 x 65 mm (sans les pieds)<br>
+
+Poids : 1.8 kg<br><br>
+
+
+
+Autres Caractéristiques
+
+<br><br>
+
+Taille de l'image: 30 - 300 pouces<br>
+
+Format d'Affichage: 4:3, compatible 16:9<br>
+
+Zoom: zoom optique x1.2<br>
+
+Objectif: F 1.58 – 1.68; f 16.1 – 19.3 mm<br>
+
+Distance de Projection : De 0.65 à 8.26m<br>
+
+Rapport de Projection: 1.09-1.68 : 1<br>
+
+Offset: 6:1 <br>
+
+Audio: Haut-parleur (1 Watt mono)<br>
+
+Correction trapézoïdale : Automatique Verticale +/- 30 degrés<br>
+
+Compatibilité Informatique : PC et Compatibles, VGA/SVGA/SXGA/UXGA, Mac<br>
+
+Compatibilité Vidéo: PAL-N/M, PAL 60, SECAM, NTSC<br><br>
+
+
+Connectique
+
+
+<br><br>
+
+Entrées:<br>
+
+1 x USB type A<br>
+
+1 x D-Sub 15 broches (VGA)<br>
+
+1 x D-Sub 15 broches (composante)<br>
+
+1 x Composite Vidéo RCA<br>
+
+1 x S-Vidéo<br>
+
+1 x Audio Mini Jack
+<br>
+1 x Module Wifi (802.11a/11b/11g)<br>
+
+
+
+
+Contrôle <br>
+
+1 x Port USB B<br><br>
+
+
+
+
+Fonctions Supplémentaires
+
+
+<br><br>
+
+Evacuation avant<br>
+
+Détection automatique de la source<br>
+
+Protection par mot de passe sécurisé<br>
+
+8 modes colorimétriques<br>
+
+Mode haute altitude<br>
+
+Correction trapézoïdale automatique<br>
+
+Mise sous/hors tension directe<br>
+
+
+Capot coulissant A/V Mute Slide<br>
+
+E-zoom<br>
+
+Logo utilisateur<br>
+
+Fonction arrêt sur image<br>
+
+Bouton utilisateur sur la télécommande<br>
+
+Installation plafond possible avec kit en option<br>
+
+Connexion sans fil (802.11a/b/g)<br>
+
+Affichage sur plusieurs écrans avec Windows 2000 et XP<br>
+
+Envoi de films (MPEG2, WMV)<br>
+
+Compatibilité MAC OSX 10.3 et 10.5, WPS<br>
+
+Connexion avec ou sans fil avec le système d'exploitation Windows Vista (sauf édition familiale basique)<br>
+
+Affichage USB 3 en 1 <br>
+
+USB autonome, formats pris en charge: JPEG/BMP/GIF/PNG; MPEG2/4 ASP/MPEG4 AVC (H.264)/WMV8,9 ; SIT crée avec EMP slide-maker 2<br>
+
+Gestion du Projecteur à travers le réseau<br>
+
+Alertes par courrier électronique SNMP<br>
+
+Contrôle Web
+
+
+
+</p>
+
+
+<p align="right"><i>
+Avec la participation de<br><a href="http://www.projopourtous.com" target="_blank"><font color="#8080FF">www.ProjoPourTous.com - le sp&eacute;cialiste du vid&eacute;oprojecteur</font></a></font>.</i><br><font size="-2">&copy; Tous droits r&eacute;serv&eacute;s</font>
