@@ -1,0 +1,170 @@
+<?php  
+$this->headMeta()
+                ->appendName('keywords', "lampe videoprojecteur")
+                ->appendName('description', "Le site d'informations sur le vidéoprojecteur et la lampe du projecteur. Prix, durée de vie, où acheter, infos nouveautés.");
+?>
+
+<!-- Slider -->
+<div class="box-line bg_slider">
+    <div class="banniere_slide">
+        <div id="carousel-example-generic" class="carousel slide">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+              <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+              <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+              <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+              <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+              <li data-target="#carousel-example-generic" data-slide-to="4"></li>
+            </ol>
+              <div class="carousel-inner">
+                <!--Slide 1 -->
+                
+                <div class="item active">
+                    <a href="annuaire-audiovisuel" >
+                        <img src="images/slider/slide1.jpg" alt="Annuaire Audiovisuel" title="Annuaire Audiovisuel" />
+                    </a>
+                </div>
+                
+                <!--Slide 2 -->
+                <div class="item">
+                    <a href="http://www.projopourtous.com" target="_blank">
+                        <img src="images/slider/slide2.jpg" alt="projopourtous" title="projopourtous" />
+                    </a>
+                </div>
+                <!--Slide 3 -->
+                <div class="item">
+                    <a href="http://originalinsidelamps.com" target="_blank">
+                        <img src="images/slider/slide3.jpg" alt="Originalinsidelamps" title="Originalinsidelamps" />
+                    </a>
+                </div>
+                <!--Slide 4 -->
+                <div class="item">
+                      <a href="http://www.rienquedeslampes.fr" target="_blank">
+                        <img src="images/slider/slide4.jpg" alt="rienquedeslampes" title="rienquedeslampes" />
+                      </a>
+                </div>
+                <!--Slide 5 -->
+                <div class="item">
+                      <a href="http://www.affiche-cine.com" target="_blank">
+                        <img src="images/slider/slide5.jpg" alt="affiche-cine" title="affiche-cinel" />
+                      </a>
+                </div>
+              </div>
+            <!-- Controls -->
+              <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev"><span class="icon-prev"></span></a>
+              <a class="right carousel-control" href="#carousel-example-generic" data-slide="next"><span class="icon-next"></span></a>                  
+        </div>
+     </div>
+</div>
+<!-- End Slider -->
+<!-- 3 blocs -->
+<div class="box-line trois">
+	<div class="three_blocs">
+        <div class="partenaire">
+        	<h3>Partenariat</h3>
+            <p>Devenez partenaire de notre site d&acute;information sur le vid&eacute;projecteur et sa lampe et affichez votre site sur toutes nos pages</p>
+         	<form>
+                <a href="partenariat.php" title="Lampe VideoProjecteur devenir partenaire"><div  class="btn-partenaire" onclick="location.href=partenariat.php"/>Devenir partenaire</div></a>
+            </form>
+        </div>
+        
+        <div class="selecteur">
+        	<h3>RECHERCHEZ VOTRE VIDEOPROJECTEUR</h3>
+            <div>
+                <select id="marque" name="marque">
+                    <option value="">--Marque de vid&eacute;oprojecteur--</option>
+                </select>
+                <select id="model" name="model">
+                    <option value="">-- Modéle de vid&eacute;oprojecteur--</option>
+                </select>
+                <div style="margin-top:15px;">
+                <div class="info-video" onclick="href_info_produit();" >Infos sur le vid&eacute;oprojecteur</div>
+                <div class="prix-lampe" onclick="href_fiche_produit();">Prix de la lampe</div>
+                </div>
+            </div>
+        </div>
+        <div class="pour-nul">
+        	<a href="infos-videoprojecteur.php" title="Vid&eacute;oprojecteur pour les nuls"><img src="images/pour-les-nul.jpg" alt="Vid&eacute;oprojecteur pour les nuls" width="220" height="222" /></a>
+        </div>
+        <div class="spacer"></div>
+    </div>
+</div>
+<!-- End 3 blocs -->
+
+<!-- Bienvenue -->
+<div class="box-line bienvenue">
+	<div class="welcome">
+    	<h3>Bienvenue sur le site</h3>
+        <h1>LAMPE VIDEOPROJECTEUR.INFO</h1>
+        <p>Vous trouverez sur ce site les informations sur le vid&eacute;oprojecteur et sa lampe : Photos, prix, dur&eacute;e de vie, docs, manuels</p>
+    </div>
+</div>
+<!-- End Bienvenue -->
+
+<!-- Actus -->
+<div class="box-line actus">
+	<div class="box-actus">
+        <h1>Nouveaut&eacute;s &amp; actualit&eacute;s !</h1>
+        <div class="boite-a-actu">
+        	<!-- 1 -->
+        	<div class="article">
+            	<img src="images/Panasonic_PT-LX22.jpg" width="215" height="215" alt="" />
+                <h4>Projecteur PT-LX22, haute luminosit&eacute; &agrave; petit budget chez Panasonic </h4>
+                <p>Id&eacute;al pour les r&eacute;unions ou les salles de cours, le vid&eacute;oprojecteur Panasonic PT-LX22 offre une bonne qualit&eacute; d&acute;image gr&acirc;ce &agrave; sa luminosit&eacute; de 2200 Lumens et sa technologie de projection 3 LCD. </p>
+                <a href="nouveautes-videoprojecteurs-panasonic.php" title="nouveautes videoprojecteurs panasonic">Lire la suite</a>
+            </div>
+            <!-- 2 -->
+        	<div class="article">
+            	<img src="images/SANYO_PLC-XU4001.jpg" width="215" height="215" alt="" />
+                <h4>Des images lumineuses avec le nouveau SANYO PLC-XU4001</h4>
+                <p>Le nouveau PLC-XU4001 SANYO est id&eacute;al pour une utilisation mobile et permet de belles pr&eacute;sentations gr&acirc;ce &agrave; ses connectiques et ses performances professionnelles.</p>
+                <a href="nouveautes-videoprojecteurs-sanyo.php" title="nouveautes videoprojecteurs sanyo">Lire la suite</a>
+            </div>
+            <!-- 3 -->
+        	<div class="article">
+            	<img src="images/Sony_HDR-PJ10E.jpg" width="215" height="215" alt="" />
+                <h4>Sony HDR-PJ10E :Cam&eacute;scope avec projecteur int&eacute;gr&eacute;</h4>
+                <p>Des souvenirs inoubliables &agrave; partager. Ce cam&eacute;scope Full HD compact et facile &agrave; utiliser dispose d&acute;un projecteur pour projeter vos vid&eacute;os sur n&acute;importe quel support &agrave; proximit&eacute;. C&acute;est un outil intelligent et amusant que tout le monde peut partager. </p>
+                <a href="nouveautes-videoprojecteurs-sony.php" title="nouveautes videoprojecteurs sony">Lire la suite</a>
+            </div>
+            <!-- 4 -->
+        	<div class="article">
+            	<img src="images/image-article.jpg" width="215" height="215" alt="" />
+                <h4>Actualit&eacute;s des boutiques de vid&eacute;oprojecteurs et lampes en ligne </h4>
+                <p>Le site de vente de lampes RIEN QUE DES LAMPES offre d&eacute;sormais une garantie de 4 mois minimum sur toutes ses lampes.</p>
+                <a href="achat-en-ligne.php" title="video projecteur achat-en-ligne">Lire la suite</a>
+            </div>
+        	<!-- 5 -->
+        	<div class="article premier">
+            	<img src="images/Pico_projecteur_Acer_C110.jpg" width="215" height="215" alt="" />
+                <h4>Le pico-projecteur Acer C110 - Une projection &quot; unique &quot; via l'USB et un design ultral&eacute;ger</h4>
+                <p>Les images, les vid&eacute;os et les pr&eacute;sentations jouent un r&ocirc;le de plus en plus important dans nos vies, aussi bien dans le cadre priv&eacute; que professionnel.</p>
+                <a href="nouveautes-videoprojecteurs-acer.php" title="nouveautes videoprojecteurs acer">Lire la suite</a>
+            </div>
+            <!-- 6 -->
+        	<div class="article">
+            	<img src="images/GOPICO_35.jpg" width="215" height="215" alt="" />
+                <h4>&Eacute;TUI PICO PROJECTEUR POUR IPHONE 4 4S, GOPICO 35</h4>
+                <p>C&acute;est un projecteur slim et l&eacute;ger avec une conception portative pour iPhone 4 et 4s. Facile &agrave; utiliser et se connecte directement sans c&acirc;ble.</p>
+                <a href="#" title="Lire la suite">Lire la suite</a>
+            </div>
+            <!-- 7 -->
+        	<div class="article">
+            	<img src="images/Vidéoprojecteur_LG_HX300G.jpg" width="215" height="215" alt="" />
+                <h4>Un petit bijou de technologie &agrave; LED qui vous assure une mobilit&eacute; optimale </h4>
+                <p>Vid&eacute;oprojecteur LED, 300 ANSI lumens, connectique HDMI, lecture directe des fichiers Divx et Microsoft Office via port USB</p>
+                <a href="video-projecteur-LG-HX300G.html" title="videoprojecteurs G-HX300G">Lire la suite</a>
+            </div>
+            <!-- 8 -->
+        	<div class="article">
+            	<img src="images/Vidéoprojecteur_LG_CF3D.jpg" width="215" height="215" alt="" />
+                <h4>Vid&eacute;oprojecteur 3D, SXRD, 2500 ANSI lumens, Contraste 7000:1, 3 connectiques HDMI</h4>
+                <p>Vid&eacute;oprojecteur 3D, SXRD, 2500 ANSI lumens, Contraste 7000:1, 3 connectiques HDMI. Avec le vid&eacute;oprojecteur LG CF3D d&eacute;couvrez un nouveau monde en 3 dimensions. </p>
+                <a href="video-projecteur-LG-CF3D.html" title="videoprojecteurs LG-CF3D">Lire la suite</a>
+            </div>
+            <div class="spacer"></div>
+        </div>
+    </div>
+</div>
+<!-- End Actus -->
+

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<ads_loader>
+	<ads>
+		<ad image="xml/pub_videoprojecteurled.jpg" link="http://www.videoprojecteurled.com" target="_blank"/>
+		<ad image="xml/pub_homecinemafr.jpg" link="http://www.homecinema-fr.com/forum/viewforum.php?f=84" target="_blank"/>
+		<ad image="xml/pub_rqdl.jpg" link="http://www.rqdl.fr" alt="lampes videoprojecteurs" target="_blank"/>
+		<ad image="xml/pub_cinemachezsoi.jpg" link="http://www.cinemachezsoi.com" target="_blank"/>
+		<ad image="xml/pub_projopourtous.jpg" link="http://www.projopourtous.com" target="_blank"/>
+		<ad image="xml/pub_diamond.jpg" link="http://www.lampes-diamond.fr/" target="_blank"/>
+		<ad image="xml/pub_affiche-cine.jpg" link="http://www.affiche-cine.com" alt="Affiche-cine.com, vente d'affiches de cinéma originales anciennes et récentes" target="_blank"/>
+		<ad image="xml/pub_annuaire.jpg" link="annuaire-audiovisuel/" alt="Notre Annuaire Audiovisuel"/>
+
+	</ads>
+	
+	<options>
+		<option display_seconds="7" autoplay="true" fade_seconds="1" show_pause_button="true"/>
+		<option buttons_alpha="50" buttons_rollover_alpha="80" buttons_space="-1" buttons_margin="5"/>
+		<option button_color="000000" button_rollover_color="000000" />
+		<option button_border_color="FFFFFF" button_border_rollover_color="D6D3AA"/>
+		<option button_label_color="FFFFFF" button_label_rollover_color="FFFFFF"/>
+		<option show_time_bar="FALSE" time_bar_alpha="100" time_bar_color="CCFF00" random_start="true"/>
+	</options>
+</ads_loader>

@@ -1,0 +1,388 @@
+@charset "utf-8";
+/* CSS Document */
+.titre_page{
+	color:#FF7900;
+	font-size:26px;
+	font-family:"Comfortaa-bold", Arial;
+	clear:both;
+	padding-bottom:10px;
+	border-bottom:1px solid #FF7900;
+}
+
+ul.menu-video{margin-bottom:25px;}
+ul.menu-video li{
+	float:left;
+	list-style:none;
+	height:90px;
+	width:200px;
+	margin-right:15px;
+	margin-top:15px;
+	text-align:center;
+}
+ul.menu-video li.box-mark{background-color:#424242;}
+ul.menu-video li a{
+	color:#424242;
+	width:100%;
+	height:100%;
+	display:block;
+	text-align:center;
+	padding:40px 25px 10px;
+	background-color:#424242;
+	color:#ffffff;
+}
+ul.menu-video li a:hover, ul.menu-video li a.actif{
+	color:#ffffff;
+	text-decoration:none;
+	background-color:#FF7900;
+}
+a.men1{background:url("../images/men1.png") no-repeat center top 10px;}
+a.men2{background:url("../images/men2.png") no-repeat center top 10px;}
+a.men3{background:url("../images/men3.png") no-repeat center top 10px;}
+a.men4{background:url("../images/men4.png") no-repeat center top 10px;}
+a.men5{background:url("../images/men5.png") no-repeat center top 10px;padding:40px 10px 10px!important;}
+a.men6{background:url("../images/men6.png") no-repeat center top 10px;}
+a.men7{background:url("../images/men7.png") no-repeat center top 10px;}
+p.intro2{float:left; width:40%;margin:0 0 10px 0;}
+p.intro3{float:right; width:55%; text-align:right;margin:0 0 10px 0;}
+.search_in_page{
+	width:230px;
+	height:40px;
+	background-color:#FF7900;
+	border-radius:6px;
+	padding:5px 0 0 10px;
+	float:right;
+	margin-bottom:10px;
+}
+input.keywrd{
+	width:180px;
+	height:30px;
+	padding:0 5px;
+	color:#666666;
+	font-size:12px;
+}
+input.keygo{
+	width:30px;
+	height:30px;
+	border:none;
+	font-weight:700;
+	font-family:"Comfortaa-bold", Arial;
+	background:url("../images/ok.png") no-repeat center;
+}
+/* Annuaire audiovisuel */
+.deja{
+	display:block;
+	border-bottom:1px solid #00BEFD; 
+	padding-bottom:15px; 
+	margin-top:15px;
+	margin-bottom:15px; 
+	font-size:16px; 
+	font-family:"Comfortaa", Arial;
+	color:#00BEFD;
+	font-weight:normal;
+	}
+ul.list-annuaire{margin:0; padding:0; clear:both;}
+ul.list-annuaire li{
+	list-style:none; 
+	width:640px;
+	padding:10px;
+	margin:0 0 10px 10px;
+	border-bottom:1px solid #cccccc;
+	transition: background .4s;
+	}
+ul.list-annuaire li:hover{ background:#F2F2F2; transition: background .4s;}
+ul.list-annuaire li h4 a{font-family:"Comfortaa-bold", Arial; font-size:16px;}
+ul.list-annuaire li h4 a:hover{ text-decoration:none; color:#00BEFD;}
+
+div.souscription{
+	clear:both;
+	margin-top:25px;
+}
+div.souscription h5{
+	font-size:14px;
+	font-family:"Comfortaa-bold", Arial;
+	color:#FF7900;
+	padding-bottom:10px;
+	border-bottom:1px solid #FF7900;
+	margin-top:20px;
+}
+div.souscription ol{
+	margin-left:25px;
+}
+div.souscription ol li em{color:#00BEFD;}
+div.souscription ul{
+	margin-left:20px;
+	margin-top:10px;
+}
+div.souscription ul li{
+	list-style:none;
+	list-style-image:url("../images/puce.png");
+	margin-bottom:5px;
+}
+p.attention{
+	background:url("../images/attention.png") no-repeat left;
+	height:32px;
+	padding-left:40px;
+	color:#FF7900;
+}
+div.formulaire{
+	padding:15px;
+	background:#F3F3F8;
+	margin:15px 0;
+	border:1px solid #FF7900;
+}
+div.formulaire div{clear:both; padding-top:10px;}
+div.formulaire label{
+	width:300px;
+	height:auto;
+	float:left;
+	font-weight:normal;
+	display:block;
+	padding-top:7px;
+	font-family:Arial!important;
+}
+div.formulaire input[type="text"]{
+	width:300px;
+	height:30px;
+	float:right;
+	padding:0 5px;
+	font-size:13px;
+	color:#999;
+	border:1px solid #cccccc;
+	border-radius:3px;
+}
+div.formulaire textarea{
+	width:300px;
+	height:80px;
+	float:right;
+	padding:0 5px;
+	font-size:13px;
+	color:#999;
+	border:1px solid #cccccc;
+	border-radius:3px;
+}
+div.formulaire div em{clear:both; color:#999999; font-size:12px; float:none;}
+div.formulaire div input.enregistrer{
+	padding:10px 25px;
+	color:#ffffff;
+	font-family:"Comfortaa-bold", Arial;
+	background:#FF7900;
+	float:right;
+	border:none;
+}
+
+/* INFO SUR LA LAMPE */
+.acc{margin-top:25px;}
+.info-titre{color:#FF7900;}
+.info-titre:hover, .info-titre:focus{ text-decoration:none; color:#FF7900; background:#F8F21A;}
+.accordion-group .in{ background:#F8F8F8;}
+.accordion-inner p{line-height:160%;text-align: justify;}
+.accordion-inner ul{margin-left:20px;}
+.accordion-inner ul li{list-style:square;}
+
+/* LISTE DES MARQUES */
+.box-mark{ width:600px; margin:auto; padding-bottom:25px;}
+ul.mark-list{}
+ul.mark-list li{
+	display:block;
+	float:left;
+	width:110px;
+	height:150px;
+	padding:5px;
+	border-radius:5px;
+	border:1px solid #cccccc;
+	margin:10px 10px 0 0;
+	background:#424242;
+	}
+ul.mark-list li:hover{ background:#FF7900;}
+a.name-mark{width:100%; text-align:center; padding:0 1%; color:#ffffff; font-size:12px; display:block;}
+a.name-mark:hover{ color:#ffffff; text-decoration:none;}
+
+/* PAGE REFERENCE */
+.ref-box{clear:both; position:relative;}
+.sommaire{margin-bottom:20px;}
+.sommaire div{
+	float:left;
+	padding:5px;
+	margin-right:5px;
+}
+.sommaire div span{font-size:12px;}
+li.page-table{
+	width:655px;
+	padding:0;
+}
+li.page-table table{ width:655px;}
+li.page-table table tr th.video-cell{ 
+	height:35px; 
+	text-align:left;
+	padding:0 10px;
+	vertical-align:middle;
+	font-size:12px;
+	color:#ffffff;
+	background:#FF7900;
+	border-radius:5px 0 0 0;
+	}
+li.page-table table tr th.ico-cell{ background:#FF7900;}
+li.page-table table tr th.lampe-cell{ 
+	height:35px; 
+	text-align:left;
+	padding:0 10px;
+	vertical-align:middle;
+	font-size:12px;
+	color:#ffffff;
+	background:#FF7900;
+	}
+li.page-table table tr th.compare-prix{
+	height:35px; 
+	text-align:left;
+	padding:0 10px;
+	vertical-align:middle;
+	font-size:12px;
+	color:#ffffff;
+	background:#FF7900;
+	border-radius:0 5px 0 0;
+	}
+li.page-table table tr .video-cell{ width:40%;}
+li.page-table table tr .ico-cell{ width:25%;}
+li.page-table table tr .lampe-cell{ width:25%;}
+li.page-table table tr .compare-prix{ width:10%; text-align:center;}
+li.page-table table tr td{ 
+height:35px; 
+padding:0 10px;
+font-size:12px;
+border-top:1px solid #ffffff;
+border-bottom:1px solid #ffffff;
+}
+li.page-table table tr td a{color:#424242;}
+li.page-table table tr td a:hover{color:#010101; text-decoration:none;}
+.ico-cell img{display:block; float:left; margin-right:10px;}
+.lineOne{background:#E1E1E1; cursor:pointer;}
+.lineOne:hover{background:#d1d1d1;}
+a.next3{
+	width:30px; 
+	height:30px;
+	display:block;
+	color:#FF7900;
+	border:1px solid #FF7900;
+	position:absolute;
+	bottom:0;
+	right:0;
+	padding:5px 0 0 0;
+	text-align:center;
+}
+a.prev3{
+	width:30px; 
+	height:30px;
+	display:block;
+	color:#FF7900;
+	border:1px solid #FF7900;
+	position:absolute;
+	bottom:0;
+	left:0;
+	padding:5px 0 0 0;
+	text-align:center;
+}
+a.prev3:hover, a.next3:hover, a.prev3:focus, a.next3:focus{ background:#FF7900; color:#ffffff; text-decoration:none;}
+.pager3{
+	width:585px;
+	margin:auto;
+	height:30px;
+}
+.pager3 a{
+	width:20px; 
+	height:20px;
+	display:block;
+	color:#FF7900;
+	border:1px solid #FF7900;
+	padding:0;
+	text-align:center;
+	float:left;
+	margin-right:5px;
+	margin-top:5px;
+}
+.pager3 a:hover, .pager3 a.selected { background:#FF7900; color:#ffffff; text-decoration:none;}
+
+/* specification */
+.spec-name{width:50%;}
+.spec-for{width:15%;}
+.spec-type{width:15%;}
+.spec-power{width:10%;}
+li.page-table table tr td{
+	border-top:1px solid #ffffff;
+	border-bottom:1px solid #ffffff;
+	height:35px;
+}
+li.page-table table tr th.spec-name{ 
+	height:35px; 
+	text-align:left;
+	padding:0 10px;
+	vertical-align:middle;
+	font-size:14px;
+	color:#ffffff;
+	background:#FF7900;
+	border-radius:5px 0 0 0;
+	}
+li.page-table table tr th.spec-power{ 
+	height:35px; 
+	text-align:left;
+	padding:0 10px;
+	vertical-align:middle;
+	font-size:12px;
+	color:#ffffff;
+	background:#FF7900;
+	}
+li.page-table table tr th.spec-for, li.page-table table tr th.spec-type{
+	height:35px; 
+	vertical-align:middle; 
+	background:#FF7900;
+	font-size:12px;
+	color:#ffffff;
+	padding:0 10px;
+	}
+
+/* DUREE DE VIE */
+p.info-etoile{font-size:11px; color:#424242;}
+p.info-etoile .red{ color:#F00;}
+p.info-etoile strong{ font-weight:bold; color:#010101;}
+.life-name{width:60%;}
+.life-lenght{width:30%;}
+li.page-table table tr th.life-name{ 
+	height:45px; 
+	text-align:left;
+	padding:0 10px;
+	vertical-align:middle;
+	font-size:14px;
+	color:#ffffff;
+	background:#FF7900;
+	border-radius:5px 0 0 0;
+	}
+li.page-table table tr th.life-lenght{ 
+	height:45px; 
+	text-align:left;
+	padding:0 10px;
+	vertical-align:middle;
+	font-size:12px;
+	color:#ffffff;
+	background:#FF7900;
+	}
+/* PRIX DE LA LAMPE */
+.price-name{width:60%;}
+.price-lenght{width:30%;}
+li.page-table table tr th.price-name{ 
+	height:45px; 
+	text-align:left;
+	padding:0 10px;
+	vertical-align:middle;
+	font-size:14px;
+	color:#ffffff;
+	background:#FF7900;
+	border-radius:5px 0 0 0;
+	}
+li.page-table table tr th.price-lenght{ 
+	height:45px; 
+	text-align:left;
+	padding:0 10px;
+	vertical-align:middle;
+	font-size:12px;
+	color:#ffffff;
+	background:#FF7900;
+	}

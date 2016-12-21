@@ -1,0 +1,171 @@
+<?php  
+$this->layout()->title = 'Lampe videoprojecteur Contact';
+$this->headMeta()
+                ->appendName('keywords', "lampe videoprojecteur Contact")
+                ->appendName('description', "Infos lampe videoprojecteur Contact");
+?>
+<!-- Slider -->
+<div class="box-line bg_slider">
+    <div class="banniere_slide">
+        <div id="carousel-example-generic" class="carousel slide">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+              <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+              <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+              <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+              <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+              <li data-target="#carousel-example-generic" data-slide-to="4"></li>
+            </ol>
+              <div class="carousel-inner">
+                <!--Slide 1 -->
+                
+                <div class="item active">
+                    <a href="annuaire-audiovisuel" >
+                        <img src="images/slider/slide1.jpg" alt="Annuaire Audiovisuel" title="Annuaire Audiovisuel" />
+                    </a>
+                </div>
+                
+                <!--Slide 2 -->
+                <div class="item">
+                    <a href="http://www.projopourtous.com" target="_blank">
+                        <img src="images/slider/slide2.jpg" alt="projopourtous" title="projopourtous" />
+                    </a>
+                </div>
+                <!--Slide 3 -->
+                <div class="item">
+                    <a href="http://originalinsidelamps.com" target="_blank">
+                        <img src="images/slider/slide3.jpg" alt="Originalinsidelamps" title="Originalinsidelamps" />
+                    </a>
+                </div>
+                <!--Slide 4 -->
+                <div class="item">
+                      <a href="http://www.rienquedeslampes.fr" target="_blank">
+                        <img src="images/slider/slide4.jpg" alt="rienquedeslampes" title="rienquedeslampes" />
+                      </a>
+                </div>
+                <!--Slide 5 -->
+                <div class="item">
+                      <a href="http://www.affiche-cine.com" target="_blank">
+                        <img src="images/slider/slide5.jpg" alt="affiche-cine" title="affiche-cinel" />
+                      </a>
+                </div>
+              </div>
+            <!-- Controls -->
+              <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev"><span class="icon-prev"></span></a>
+              <a class="right carousel-control" href="#carousel-example-generic" data-slide="next"><span class="icon-next"></span></a>                  
+        </div>
+     </div>
+</div>
+<!-- End Slider -->
+<!-- Fil d'Ariane -->
+<div class="ariane">
+  <p>
+      <a href="home" title="Lampe VideoProjecteur"><img src="images/ico-home.png" alt="" width="16" height="14" /></a>&nbsp;&gt;&nbsp;
+        <span>Contact</span>
+    </p>
+</div>
+<!-- End Fil d'Ariane -->
+<div class="containeur">
+  <!-- Contenu -->
+  <div class="contenu">
+    <h1 class="titre_page">Tout savoir sur les lampes de vidéoprojecteurs</h1>
+    <?php
+    $form = $this->form;
+    $form->setAttribute('action', '');
+    $form->setAttribute('value', 'Contactez-nous');
+    $form->prepare();
+    echo $this->form()->openTag($form);                 // Ouverture de la balise form
+    ?>
+        <span>Contactez-nous</span>
+        <div class="formulaire">
+                            <div>
+                                <p>
+                                <label for="Titre">Titre de message *:</label>
+                                <?php echo $this->formRow($form->get('Titre')); ?>
+                                <?php 
+                                // echo $this->formElementErrors($form->get('Titre'), array('class' => 'error_list'));?>
+                                </p>
+                            </div>
+                            <div>
+                                <p>
+                                <label for="Message">Message *:</label>
+                                <?php echo $this->formRow($form->get('Message')); ?>
+                                <?php
+                                // echo $this->formElementErrors($form->get('Message'), array('class' => 'error_list'));?>
+                                </p>
+                            </div>
+                            <div>
+                                <p>
+                                <label for="Mailfrom">Votre adresse e-mail *:</label>
+                                <div style="position:absolute;margin-top:-20px;margin-left:325px">
+                                <?php echo $this->formRow($form->get('Mailfrom')); ?>
+                                </div>
+                                <?php 
+                                //echo $this->formElementErrors($form->get('Mailfrom'), array('class' => 'error_list'));?>
+                                </p>
+                            </div>
+                             <div >
+                                <?php echo $this->formSubmit($form->get('submit')); ?>
+                            </div>
+                            <p id="erreur_form" style="margin-left:420px">
+                                
+                            </p>
+                            <div class="spacer"></div>
+        </div>
+    <?php
+    echo $this->form()->closeTag();                     // Fermeture de la balise form
+    ?>
+     </div>
+    </div>
+    <!--<div class="zmenu" style="margin-left: 100px; margin-top: 39px;"></div>-->
+    <!-- End Contenu -->
+    <!-- Bloc left -->
+    <div class="bloc_right">
+      <div class="selecteur">
+            <h3>RECHERCHEZ VOTRE VIDEOPROJECTEUR</h3>
+            <form>
+                <select id="marque" name="marque">
+                    <option value="">--Marque de vid&eacute;oprojecteur--</option>
+                </select>
+                <select id="model" name="model">
+                    <option value="">--Mod&egrave;le de vid&eacute;oprojecteur--</option>
+                </select>
+                <p style="margin-top:15px;">
+                <div onclick="href_info_produit();"  class="info-video" title="LampeVideoProjecteur info">Infos sur le vid&eacute;oprojecteur</div>
+
+                <div class="prix-lampe" onclick="href_fiche_produit();" class="prix-lampe" title="LampeVideoProjecteur comprarer les prix">Prix de la lampe</div>
+                </p>
+            </form>
+        </div>
+      <div class="partenaire">
+          <h3>Partenariat</h3>
+            <p>Devenez partenaire de notre site d&acute;information sur le vid&eacute;projecteur et sa lampe et affichez votre site sur toutes nos pages</p>
+          <form>
+              <a href="partenariat.php" title="Lampe VideoProjecteur partenariat"><div  class="btn-partenaire" onclick="location.href=annuaire-audiovisuel"/>Devenir partenaire</div></a>
+            </form>
+        </div>
+        <div class="boutique">
+          <h3>Nos trois boutiques</h3>
+          <div class="list_carousel">
+        <ul id="foo0">
+          <li>
+                        <p><img src="images/logo-partenaire/boutik1.jpg" alt=""  />
+                        Distributeur europ&eacute;en de lampes de vid&eacute;oprojecteur : originales, Original Inside et Genius. Une moyenne de 4.6/5 avec le service d'avis clients Ekomi (Calcul&eacute; &agrave; partir de 816 avis). Possibilit&eacute; de retrait sur place. </p>
+                    </li>
+          <li>
+                        <p><img src="images/logo-partenaire/boutik2.png" alt=""  />
+                        Sp&eacute;cialiste dans la vente de lampes Originales pour vid&eacute;oprojecteur. Lampe exp&eacute;di&eacute;e le jour même si la commande se fait avant 16h.</p>
+                    </li>
+          <li>
+                        <p><img src="images/logo-partenaire/boutik3.jpg" alt=""  />
+                        Site de vente de lampes Original Inside. Service fiable et paiement en ligne s&eacute;curis&eacute;. 176 avis clients positifs. Toutes les lampes sont garanties 5 mois. </p>
+                    </li>
+        </ul>
+        <div class="clearfix"></div>
+      </div>
+        </div>
+    </div>
+    <!-- End left -->
+    <div class="spacer"></div>
+</div>
+<!-- End Conteneur -->

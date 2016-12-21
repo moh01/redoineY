@@ -1,0 +1,192 @@
+<?php echo $this->doctype(Zend\View\Helper\Doctype::XHTML1_TRANSITIONAL);?>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+        <?php echo $this->headTitle($this->layout()->title ) ?>
+        <?php
+        $this->headMeta()->appendName('verify-v1', '5432ZcdMcwItJvtz5yf6w/J5jV8rOntZc7RcYqYJOwU=') 
+        ->appendHttpEquiv("Content-Type" ,"text/html;charset=utf-8")
+                        ->appendName('robots', 'ALL') 
+                        ->appendName('rating', 'General') 
+                        ->appendName('copyright', 'DAVID-ARGENCE S.L.') 
+                        ->appendName('author', 'David Argence') 
+                        ->appendName('language', 'Fr') 
+                        ->appendHttpEquiv("reply-to" ,"contact@lampe-videoprojecteur.info")
+                        ->appendName('viewport', 'width=device-width, initial-scale=1.0') 
+                        ;
+        echo $this->headMeta();
+        ?>
+<!-- Le styles -->
+<!--[if lte IE 7]> <link rel="stylesheet" href="css/styles-ie.css" type="text/css" /> <![endif]-->
+        <?php echo $this->headLink(array('rel' => 'shortcut icon', 'type' => 'image/vnd.microsoft.icon', 'href' => $this->basePath() . '/images/favicon.png'))
+                        ->prependStylesheet($this->basePath() . '/css/bootstrap-responsive.min.css')
+                        ->prependStylesheet($this->basePath() . '/css/jquery.fancybox.css') 
+                        ->prependStylesheet($this->basePath() . '/css/bootstrap.min.css')
+                        ->prependStylesheet($this->basePath() . '/css/normalize.css') 
+                        ->prependStylesheet($this->basePath() . '/css/page.css') 
+                        ->prependStylesheet($this->basePath() . '/css/fiche.css') 
+                        ->prependStylesheet($this->basePath() . '/css/style.css')
+                        ?>      
+<!-- Style -->
+        <!-- Scripts -->
+        <?php echo $this->headScript()
+          ->prependFile($this->basePath().'/js/forms.js', 'text/javascript') 
+          ->prependFile($this->basePath().'/js/recherche_text.js', 'text/javascript') 
+          ->prependFile($this->basePath().'/js/carouFredSel.js', 'text/javascript') 
+          ->prependFile($this->basePath() . '/js/xiti.js', 'text/javascript')
+          ->prependFile($this->basePath() . '/js/fancybox.js', 'text/javascript')
+          ->prependFile($this->basePath() . '/js/jquery.fancybox.pack.js', 'text/javascript')
+          ->prependFile($this->basePath() . '/js/respond.min.js', 'text/javascript')
+          ->prependFile($this->basePath() . '/js/recherche.js', 'text/javascript')
+          ->prependFile($this->basePath() . '/js/script4.js', 'text/javascript')
+          ->prependFile($this->basePath() . '/js/cherchedanspage.js', 'text/javascript')
+          ->prependFile($this->basePath().'/js/jquery.carouFredSel-6.2.1-packed.js', 'text/javascript') 
+          ->prependFile($this->basePath() . '/js/selecteur-ajax.js', 'text/javascript')
+          ->prependFile($this->basePath() . '/js/respond.js', 'text/javascript')
+          ->prependFile($this->basePath() . '/js/bootstrap.min.js', 'text/javascript')
+          ->prependFile($this->basePath() . '/js/jquery.js', 'text/javascript')
+           ;                   
+        ?>
+  </head>
+  <body>
+<!-- Header -->
+<div class="box-line bg_header">
+  <div class="header">
+      <div class="logo">
+          <a href="home" title="Lampe VideoProjecteur.info"><img src="images/logo.png" alt="Lampe VideoProjecteur.info" width="68" height="110" /></a>
+        </div>
+        <div class="slogan">
+          <p class="titre"><a href="home" title="Lampe VideoProjecteur"><span class="blanc">Lampe-videoprojecteur</span><span class="jaune">.info</span></a></p>
+            <p class="slg"><a href="home" title="Tout savoir sur la lampe de vid&eacute;oprojecteur"><span class="orange">Tout savoir sur la lampe de vid&eacute;oprojecteur</span></a></p>
+        </div>
+        <div class="post-it">
+          <p>Comparer les prix des lampes de vid&eacute;oprojecteur</p>
+        </div>
+        <div class="spacer"></div>
+    </div>
+    <!-- Menu -->
+    <div class="menu">
+      <div class="home"><a href="home" title="Lampe VideoProjecteur info">&nbsp;</a></div>
+      <ul class="navig">
+          <li style="cursor:pointer;"><p style="padding:12px">&nbsp;Le vid&eacute;oprojecteur&nbsp;&nbsp;</p>
+          <ul class="sous-menu">
+              <li><a href="videoprojecteur.php" title="Lampe VideoProjecteur expliqu&eacute;">&nbsp;Le vid&eacute;oprojecteur expliqu&eacute;&nbsp;</a></li>
+                <li><a href="http://www.atout-videoprojecteur.com" target="_blank" title="Lampe VideoProjecteur Blog : Atout-vid&eacute;oprojecteur">&nbsp;Blog : Atout-vid&eacute;oprojecteur&nbsp;</a></li>
+            </ul>
+        </li>
+        <li style="cursor:pointer;"><p style="padding:12px">&nbsp;La lampe de vid&eacute;oprojecteur&nbsp;</p>
+          <ul class="sous-menu2" style="width: 120%;">
+              <li><a href="lampe.php" title="Le vid&eacute;oprojecteur et sa lampe">Le vid&eacute;oprojecteur et sa lampe</a></li>
+                <li><a href="lampe-videoprojecteur.php" title="Infos sur les lampes de vid&eacute;oprojecteurs par marques">Infos sur les lampes de vid&eacute;oprojecteurs par marques</a></li>
+                <li ><a href="nouveautes-videoprojecteurs.php" title="Nouveaut&eacute;s sur les lampes de vid&eacute;oprojecteurs par marques">Nouveaut&eacute;s sur les lampes de vid&eacute;oprojecteurs par marques</a></li>
+            </ul>
+        </li>
+        <li><a href="http://www.homecinema-fr.com/forum/viewforum.php?f=84" target="_blank" title="Lampe VideoProjecteur Homecinema-fr">&nbsp;Homecinema-fr.com&nbsp;</a></li>
+        <li><a href="annuaire-audiovisuel" title="Lampes de vid&eacute;oprojecteurs Inscription Annuaire">&nbsp;&nbsp;Inscription Annuaire&nbsp;&nbsp;</a></li>
+      </ul>
+      <div class="contact" ><a href="contact.php" title="lampes de vid&eacute;oprojecteurs Nous contacter">Nous contacter</a></div>
+    </div>
+  <!-- End Menu -->
+  </div>
+<!-- End Header -->
+            <?php echo $this->content; ?>
+<!-- Marque -->
+<div class="box-line marque">
+  <div class="slider_marque">
+      <h3>Marques de lampes et de vid&eacute;oprojecteurs</h3>
+        <div class="list_carousel">
+        <ul id="foo2">
+          <li><a href="reference-lampe-videoprojecteur-EPSON.html" title="Lampe VideoProjecteur EPSON"><img src="images/marque/1.gif" width="100" height="100" alt="Lampe VideoProjecteur EPSON" /></a></li>
+          <li><a href="reference-lampe-videoprojecteur-HITACHI.html" title="Lampe VideoProjecteur HITACHI"><img src="images/marque/2.gif" width="100" height="100" alt="Lampe VideoProjecteur HITACHI" /></a></li>
+          <li><a href="reference-lampe-videoprojecteur-MITSUBISHI.html" title="Lampe VideoProjecteur MITSUBISHI"><img src="images/marque/3.gif" width="100" height="100" alt="Lampe VideoProjecteur MITSUBISHI" /></a></li>
+          <li><a href="reference-lampe-videoprojecteur-NEC.html" title="Lampe VideoProjecteur NEC"><img src="images/marque/4.gif" width="100" height="100" alt="Lampe VideoProjecteur NEC" /></a></li>
+          <li><a href="reference-lampe-videoprojecteur-InFOCUS.html" title="Lampe VideoProjecteur InFOCUS"><img src="images/marque/5.gif" width="100" height="100" alt="Lampe VideoProjecteur InFOCUS" /></a></li>
+          <li><a href="reference-lampe-videoprojecteur-Optoma.html" title="Lampe VideoProjecteur Optoma"><img src="images/marque/6.gif" width="100" height="100" alt="Lampe VideoProjecteur Optoma" /></a></li>
+          <li><a href="reference-lampe-videoprojecteur-Panasonic.html" title="Lampe VideoProjecteur Panasonic"><img src="images/marque/7.gif" width="100" height="100" alt="Lampe VideoProjecteur Panasonic" /></a></li>
+          <li><a href="reference-lampe-videoprojecteur-SANYO.html" title="Lampe VideoProjecteur SANYO"><img src="images/marque/8.gif" width="100" height="100" alt="Lampe VideoProjecteur SANYO" /></a></li>
+          <li><a href="reference-lampe-videoprojecteur-TOSHIBA.html" title="Lampe VideoProjecteur TOSHIBA"><img src="images/marque/9.gif" width="100" height="100" alt="Lampe VideoProjecteur TOSHIBA" /></a></li>
+          <li><a href="reference-lampe-videoprojecteur-3M.html" title="Lampe VideoProjecteur 3M"><img src="images/marque/10.gif" width="100" height="100" alt="Lampe VideoProjecteur 3M" /></a></li>
+          <li><a href="reference-lampe-videoprojecteur-Acer.html" title="Lampe VideoProjecteur Acer"><img src="images/marque/11.gif" width="100" height="100" alt="Acer" /></a></li>
+          <li><a href="reference-lampe-videoprojecteur-AK.html" title="Lampe VideoProjecteur AK"><img src="images/marque/12.gif" width="100" height="100" alt="AK" /></a></li>
+                    <li><a href="reference-lampe-videoprojecteur-ASK Proxima.html" title=Lampe VideoProjecteur "ASK Proxima"><img src="images/marque/13.gif" width="100" height="100" alt="Lampe VideoProjecteur ASK Proxima" /></a></li>
+          <li><a href="reference-lampe-videoprojecteur-BENQ.html" title="Lampe VideoProjecteur BARCO"><img src="images/marque/14.gif" width="100" height="100" alt="Lampe VideoProjecteur BARCO" /></a></li>
+                    <li><a href="reference-lampe-videoprojecteur-BENQ.html" title="Lampe VideoProjecteur BENQ"><img src="images/marque/15.gif" width="100" height="100" alt="Lampe VideoProjecteur BENQ" /></a></li>
+                    <li><a href="reference-lampe-videoprojecteur-Canon.html" title="Lampe VideoProjecteur Canon"><img src="images/marque/16.gif" width="100" height="100" alt="Lampe VideoProjecteur Canon" /></a></li>
+                    <li><a href="reference-lampe-videoprojecteur-CASIO.html" title="Lampe VideoProjecteur CASIO"><img src="images/marque/17.gif" width="100" height="100" alt="Lampe VideoProjecteur CASIO" /></a></li>
+                    <li><a href="reference-lampe-videoprojecteur-COMPAQ.html" title="Lampe VideoProjecteur CHRISTIE"><img src="images/marque/18.gif" width="100" height="100" alt="Lampe VideoProjecteur CHRISTIE" /></a></li>
+                    <li><a href="reference-lampe-videoprojecteur-COMPAQ.html" title="Lampe VideoProjecteur COMPAQ"><img src="images/marque/19.gif" width="100" height="100" alt="Lampe VideoProjecteur COMPAQ" /></a></li>
+                    <li><a href="#" title="DELL"><img src="images/marque/20.gif" width="100" height="100" alt="Lampe VideoProjecteur DELL" /></a></li>
+                    <li><a href="reference-lampe-videoprojecteur-Dream Vision.html" title="Lampe VideoProjecteur Dream Vision"><img src="images/marque/21.gif" width="100" height="100" alt="Lampe VideoProjecteur Dream Vision" /></a></li>
+                    <li><a href="reference-lampe-videoprojecteur-EIKI.html" title="Lampe VideoProjecteur EIKI"><img src="images/marque/22.gif" width="100" height="100" alt="Lampe VideoProjecteur EIKI" /></a></li>
+                    <li><a href="reference-lampe-videoprojecteur-ELECTROHOME.html" title="Lampe VideoProjecteur ELECTROHOME"><img src="images/marque/23.gif" width="100" height="100" alt="Lampe VideoProjecteur ELECTROHOME" /></a></li>
+                    <li><a href="reference-lampe-videoprojecteur-FUJITSU.html" title="Lampe VideoProjecteur FUJITSU"><img src="images/marque/24.gif" width="100" height="100" alt="Lampe VideoProjecteur FUJITSU" /></a></li>
+                    <li><a href="reference-lampe-videoprojecteur-FUJITSU SIEMENS.html" title="FUJITSU SIEMENS"><img src="images/marque/25.gif" width="100" height="100" alt="Lampe VideoProjecteur FUJITSU SIEMENS" /></a></li>
+                    <li><a href="reference-lampe-videoprojecteur-HP.html" title="Lampe VideoProjecteur Geha"><img src="images/marque/26.gif" width="100" height="100" alt="Geha" /></a></li>
+                    <li><a href="reference-lampe-videoprojecteur-HP.html" title="Lampe VideoProjecteur HP"><img src="images/marque/27.gif" width="100" height="100" alt="Lampe VideoProjecteur HP" /></a></li>
+                    <li><a href="reference-lampe-videoprojecteur-IBM.html" title="Lampe VideoProjecteur IBM"><img src="images/marque/28.gif" width="100" height="100" alt="Lampe VideoProjecteur IBM" /></a></li>
+                    <li><a href="reference-lampe-videoprojecteur-LG.html" title="Lampe VideoProjecteur LG"><img src="images/marque/29.gif" width="100" height="100" alt="Lampe VideoProjecteur LG" /></a></li>
+                    <li><a href="reference-lampe-videoprojecteur-Marantz.html" title="Lampe VideoProjecteur Marantz"><img src="images/marque/30.gif" width="100" height="100" alt="Lampe VideoProjecteur Marantz" /></a></li>
+                    <li><a href="reference-lampe-videoprojecteur-PHILIPS.html" title="Lampe VideoProjecteur PHILIPS"><img src="images/marque/31.gif" width="100" height="100" alt="Lampe VideoProjecteur PHILIPS" /></a></li>
+                    <li><a href="reference-lampe-videoprojecteur-PLUS.html" title="Lampe VideoProjecteur PLUS"><img src="images/marque/32.gif" width="100" height="100" alt="Lampe VideoProjecteur PLUS" /></a></li>
+                    <li><a href="reference-lampe-videoprojecteur-Projection Design.html" title="Lampe VideoProjecteur Projection Design"><img src="images/marque/33.gif" width="100" height="100" alt="Lampe VideoProjecteur Projection Design" /></a></li>
+                    <li><a href="reference-lampe-videoprojecteur-ASK Proxima.html" title="Lampe VideoProjecteur ASK Proxima"><img src="images/marque/34.gif" width="100" height="100" alt="Lampe VideoProjecteur ASK Proxima" /></a></li>
+                    <li><a href="reference-lampe-videoprojecteur-SAGEM.html" title="Lampe VideoProjecteur Lampe VideoProjecteur SAGEM"><img src="images/marque/35.gif" width="100" height="100" alt="SAGEM" /></a></li>
+                    <li><a href="reference-lampe-videoprojecteur-SAMSUNG.html" title="Lampe VideoProjecteur Lampe VideoProjecteur SAMSUNG"><img src="images/marque/36.gif" width="100" height="100" alt="Lampe VideoProjecteur SAMSUNG" /></a></li>
+                    <li><a href="reference-lampe-videoprojecteur-SHARP.html" title="Lampe VideoProjecteur Lampe VideoProjecteur SHARP"><img src="images/marque/37.gif" width="100" height="100" alt="Lampe VideoProjecteur SHARP" /></a></li>
+                    <li><a href="reference-lampe-videoprojecteur-SIM2.html" title="Lampe VideoProjecteur SIM2"><img src="images/marque/38.gif" width="100" height="100" alt="Lampe VideoProjecteur SIM2" /></a></li>
+                    <li><a href="reference-lampe-videoprojecteur-SONY.html" title="Lampe VideoProjecteur SONY"><img src="images/marque/39.gif" width="100" height="100" alt="Lampe VideoProjecteur SONY" /></a></li>
+                    <li><a href="reference-lampe-videoprojecteur-THOMSON.html" title="Lampe VideoProjecteur THOMSON"><img src="images/marque/40.gif" width="100" height="100" alt="Lampe VideoProjecteur THOMSON" /></a></li>
+                    <li><a href="reference-lampe-videoprojecteurViewSonic-ViewSonic.html" title="Lampe VideoProjecteur ViewSonic"><img src="images/marque/41.gif" width="100" height="100" alt="Lampe VideoProjecteur ViewSonic" /></a></li>
+                    <li><a href="reference-lampe-videoprojecteur-VIVITEK.html" title="Lampe VideoProjecteur VIVITEK"><img src="images/marque/42.gif" width="100" height="100" alt="Lampe VideoProjecteur VIVITEK" /></a></li>
+                    <li><a href="reference-lampe-videoprojecteur-YAMAHA.html" title="Lampe VideoProjecteur YAMAHA"><img src="images/marque/43.gif" width="100" height="100" alt="Lampe VideoProjecteur YAMAHA" /></a></li>
+        </ul>
+        <div class="clearfix"></div>
+        <a id="prev2" class="prev" href="#">&nbsp;</a>
+        <a id="next2" class="next" href="#">&nbsp;</a>
+        <!--div id="pager2" class="pager"></div-->
+    </div>
+    </div>
+</div>
+<!-- End Marque -->
+<!-- Footer -->
+<div class="box-line footer">
+  <div class="ft-bloc">
+      <ul class="footer_nav">
+          <li><a href="home" title="Lampe VideoProjecteur info">Accueil</a></li>
+            <li><a href="partenariat.php"  title="Lampe VideoProjecteur devenir partenaire">Devenir partenaire</a></li>
+            <li><a href="annuaire-audiovisuel"  title="Lampe VideoProjecteur annuaire-audiovisuel">Inscription Annuaire</a></li>
+            <li><a href="lampe-videoprojecteur.php"  title="Lampe VideoProjecteur Comparer les prix des lampes">Comparer le prix des lampes</a></li>
+            <li><a href="#"  title="Lampe VideoProjecteur Achetez une lampe">Achetez une lampe</a></li>
+            <li><a href="mention-legale.php"  title="Lampe VideoProjecteur Mentions l&eacute;gales">Mentions l&eacute;gales</a></li>
+            <li><a href="contact.php"  title="Lampe VideoProjecteur Nous contacter">Nous contacter</a></li>
+            <li class="spacer">&nbsp;</li>
+        </ul>
+    </div>
+</div>
+<!-- End Footer -->
+<!-- copyrights -->
+<div class="box-line rights">
+  <div class="copyright">
+      <div class="all-right">
+          <span>&copy; Lampe Vid&eacute;oprojecteur.info 2008 - 2014</span>
+        </div>
+        <div class="xiti">
+          
+        </div>
+        <div class="boxart">
+        </div>
+        <div class="spacer"></div>
+    </div>
+</div>   
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-51551873-1', 'lampe-videoprojecteur.info');
+  ga('send', 'pageview');
+
+</script>		     
+</body>
+</html>

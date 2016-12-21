@@ -1,0 +1,118 @@
+body {
+    padding-top: 60px;
+    padding-bottom: 40px;
+}
+
+.zf-green {
+    color: #68b604;
+}
+
+.btn-success {
+  background-color: #57a900;
+  background-image: -moz-linear-gradient(top, #70d900, #57a900);
+  background-image: -ms-linear-gradient(top, #70d900, #57a900);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#70d900), to(#57a900));
+  background-image: -webkit-linear-gradient(top, #70d900, #57a900);
+  background-image: -o-linear-gradient(top, #70d900, #57a900);
+  background-image: linear-gradient(top, #70d900, #57a900);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#70d900', endColorstr='#57a900', GradientType=0);
+}
+
+.btn-success:hover,
+.btn-success:active,
+.btn-success.active,
+.btn-success.disabled,
+.btn-success[disabled] {
+  background-color: #57a900;
+}
+
+.btn-success:active, .btn-success.active {
+  background-color: #57a900;
+}
+
+div.container a.brand {
+    background: url("../img/zf2-logo.png") no-repeat scroll 0 10px transparent;
+    margin-left: 0;
+    padding: 8px 20px 12px 40px;
+}
+
+#comparateur_sous_bloc{
+  
+  font-family:calibri;
+  font-size:12px;
+  height:auto;
+  width:78%;
+  margin-top:30px;
+  border:  #e46c0a solid 1px ;
+
+}
+#photo_constructeur{
+  background-color: ;
+  width:200px;
+  height:300px;
+  margin-left:50px;
+  margin-top:0px;
+}
+#description{
+  background-color: ;
+  width:250px;
+  height:150px;
+  margin-left:220px;
+  margin-top:-290px;
+}
+#info_produit{
+  border-radius: 10px;
+  background-color:#dbeef4;
+  font-size:14px;
+  font-weight:bold;
+  width:620px;
+  height:85px;
+  margin-left:290px;
+  margin-top:-30px; 
+
+}
+#info_prix{
+  background-color: ;
+  width:200px;
+  height:200px;
+  margin-left:735px;
+  margin-top:-170px; 
+
+}
+
+ A:visited { color: #C0C0C0;text-decoration: none;}
+  A:link { color: #C0C0C0;text-decoration: none;}
+  A:hover { color: red;text-decoration: underline;}
+  A:active {color: #FFFFFF;text-decoration: underline;}  
+  TD { font-family: verdana,arial; color: balck; font-size: 12;}
+  H1 { color: #808080;}
+
+  #thRqdl{
+      background:#2d627f;
+      color:#fff;
+      height: 35px;
+      width:30%;
+      font-size: 0.9em;
+      border-color: #bdced8; 
+      border-right-style: inset;
+      border-right-width: thin
+  }
+
+   #TableProduit{
+       border-width:1px; 
+       border-style:solid; 
+       border-color:#bdced8;
+       background:#fff;
+       width: 100%; 
+       border-collapse:collapse;
+       
+  }
+
+  #tdRqdl {    
+     border: 1px solid #bdced8;
+   }
+
+#principal {background-color: white;
+            
+
+}

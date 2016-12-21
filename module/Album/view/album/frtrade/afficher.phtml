@@ -1,0 +1,212 @@
+<?php 
+$this->layout()->title = 'Lampe videoprojecteur -Fiche Produit '.$Video.' '.$marque; 
+$this->headMeta()
+                ->appendName('keywords', 'Lampe vidéoprojecteur - Fiche Produit '.$Video.' '.$marque)
+                ->appendName('description', 'Lampe vidéoprojecteur -Fiche Produit '.$Video.' '.$marque);
+?>
+<?php
+//echo var_dump($stock);
+$existe[0] = 'en cours d’approvisionnement';
+$margLeft = '-422px';
+$qt = 0;
+if(!empty($stock[0]['qty'])){
+    $existe = $this->HelpMe()->stock($stock[0]['qty']);
+    $margLeft = $existe[1] ;
+    $qt = $stock[0]['qty'];
+}
+?>
+<!-- Fil d'Ariane -->
+<div class="ariane">
+    <p>
+        <a href="home"><img src="images/ico-home.png" alt="Lampe VideoProjecteur" title="Lampe VideoProjecteur" width="16" height="14" /></a>&nbsp;&gt;&nbsp;
+        <a href="lampe-videoprojecteur.php" title="Lampe VideoProjecteur infos">Infos sur les lampes de vid&eacute;oprojecteurs par marques</a>&nbsp;&gt;&nbsp;<span>comparez lampes pour  <?php echo $marque;?> <?php echo $Video;?></span>
+    </p>
+</div>
+<!-- End Fil d'Ariane -->
+
+<!-- Conteneur -->
+<div class="containeur">
+    <!-- Contenu -->
+    <div class="contenu">
+        <p class="intro"><strong><?php echo $nbrRqdl; ?> annonces</strong> provenant de marchands partenaires avec lampe-vid&eacute;oprojecteur.info pour <strong>la lampe <?php echo $marque." ".$Video; ?></strong> </p>
+        <p class="notif"><strong>*</strong> Les articles sont tri&eacute;s par ordre de popularit&eacute; et les prix sont affich&eacute;s en TTC</p>
+        <!-- Produit 1-->
+
+<?php foreach($rqdls as $rqdl): 
+    $ttc = $this->HelpMe()->muliplication($rqdl['le_prix'],1.2,0);
+    $file = $this->Helpme()->img_exist($rqdl['libelle_constructeur'], $rqdl['ref_constructeur_composant']);
+    $type = $this->Helpme()->typeProduit($rqdl['code_type_produit']);
+    $type2 = $this->Helpme()->typeProduit2($rqdl['code_type_produit']);
+?>    
+        <div class="bloc_produit">
+            <div class="left-bloc">
+                <a href=<?php echo "sortie3shop-rqdl-".$rqdl['libelle_constructeur']."-".$rqdl['libelle_produit'].".php"; ?> target="_blank" title="" title="Lampe VideoProjecteur infos" class="photo-produit fancybox" rel="group"><img src="<?php echo $file; ?>" width="160px" height="160px"/> </a>
+                
+            </div>
+            <div class="right-bloc">
+
+                <h2><?php echo $type; ?> de rechange  <?php echo $rqdl['libelle_constructeur']." ".$rqdl['libelle_produit'];?> </h2>
+                <p class="bouton-produit">
+                    <a href=<?php echo "sortie3shop-rqdl-".$rqdl['libelle_constructeur']."-".$rqdl['libelle_produit'].".php"; ?> target="_blank" class="view-product"><span>VOIR</span></a>
+                    <a href=<?php echo "sortie3shop-rqdl-".$rqdl['libelle_constructeur']."-".$rqdl['libelle_produit'].".php"; ?> target="_blank" class="prix-produit" style="position:absolute;margin-left:360px;color:#FD871A"><span><?php echo round($ttc); ?> &euro;</span></a>
+                </p>
+                <p>Remplacer <?php echo $type2; ?> des vidéoprojecteurs <?php echo $rqdl['libelle_constructeur'];?> <?php echo $rqdl['libelle_produit'];?>, <?php echo $rqdl['libelle_produit'];?>. Livraison gratuite. 
+                </p>
+                <div class="etat">
+                    <span class="etat-dispo">Disponibilit&eacute; : <?php echo $existe[0]; ?></span>
+                    <span class="etat-stock">Pièce en stock : <?php echo $qt;
+                    ?> </span>
+                    <span class="etat-livraison">Livraison : 2 jours</span>
+                    <span class="etat-retrait hidden">Retrait sur place : Oui</span>
+                    <span class="etat-tva">T.V.A: 20% incluse</span>
+                    <span class="etat-port">Frais de port: 0,00€</span>
+                    <span class="spacer">&nbsp;</span>
+                </div>
+                <div class="owner-product">
+                    <a href=<?php echo "sortie3shop-rqdl-".$rqdl['libelle_constructeur']."-".$rqdl['libelle_produit'].".php"; ?> target="_blank" title=<?php 
+                    echo "Lampe pour vid&eacute;o proj&eacute;cteur ".$rqdl['libelle_constructeur']."-".$rqdl['libelle_produit']; 
+                    ?> class="lien-partenaire">Rienquedeslampes.fr</a>
+                     <a href=<?php echo "sortie3shop-rqdl-".$rqdl['libelle_constructeur']."-".$rqdl['libelle_produit'].".php"; ?> target="_blank" title=<?php 
+                    echo "Lampe pour vid&eacute;o proj&eacute;cteur ".$rqdl['libelle_constructeur']."-".$rqdl['libelle_produit']; 
+                    ?> ><img src="img/site/rqdl.png" alt="" /></a>
+                </div>
+            </div>
+            <div class="spacer"></div>
+        </div>
+<?php endforeach; ?>
+
+
+<?php foreach($lvps as $rqdl): 
+    $ttc = $this->HelpMe()->muliplication($rqdl['le_prix'],1.2,0);
+    $file = $this->Helpme()->img_exist($rqdl['libelle_constructeur'], $rqdl['ref_constructeur_composant']);
+    $type = $this->Helpme()->typeProduit($rqdl['code_type_produit']);
+    $type2 = $this->Helpme()->typeProduit2($rqdl['code_type_produit']);
+?>    
+        <div class="bloc_produit">
+            <div class="left-bloc">
+                <a href=<?php echo "sortie3shop-lvp-".$rqdl['libelle_constructeur']."-".$rqdl['libelle_produit'].".php"; ?> target="_blank" title="" class="photo-produit fancybox" rel="group"><img src="<?php echo $file; ?>" width="160px" height="160px"/></a>
+            </div>
+            <div class="right-bloc">
+                <h2><?php echo $type; ?> pour  vid&eacute;oprojecteur <?php echo $rqdl['libelle_constructeur']." ".$rqdl['libelle_produit'];?> <?php echo $existe[0]; ?></h2>
+                 <p class="bouton-produit">
+                    <a href=<?php echo "sortie3shop-lvp-".$rqdl['libelle_constructeur']."-".$rqdl['libelle_produit'].".php"; ?> target="_blank" class="view-product"><span>VOIR</span></a>
+                    <a href=<?php echo "sortie3shop-lvp-".$rqdl['libelle_constructeur']."-".$rqdl['libelle_produit'].".php"; ?> target="_blank" class="prix-produit" style="position:absolute;margin-left:360px;color:#FD871A"><span><?php echo round($ttc); ?> &euro;</span></a>
+                </p>
+                <p><?php echo $rqdl['libelle_produit'];?>, <?php echo $type2;?> de remplacement pour vidéoprojecteur <?php echo $rqdl['libelle_constructeur'];?> <?php echo $rqdl['libelle_produit'];?>, <?php echo $rqdl['libelle_produit'];?>. GARANTIE 3 MOIS 
+                </p>
+                <div class="etat">
+                    <span class="etat-dispo">Disponibilit&eacute; : <?php echo $existe[0]; ?></span>
+                    <span class="etat-stock hidden">Pièce en stock : <?php echo $qt;
+                    ?> </span>
+                    <span class="etat-livraison">Livraison : 24h</span>
+                    <span class="etat-retrait">Retrait sur place : Oui</span>
+                    <span class="etat-tva">T.V.A: 20% incluse</span>
+                    <span class="etat-port">Frais de port: 11,96€</span>
+                    <span class="spacer">&nbsp;</span>
+                </div>
+                <div class="owner-product">
+                    <a href=<?php echo "sortie3shop-lvp-".$rqdl['libelle_constructeur']."-".$rqdl['libelle_produit'].".php"; ?> target="_blank" title=<?php 
+                    echo $type2." pour vid&eacute;o proj&eacute;cteur ".$rqdl['libelle_constructeur']."-".$rqdl['libelle_produit']; 
+                    ?> class="lien-partenaire">Lampevideoprojecteur.fr</a>
+                     <a href=<?php echo "sortie3shop-lvp-".$rqdl['libelle_constructeur']."-".$rqdl['libelle_produit'].".php"; ?> target="_blank" title=<?php 
+                    echo $type2." pour vid&eacute;o proj&eacute;cteur ".$rqdl['libelle_constructeur']."-".$rqdl['libelle_produit']; 
+                    ?> ><img src="img/site/lvp.png" alt="" /></a>
+                </div>
+            </div>
+            <div class="spacer"></div>
+        </div>
+<?php endforeach; ?>
+
+<?php foreach($hpls as $rqdl): 
+    $ttc=$this->HelpMe()->muliplication($rqdl['le_prix'],1.2,0);
+    $file = $this->Helpme()->img_exist($rqdl['libelle_constructeur'], $rqdl['ref_constructeur_composant']);
+    $type=$this->Helpme()->typeProduit($rqdl['code_type_produit']);
+    $type2 = $this->Helpme()->typeProduit2($rqdl['code_type_produit']);
+?>    
+        <div class="bloc_produit">
+            <div class="left-bloc">
+                <a href=<?php echo "sortie3shop-hpl-".$rqdl['libelle_constructeur']."-".$rqdl['libelle_produit'].".php"; ?> target="_blank" title="" class="photo-produit fancybox" rel="group"><img src="<?php echo $file; ?>" width="160px" height="160px"/> </a>
+            </div>
+            <div class="right-bloc">
+                <h2><?php echo $type; ?> <?php echo $rqdl['libelle_produit'];?> 
+                pour vidéoprojecteur <?php echo $rqdl['libelle_constructeur'];?> <?php echo $rqdl['libelle_produit'];?> </h2>
+                 <p class="bouton-produit">
+                    <a href=<?php echo "sortie3shop-hpl-".$rqdl['libelle_constructeur']."-".$rqdl['libelle_produit'].".php"; ?> target="_blank" class="view-product"><span>VOIR</span></a>
+                    <a href=<?php echo "sortie3shop-hpl-".$rqdl['libelle_constructeur']."-".$rqdl['libelle_produit'].".php"; ?> target="_blank" class="prix-produit" style="position:absolute;margin-left:360px;color:#FD871A"><span><?php echo round($ttc); ?> &euro;</span></a>
+                </p>
+                <p><?php echo $type; ?> <?php echo $rqdl['libelle_constructeur'];?> <?php echo $rqdl['libelle_produit'];?>  pour vidéoprojecteurs <?php echo $rqdl['libelle_constructeur'];?> <?php echo $rqdl['libelle_produit'];?>, <?php echo $rqdl['libelle_produit'];?>. Bulbe original  garanti.
+                </p>
+                <div class="etat">
+                    <span class="etat-dispo">Disponibilit&eacute; : <?php echo $existe[0]; ?></span>
+                    <span class="etat-stock hidden">Pièce en stock : <?php echo $qt;
+                    ?> </span>
+                    <span class="etat-livraison">Livraison : 1 jours</span>
+                    <span class="etat-retrait hidden">Retrait sur place : Oui</span>
+                    <span class="etat-tva">T.V.A: 20% incluse</span>
+                    <span class="etat-port">Frais de port:  9.57€</span>
+                    <span class="spacer">&nbsp;</span>
+                </div>
+                <div class="owner-product">
+                    <a href=<?php echo "sortie3shop-hpl-".$rqdl['libelle_constructeur']."-".$rqdl['libelle_produit'].".php"; ?> target="_blank" title=<?php 
+                    echo $type2." pour vid&eacute;o proj&eacute;cteur ".$rqdl['libelle_constructeur']."-".$rqdl['libelle_produit']; 
+                    ?> class="lien-partenaire">Hotprojectorlamps.fr</a>
+                     <a href=<?php echo "sortie3shop-hpl-".$rqdl['libelle_constructeur']."-".$rqdl['libelle_produit'].".php"; ?> target="_blank" title=<?php 
+                    echo $type2." pour vid&eacute;o proj&eacute;cteur ".$rqdl['libelle_constructeur']."-".$rqdl['libelle_produit']; 
+                    ?> ><img src="img/site/hpl.png" alt="" /></a>
+                </div>
+            </div>
+            <div class="spacer"></div>
+        </div>
+<?php endforeach; ?>
+</div>
+    <!-- End Contenu -->
+    <!-- Bloc left -->
+    <div class="bloc_right">
+        <div class="selecteur">
+            <h3>RECHERCHEZ VOTRE VIDEOPROJECTEUR</h3>
+            <form>
+                <select id="marque" name="marque">
+                    <option value="">--Marque de vid&eacute;oprojecteur--</option>
+                </select>
+                <select id="model" name="model">
+                    <option value="">--Mod&egrave;le de vid&eacute;oprojecteur--</option>
+                </select>
+                <p style="margin-top:15px;">
+                <div onclick="href_info_produit();"  class="info-video" title="LampeVideoProjecteur info">Infos sur le vid&eacute;oprojecteur</div>
+
+                <div class="prix-lampe" onclick="href_fiche_produit();" class="prix-lampe" title="LampeVideoProjecteur comprarer les prix">Prix de la lampe</div>
+                </p>
+            </form>
+        </div>
+        <div class="partenaire">
+            <h3>Partenariat</h3>
+            <p>Devenez partenaire de notre site d&acute;information sur le vid&eacute;projecteur et sa lampe et affichez votre site sur toutes nos pages</p>
+            <form>
+                <a href="partenariat.php"><div  class="btn-partenaire" onclick="location.href=annuaire-audiovisuel"/>Devenir partenaire</div></a>
+            </form>
+        </div>
+        <div class="boutique">
+            <h3>Nos trois boutiques</h3>
+            <div class="list_carousel">
+                <ul id="foo0">
+                    <li>
+                        <p><img src="images/logo-partenaire/boutik1.jpg" alt=""  />
+                        Distributeur europ&eacute;en de lampes de vid&eacute;oprojecteur : originales, Original Inside et Genius. Une moyenne de 4.6/5 avec le service d'avis clients Ekomi (Calcul&eacute; &agrave; partir de 816 avis). Possibilit&eacute; de retrait sur place. </p>
+                    </li>
+                    <li>
+                        <p><img src="images/logo-partenaire/boutik2.png" alt=""  />
+                        Sp&eacute;cialiste dans la vente de lampes Originales pour vid&eacute;oprojecteur. Lampe exp&eacute;di&eacute;e le jour même si la commande se fait avant 16h.</p>
+                    </li>
+                    <li>
+                        <p><img src="images/logo-partenaire/boutik3.jpg" alt=""  />
+                        Site de vente de lampes Original Inside. Service fiable et paiement en ligne s&eacute;curis&eacute;. 176 avis clients positifs. Toutes les lampes sont garanties 5 mois. </p>
+                    </li>
+                </ul>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+    <!-- End left -->
+    <div class="spacer"></div>
+</div>
+<!-- End Conteneur -->

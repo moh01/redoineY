@@ -1,0 +1,66 @@
+                                          
+<h1>BAS prix, HAUTE luminosit&eacute;</h1>
+
+<img src="images/photos/Panasonic-PT-LX22.gif"><br><br>
+
+Id&eacute;al pour les r&eacute;unions ou les salles de cours, le vid&eacute;oprojecteur Panasonic PT-LX22 offre une bonne qualit&eacute; d'image gr&acirc;ce &agrave; sa luminosit&eacute; de 2200 Lumens et sa technologie de projection 3 LCD.
+<br><br>
+
+Superbes fonctions de base<br />
+<br />
+    Luminosit&eacute; de 2 200 lumens<br />
+    Rapport de contraste de 500:1<br />
+    Dur&eacute;e de vie de l'ampoule de 4 000 heures et cycle de remplacement du filtre de 4 000 heures<br />
+    Fonctionnement silencieux de 29 dB<br />
+    R&eacute;solution XGA (1 024 x 768)<br />
+<br />
+Configuration et fonctionnement faciles<br />
+<br />
+    Correction de la distorsion trap&eacute;zo&iuml;dale en temps r&eacute;el<br />
+    Objectif zoom 1,2x<br />
+    Recherche automatique de signal d'entr&eacute;e et guide &agrave; l'&eacute;cran<br />
+    Modes de rendu de l'image (couleur et tableau noir)<br />
+    Prises multiples<br />
+    Fonctions utiles convenant &agrave; un grand &eacute;ventail d'applications (minuterie, arr&ecirc;t sur image et zoom num&eacute;rique)<br />
+<br />
+Autres caract&eacute;ristiques<br />
+<br />
+    Mise hors tension directe<br />
+    Fonctions de s&eacute;curit&eacute; et antivols avec logo de d&eacute;marrage personnalisable<br />
+    Assignation d'identification pour pilotage &agrave; distance de plusieurs projecteurs (jusqu'&agrave; 6)<br />
+    D&eacute;codeur de sous-titres int&eacute;gr&eacute;<br />
+
+
+<br><hr></p>
+
+</td></tr>
+
+<tr><td colspan="8">
+
+<h2 style="color:#C0C0C0;">Nouveaut&eacute;s Videoprojecteurs <font color="#FF7F00"><? echo $marque ?></font> 2011</h2></td></tr>
+
+<tr><td>
+
+<h1>Le premier projecteur Full HD 3D de Panasonic</h1>
+
+<img src="images/photos/Panasonic-PT-AT5000E.gif"><br><br>
+
+Panasonic d&eacute;voile en juillet 2011 son tout premier vid&eacute;oprojecteur Home Cin&eacute;ma Full HD 3D : le PT-AT5000E. Equip&eacute; de la technologie 3LCD, offrant un excellent ratio de contraste de 300 000:1 et une luminosit&eacute; de 2 000 lumens, le nouveau vid&eacute;oprojecteur de Panasonic r&eacute;pond aux exigences techniques des professionnels d'Hollywood pour le plus grand plaisir de tous les amateurs de cin&eacute;ma &agrave; la maison
+
+<br><br>
+
+Ce nouveau vid&eacute;oprojecteur est &eacute;quip&eacute; du meilleur de la technologie Panasonic et permet une multitude de r&eacute;glages, notamment:<br>
+- 9 de formats d'image possibles, pour s'adapter &agrave; tous vos besoins. Le zoom 2x est capable d'afficher une image de 304,8 cm de diagonale de 3,6 m et jusqu'&agrave; une distance 7 m de l'&eacute;cran.<br>
+- un moniteur de visualisation 3D pour effectuer les r&eacute;glages de la profondeur de champ.<br>
+- 5 effets 3D diff&eacute;rents pour une visualisation personnalis&eacute;e<br>
+- le d&eacute;placement de la lentille de 100% &agrave; la verticale et de 26% &agrave; l'horizontale permet de s'adapter dans tous les cas &agrave; votre installation.<br>
+
+<br><br>
+
+L'utilisation au quotidien du PT-AT5000E est aussi simple qu'&eacute;conomique. Avec son syst&egrave;me intelligent de gestion d'&eacute;nergie qui r&eacute;duit la puissance de la lampe au niveau n&eacute;cessaire de luminosit&eacute;, Panasonic met la technologie au service de l'&eacute;cologie.
+
+Gr&acirc;ce au VIERA Link&reg;, la connexion du PT-AT5000E &agrave; un syst&egrave;me Viera ou tout autre syst&egrave;me compatible est tr&egrave;s &eacute;. Depuis la t&eacute;l&eacute;commande &agrave; touches r&eacute;tro-&eacute;clair&eacute;es du vid&eacute;oprojecteur, la connexion &agrave; un syst&egrave;me audio Panasonic est un jeu d'enfant pour profiter d'une immersion visuelle et sonore incomparable.
+
+Le projecteur PT-AE5000E est &eacute;quip&eacute; d'un transmetteur IR 3D permettant d'utiliser les m&ecirc;mes lunettes 3D que celles utilis&eacute;es sur les t&eacute;l&eacute;viseurs VIERA 3D. Un transmetteur optionnel (ET-TRM110) est aussi disponible permettant un p&eacute;rim&egrave;tre de transmission &eacute;tendu.
+
+<br><hr></p>

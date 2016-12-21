@@ -1,0 +1,5 @@
+Options -Indexes
+Options +FollowSymlinks
+RewriteEngine On
+
+RewriteRule dataliens* / [QSA,L]

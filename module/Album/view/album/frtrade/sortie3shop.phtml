@@ -1,0 +1,72 @@
+<SCRIPT type="text/javascript">
+$(document).ready(function() {
+  $(function() {
+    var redirTime = 5;
+    setInterval(function() {
+      if(redirTime>=0){
+        $("#redir").text("Redirection dans " + redirTime + " secondes. A bientôt   !");
+        redirTime--;
+      }
+    }, 1000);
+  });
+});
+</SCRIPT>
+
+
+<div class="contenuRedirection">
+  <!-- Contenu -->
+  <div class="contenu" style="width:100%;height:500px;">
+    <div  class="contenu" style="background:#dbeef4;width:100%;text-align:center;height:50%" >
+
+    <div style="position:absolute;color:#f79646;margin-top:8%;font-weight:bold;font-size:28px;margin-left:32%;width:520px">lampe-vid&eacute;oprojecteur.info vous remercie de votre visite 
+    A bient&ocirc;t !
+    </div>
+  </div>
+
+  <div  class="contenu" style="background:white;width:100%;text-align:center;height:50%;font-size:28px;font-weight:bold;color:#a6a6a6;" >
+    <div id="redir" style="position:absolute;color:#a6a6a6;margin-top:1%;font-weight:bold;font-size:28px;margin-left:32%;width:520px">Redirection dans  5 secondes. A bient&ocirc;t !
+    </div>
+    <div  style="text-align:center;margin-top:7%;margin-left:-2%" >
+    <img src="images/lampe-video.jpg"/>
+  </div>
+  </div>
+
+
+ <?php
+ if($site == "rqdl"){
+  ?>
+  <SCRIPT type="text/javascript">
+window.setTimeout("location=('http://www.rqdl.fr/commande.php?libelle_constructeur=<?php echo $marque;?> &libelle_produit=<?php echo $produit;?>&utm_source=lvpinfo&utm_medium=lvpinfo');",5000);
+</SCRIPT>
+<?php
+ }
+ ?>
+
+ <?php
+ if($site == "hpl"){
+  ?>
+  <SCRIPT type="text/javascript">
+window.setTimeout("location=('http://www.hotprojectorlamps.fr/remplacement-lampes-videoprojecteurs-<?php echo $marque;?>-<?php echo $produit;?>.php?utm_source=lvpinfo&utm_medium=lvpinfo');",5000);
+</SCRIPT>
+<?php
+
+ }
+ ?>
+
+<?php
+ if($site == "lvp"){
+  ?>
+  <SCRIPT type="text/javascript">
+window.setTimeout("location=('http://www.lampevideoprojecteur.fr/lampe-<?php echo $marque;?>/<?php echo $produit;?>-vprf.html?utm_source=lvpinfo&utm_medium=lvpinfo');",5000);
+</SCRIPT>
+<?php
+
+ }
+
+ ?>
+ </div>
+</div>
+
+
+
+

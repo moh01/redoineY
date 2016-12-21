@@ -1,0 +1,29 @@
+Options -Indexes 
+
+#--------------------------------------------------
+# Rewriting
+#--------------------------------------------------
+
+# Le serveur doit suivre les liens symboliques :
+Options +FollowSymlinks
+
+# Activation du module de réécriture d'URL :
+RewriteEngine on
+
+#--------------------------------------------------
+# Règles de réécriture d'URL :
+#--------------------------------------------------
+
+RewriteRule ^video-projecteur-([0-9A-z]+)-([0-9A-z\ \-\_]+)\.html$ /video-projecteur.php?videoprojecteur=$1&modele=$2
+RewriteRule ^reference-lampe-videoprojecteur-([0-9A-z\ \-\_]+)\.html$ /reference-lampe-videoprojecteur.php?videoprojecteur=$1 
+RewriteRule ^infos-lampe-videoprojecteur-([0-9A-z\ \-\_]+)\.html$ /infos-lampe-videoprojecteur.php?videoprojecteur=$1 
+RewriteRule ^duree-lampe-videoprojecteur-([0-9A-z\ \-\_]+)\.html$ /duree-lampe-videoprojecteur.php?videoprojecteur=$1 
+RewriteRule ^prix-lampe-videoprojecteur-([0-9A-z\ \-\_]+)\.html$ /prix-lampe-videoprojecteur.php?videoprojecteur=$1 
+RewriteRule ^lampes-videoprojecteur-([0-9A-z\ \-\_]+)\.html$ /lampes-videoprojecteur.php?videoprojecteur=$1 
+RewriteRule ^vente-lampe-videoprojecteur-([0-9A-z\ \-\_]+)\.html$ /vente-lampe-videoprojecteur.php?videoprojecteur=$1 
+RewriteRule ^acheter-lampe-videoprojecteur-([0-9A-z\ \-\_]+)\.html$ /acheter-lampe-videoprojecteur.php?videoprojecteur=$1 [L]
+
+RewriteCond %{REQUEST_FILENAME} ((png)|(jpe?g)|(gif))$
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /erreur.gif [R]

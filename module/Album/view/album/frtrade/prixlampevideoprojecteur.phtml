@@ -1,0 +1,257 @@
+<?php  
+$this->layout()->title = 'Prix lampe vidéoprojecteur '.$marque;
+$this->headMeta()
+                ->appendName('keywords', "lampe vidéoprojecteur ".$marque)
+                ->appendName('description', "Prix des lampes vidéoprojecteur ".$marque);
+?>
+<!-- Slider -->
+<div class="box-line bg_slider">
+    <div class="banniere_slide">
+        <div id="carousel-example-generic" class="carousel slide">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+              <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+              <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+              <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+              <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+              <li data-target="#carousel-example-generic" data-slide-to="4"></li>
+            </ol>
+              <div class="carousel-inner">
+                <!--Slide 1 -->
+                
+                <div class="item active">
+                    <a href="annuaire-audiovisuel" >
+                        <img src="images/slider/slide1.jpg" alt="Annuaire Audiovisuel" title="Annuaire Audiovisuel" />
+                    </a>
+                </div>
+                
+                <!--Slide 2 -->
+                <div class="item">
+                    <a href="http://www.projopourtous.com" target="_blank">
+                        <img src="images/slider/slide2.jpg" alt="projopourtous" title="projopourtous" />
+                    </a>
+                </div>
+                <!--Slide 3 -->
+                <div class="item">
+                    <a href="http://originalinsidelamps.com" target="_blank">
+                        <img src="images/slider/slide3.jpg" alt="Originalinsidelamps" title="Originalinsidelamps" />
+                    </a>
+                </div>
+                <!--Slide 4 -->
+                <div class="item">
+                      <a href="http://www.rienquedeslampes.fr" target="_blank">
+                        <img src="images/slider/slide4.jpg" alt="rienquedeslampes" title="rienquedeslampes" />
+                      </a>
+                </div>
+                <!--Slide 5 -->
+                <div class="item">
+                      <a href="http://www.affiche-cine.com" target="_blank">
+                        <img src="images/slider/slide5.jpg" alt="affiche-cine" title="affiche-cinel" />
+                      </a>
+                </div>
+              </div>
+            <!-- Controls -->
+              <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev"><span class="icon-prev"></span></a>
+              <a class="right carousel-control" href="#carousel-example-generic" data-slide="next"><span class="icon-next"></span></a>                  
+        </div>
+     </div>
+</div>
+<!-- End Slider -->
+<!-- Fil d'Ariane -->
+<div class="ariane">
+  <p>
+      <a href="home" title="Lampe vidéo projecteur"><img src="images/ico-home.png" alt="" width="16" height="14" /></a> 
+      &nbsp;&gt;&nbsp;<a href="lampe-videoprojecteur.php" title="Marques de lampes et de vidéoprojecteurs">Marques de lampes et de vidéoprojecteurs</a>&nbsp;&gt;&nbsp;<span>Prix indicatifs des lampes de videoprojecteurs <?php echo $marque; ?></span>
+    </p>
+</div>
+<!-- End Fil d'Ariane -->
+<!-- Conteneur -->
+<div class="containeur">
+  <!-- Contenu -->
+  <div class="contenu">
+       <ul class="menu-video">
+            <li><a class="men1" href="reference-lampe-videoprojecteur-<?php echo $marque; ?>.html" title="R&eacute;f&eacute;rences des lampes <?php echo strtoupper($marque); ?>">R&eacute;f&eacute;rences des lampes <?php echo strtoupper($marque); ?></a></li>
+            <li><a class="men2" href="infos-lampe-videoprojecteur-<?php echo $marque; ?>.html" title="Sp&eacute;cifications des lampes <?php echo strtoupper($marque); ?>">Sp&eacute;cifications des lampes <?php echo strtoupper($marque); ?></a></li>
+            <li><a class="men3" href="duree-lampe-videoprojecteur-<?php echo strtoupper($marque); ?>.html" title="Dur&eacute;e des lampes des videoprojecteurs <?php echo strtoupper($marque); ?>">Dur&eacute;e des lampes des videoprojecteurs <?php echo strtoupper($marque); ?></a></li>
+            <li><a class="men4" href="prix-lampe-videoprojecteur-<?php echo strtoupper($marque); ?>.html" title="Prix des lampes videoprojecteur <?php echo strtoupper($marque); ?>">Prix des lampes videoprojecteur <?php echo strtoupper($marque); ?></a></li>
+            <li><a class="men5" href="lampes-videoprojecteur-<?php echo strtoupper($marque); ?>.html" title="Manuels d'utilisation et la marque sur internet <?php echo strtoupper($marque); ?>">Manuels d'utilisation et la marque sur internet <?php echo strtoupper($marque); ?></a></li>
+            <li><a class="men6" href="acheter-lampe-videoprojecteur-<?php echo strtoupper($marque); ?>.html" title="Acheter une lampe de videoprojecteur <?php echo strtoupper($marque); ?>">Acheter une lampe de videoprojecteur <?php echo strtoupper($marque); ?></a></li>
+        </ul>
+        <div class="spacer"></div>
+      <h1 class="titre_page">Prix indicatifs des lampes de videoprojecteurs <?php echo $marque; ?></h1>
+      <?php
+      if(file_exists("public/img/hote_images/hotes_".$marque.".jpg")){
+        $hote = "img/hote_images/hotes_".$marque.".jpg";
+        $width = "90px";
+        $height = "40px";
+      }else{
+        $hote = "images/logo.png";
+        $width = "35px";
+        $height = "35px";
+      }
+      ?>
+      <div class="intro2" ><img src="<?php echo $hote; ?>" width="<?php echo $width; ?>" height="<?php echo $height; ?>" alt="Lampes <?php echo $marque ?>"><br>
+    <img src="img/img-lampe/puce-fleche.gif">&nbsp;<a href="lampe-videoprojecteur.php">Une autre marque de projecteur ?</a></div>
+        <p class="intro3">N'h&eacute;sitez pas &agrave; visitez le <a href="http://www.homecinema-fr.com/forum/viewforum.php?f=84" target="_blank" title="Forum homecinema-fr.com">Forum homecinema-fr.com</a></p>
+        <p class="spacer"></p>
+        <div class="search_in_page">
+          <input type="text" value="" class="keywrd" id="texte_recherche">
+          <input value="" name="Submit" class="keygo">
+        </div>
+        <div class="spacer"></div>
+        <div class="sommaire">
+          <div><img src="images/presentation-ico.png" width="22" height="22" alt="" /><span> Pr&eacute;sentation</span></div>
+            <div><img src="images/brochure-ico.png" width="22" height="22" alt="" /><span> Brochure commerciale</span></div>
+            <div><img src="images/manuel-ico.png" width="22" height="22" alt="" /><span> Manuel d'utilisation</span></div>
+            <div><img src="images/fiche-ico.png" width="22" height="22" alt="" /><span> Fiche technique</span></div>
+            <div><img src="images/photo-ico.png" width="25" height="22" alt="" /><span> Photo</span></div>
+            <div class="spacer"></div>
+        </div>
+         <div class="ref-box">
+          <ul id="foo3">
+                <li class="page-table">
+                  <table cellpadding="0" cellspacing="0">
+                    <tr>
+                          <th class="price-name">Lampe (pour vid&eacute;oprojecteur / retroprojecteur)</th>
+                          <th class="spec-for">Sp&eacute;cification de la lampe (pour projecteur)</th>
+                          <th class="price-lenght">Prix minimum de la lampe</th>
+                          <th class="compare-prix">Comparer les prix</th>
+                    </tr>
+                    <?php
+                    $constructeur = $marque;
+                          foreach($marques as $marque) : 
+                            $link = 'ficheProduit_'.$constructeur.'_'.$marque['ModelNo'].'.php';
+                                  if($marque['Manufacturer']!="3M"){
+                                  $marque_upper = ucfirst(strtolower($marque['Manufacturer']));
+                                  $model_upper = strtoupper($marque['ModelNo']);
+                                  }else{
+                                    $marque_upper = $marque['Manufacturer'];
+                                    $model_upper = $marque['ModelNo'];
+                                  }
+                                   if ($_SERVER['SERVER_NAME']=="127.0.0.1")
+                                   {
+                                      $path_3shop = 'public/manuels/';
+                                   }else
+                                  {
+                                      $path_3shop = 'public/manuels/';
+                                     // $path_3shop = '/home/yeaslmps/www/lampe-videoprojecteur.info/';   
+                                  }
+                                  if($marque['minrqdl']>$marque['minlvp']){
+                                  $min = $marque['minlvp'];
+                              }else{
+                                $min = $marque['minrqdl'];
+                              }
+                              if($min < $marque['minhpl']){
+                                  $min = $min;
+                                }else{
+                                    $min = $marque['minhpl'];
+                                  }
+                              if($marque['maxrqdl']>$marque['maxlvp']){
+                                  $max = $marque['maxlvp'];
+                              }else{
+                                $max = $marque['maxrqdl'];
+                              }
+                              if($max > $marque['maxhpl']){
+                                  $max = $max;
+                                }else{
+                                    $max = $marque['maxhpl'];
+                                  }
+                        ?>
+                      <tr class="lineOne" onclick="document.location='<?php echo $link;?>'" title="<?php echo "Prix indicatif de la lampe de videoprojecteur ".$marque['Manufacturer']." ".$marque['ModelNo']; ?>">
+                          <td class="price-name"><a href="#"><?php echo $marque['Manupartcode']." pour (".$marque['Manufacturer']." ".$marque['ModelNo'].")"; ?></a>
+                            <p class="link-icon">
+                            <?php
+                              if (file_exists($path_3shop.'presentation/'.$marque_upper.'-'.$model_upper.'.txt')) { ?>
+                              <a href="video-projecteur-<?php echo $marque_upper.'-'.$model_upper; ?>.html" title="Presentation <?php echo $marque_upper.'-'.$model_upper; ?>"><img src="images/presentation-ico.png"  width="16" height="16"></a>
+                                  <?php } ?>
+                              <?php
+                              if (file_exists($path_3shop.'brochures/'.$marque_upper.'-'.$model_upper.'.pdf')) { ?>
+                              <a href="video-projecteur-<?php echo $marque_upper.'-'.$model_upper; ?>.html" title="Brochure commerciale <?php echo $marque_upper.'-'.$model_upper; ?>"><img src="images/brochure-ico.png"  width="16" height="16"></a>
+                                  <?php } ?>
+                              <?php
+                              if (file_exists($path_3shop.'technique/'.$marque_upper.'-'.$model_upper.'.pdf')) { ?>
+                              <a href="video-projecteur-<?php echo $marque_upper.'-'.$model_upper; ?>.html"  title="Fiche technique <?php echo $marque_upper.'-'.$model_upper; ?>"><img src="images/fiche-ico.png" width="16" height="16"></a>
+                                  <?php } ?>
+                              <?php
+                              if (file_exists($path_3shop.'manuels/'.$marque_upper.'-'.$model_upper.'.pdf')) { 
+                                ?>
+                              <a href="video-projecteur-<?php echo $marque_upper.'-'.$model_upper; ?>.html" title="Manuel d'utilisation <?php echo $marque_upper.'-'.$model_upper; ?>"><img src="images/manuel-ico.png"  width="18" height="16"></a>
+                                  <?php 
+                                }
+                                 ?>
+                                 <?php
+                              if (file_exists($path_3shop.'photos/'.$marque_upper.'-'.$model_upper.'.gif')) { 
+                                ?>
+                              <a href="video-projecteur-<?php echo $marque_upper.'-'.$model_upper; ?>.html" title="Photo <?php echo $marque_upper.'-'.$model_upper; ?>"><img src="images/photo-ico.png"  width="18" height="16"></a>
+                                  <?php 
+                                }
+                              ?>
+                               </p>
+                            </td>
+                            <td class="spec-for">
+                              <p><strong>Pour:</strong> <?php echo $marque['Display'];?></p>
+                                <p><strong>Type de lampe:</strong> <?php echo $marque['LampType'];?></p>
+                                <p><strong>Puissance:</strong> <?php echo $marque['Wattage']."watts";?></p>
+                            </td>
+                            <td class="price-lenght"><?php echo number_format($min,2);?> &euro;</td>
+                            <td class="compare-prix"><a href="<?php echo $link;?>" title="Comparer les prix"><img src="images/compare.png" width="20" height="20" /></a></td>
+                        </tr>
+                        <?php endforeach; ?>
+                    </table>
+                </li>
+            </ul>
+            <div class="clearfix"></div>
+            <div id="pager3" class="pager3"></div>
+        </div>
+    </div>
+    <!-- End Contenu -->
+     <!-- Bloc left -->
+    <div class="bloc_right">
+      <div class="selecteur">
+            <h3>RECHERCHEZ VOTRE VIDEOPROJECTEUR</h3>
+            <form>
+                <select id="marque" name="marque">
+                    <option value="">--Marque de vid&eacute;oprojecteur--</option>
+                </select>
+                <select id="model" name="model">
+                    <option value="">--Mod&egrave;le de vid&eacute;oprojecteur--</option>
+                </select>
+                <p style="margin-top:15px;">
+                <div onclick="href_info_produit();"  class="info-video" title="LampeVideoProjecteur info">Infos sur le vid&eacute;oprojecteur</div>
+
+                <div class="prix-lampe" onclick="href_fiche_produit();" class="prix-lampe" title="LampeVideoProjecteur comprarer les prix">Prix de la lampe</div>
+                </p>
+            </form>
+        </div>
+      <div class="partenaire">
+          <h3>Partenariat</h3>
+            <p>Devenez partenaire de notre site d&acute;information sur le vid&eacute;projecteur et sa lampe et affichez votre site sur toutes nos pages</p>
+          <form>
+              <a href="partenariat.php"><div  class="btn-partenaire" onclick="location.href=annuaire-audiovisuel"/>Devenir partenaire</div></a>
+            </form>
+        </div>
+        <div class="boutique">
+          <h3>Nos trois boutiques</h3>
+          <div class="list_carousel">
+        <ul id="foo0">
+          <li>
+                        <p><img src="images/logo-partenaire/boutik1.jpg" alt=""  />
+                        Distributeur europ&eacute;en de lampes de vid&eacute;oprojecteur : originales, Original Inside et Genius. Une moyenne de 4.6/5 avec le service d'avis clients Ekomi (Calcul&eacute; &agrave; partir de 816 avis). Possibilit&eacute; de retrait sur place. </p>
+                    </li>
+          <li>
+                        <p><img src="images/logo-partenaire/boutik2.png" alt=""  />
+                        Sp&eacute;cialiste dans la vente de lampes Originales pour vid&eacute;oprojecteur. Lampe exp&eacute;di&eacute;e le jour même si la commande se fait avant 16h.</p>
+                    </li>
+          <li>
+                        <p><img src="images/logo-partenaire/boutik3.jpg" alt=""  />
+                        Site de vente de lampes Original Inside. Service fiable et paiement en ligne s&eacute;curis&eacute;. 176 avis clients positifs. Toutes les lampes sont garanties 5 mois. </p>
+                    </li>
+        </ul>
+        <div class="clearfix"></div>
+      </div>
+        </div>
+    </div>
+    <!-- End left -->
+    <div class="spacer"></div>
+</div>
+<!-- End Conteneur -->

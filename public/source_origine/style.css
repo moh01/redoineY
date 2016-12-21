@@ -1,0 +1,7 @@
+  A:visited { color: #C0C0C0;text-decoration: none;}
+  A:link { color: #C0C0C0;text-decoration: none;}
+  A:hover { color: #FFFFFF;text-decoration: underline;}
+  A:active {color: #FFFFFF;text-decoration: underline;}  
+  TD { font-family: verdana,arial; color: #FFFFFF; font-size: 12;}
+  H1 { color: #808080;}
+

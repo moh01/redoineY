@@ -1,0 +1,150 @@
+<?php  
+$this->layout()->title = 'Lampes vidéoprojecteurs '.$videoprojecteur.' : Acheter '.$videoprojecteur;
+$this->headMeta()
+                ->appendName('keywords', "achat acheter lampe ampoule bulb videoprojecteur ".$videoprojecteur)
+                ->appendName('description', "Acheter une lampe videoprojecteur ".$videoprojecteur); 
+?>
+<!-- Slider -->
+<div class="box-line bg_slider">
+    <div class="banniere_slide">
+        <div id="carousel-example-generic" class="carousel slide">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+              <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+              <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+              <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+              <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+              <li data-target="#carousel-example-generic" data-slide-to="4"></li>
+            </ol>
+              <div class="carousel-inner">
+                <!--Slide 1 -->
+                
+                <div class="item active">
+                    <a href="annuaire-audiovisuel" >
+                        <img src="images/slider/slide1.jpg" alt="Annuaire Audiovisuel" title="Annuaire Audiovisuel" />
+                    </a>
+                </div>
+                
+                <!--Slide 2 -->
+                <div class="item">
+                    <a href="http://www.projopourtous.com" target="_blank">
+                        <img src="images/slider/slide2.jpg" alt="projopourtous" title="projopourtous" />
+                    </a>
+                </div>
+                <!--Slide 3 -->
+                <div class="item">
+                    <a href="http://originalinsidelamps.com" target="_blank">
+                        <img src="images/slider/slide3.jpg" alt="Originalinsidelamps" title="Originalinsidelamps" />
+                    </a>
+                </div>
+                <!--Slide 4 -->
+                <div class="item">
+                      <a href="http://www.rienquedeslampes.fr" target="_blank">
+                        <img src="images/slider/slide4.jpg" alt="rienquedeslampes" title="rienquedeslampes" />
+                      </a>
+                </div>
+                <!--Slide 5 -->
+                <div class="item">
+                      <a href="http://www.affiche-cine.com" target="_blank">
+                        <img src="images/slider/slide5.jpg" alt="affiche-cine" title="affiche-cinel" />
+                      </a>
+                </div>
+              </div>
+            <!-- Controls -->
+              <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev"><span class="icon-prev"></span></a>
+              <a class="right carousel-control" href="#carousel-example-generic" data-slide="next"><span class="icon-next"></span></a>                  
+        </div>
+     </div>
+</div>
+<!-- End Slider -->
+<!-- Fil d'Ariane -->
+<div class="ariane">
+  <p>
+      <a href="home" title="Lampe vidéo projecteur"><img src="images/ico-home.png" alt="" width="16" height="14" /></a> 
+      &nbsp;&gt;&nbsp;<a href="lampe-videoprojecteur.php" title="Marques de lampes et de vidéoprojecteurs">Marques de lampes et de vidéoprojecteurs</a>&nbsp;&gt;&nbsp;<span>Acheter votre lampe de videoprojecteur <?php echo $videoprojecteur; ?> sur Internet </span>
+    </p>
+</div>
+<!-- End Fil d'Ariane -->
+<!-- Conteneur -->
+<div class="containeur">
+  <!-- Contenu -->
+  <div class="contenu">
+      <ul class="menu-video">
+            <li><a class="men1" href="reference-lampe-videoprojecteur-<?php echo $videoprojecteur; ?>.html" title="R&eacute;f&eacute;rences des lampes <?php echo strtoupper($videoprojecteur); ?>">R&eacute;f&eacute;rences des lampes <?php echo strtoupper($videoprojecteur); ?></a></li>
+            <li><a class="men2" href="infos-lampe-videoprojecteur-<?php echo $videoprojecteur; ?>.html" title="Sp&eacute;cifications des lampes <?php echo strtoupper($videoprojecteur); ?>">Sp&eacute;cifications des lampes <?php echo strtoupper($videoprojecteur); ?></a></li>
+            <li><a class="men3" href="duree-lampe-videoprojecteur-<?php echo strtoupper($videoprojecteur); ?>.html" title="Dur&eacute;e des lampes des videoprojecteurs <?php echo strtoupper($videoprojecteur); ?>">Dur&eacute;e des lampes des videoprojecteurs <?php echo strtoupper($videoprojecteur); ?></a></li>
+            <li><a class="men4" href="prix-lampe-videoprojecteur-<?php echo strtoupper($videoprojecteur); ?>.html" title="Prix des lampes videoprojecteur <?php echo strtoupper($videoprojecteur); ?>">Prix des lampes videoprojecteur <?php echo strtoupper($videoprojecteur); ?></a></li>
+            <li><a class="men5" href="lampes-videoprojecteur-<?php echo strtoupper($videoprojecteur); ?>.html" title="Manuels d'utilisation et la marque sur internet <?php echo strtoupper($videoprojecteur); ?>">Manuels d'utilisation et la marque sur internet <?php echo strtoupper($videoprojecteur); ?></a></li>
+            <li><a class="men6" href="acheter-lampe-videoprojecteur-<?php echo strtoupper($videoprojecteur); ?>.html" title="Acheter une lampe de videoprojecteur <?php echo strtoupper($videoprojecteur); ?>">Acheter une lampe de videoprojecteur <?php echo strtoupper($videoprojecteur); ?></a></li>
+        </ul>
+        <div class="spacer"></div>
+      <h1 class="titre_page">Acheter votre lampe de videoprojecteur <?php echo $videoprojecteur; ?> sur Internet </h1>
+      <div class="intro2" ><img src="img/hote_images/hotes_<?php echo $videoprojecteur; ?>.jpg" width="90px"alt="Lampes <?php echo $videoprojecteur ?>"><br>
+    <img src="img/img-lampe/puce-fleche.gif">&nbsp;<a href="lampe-videoprojecteur.php">Une autre marque de projecteur ?</a></div>
+        <p class="intro3">N'h&eacute;sitez pas &agrave; visitez le <a href="http://www.homecinema-fr.com/forum/viewforum.php?f=84" target="_blank" title="Forum homecinema-fr.com">Forum homecinema-fr.com</a></p>
+        <p class="spacer"></p>
+ <div class="table-vente">
+<?php if (!$videoprojecteur) { ?>
+Choisissez une marque <a href="lampe-videoprojecteur.php" title="lampe videoprojecteur">en cliquant ici</a>
+<?php } else { ?>
+<img src="img\img-lampe\puce-fleche.gif">&nbsp;<a href="http://www.rienquedeslampes.fr" target="_blank"><span  style="color:#C0C0C0;"><b><font color="#4ABDD6">rienquedeslampes.fr</b></span></font></a> vous propose les lampes de rechange pour les projecteurs <?php echo $videoprojecteur ?> et toutes les grandes marques de vid&eacute;oprojecteurs, livr&eacute;es en 24/48 heures. A noter que, comme nous le conseillons, <a href="http://www.rienquedeslampes.fr" target="_blank"><font color="#4ABDD6"><span  style="color:#C0C0C0;"><b>RQDL.fr</b></span></font></a> NE VEND PAS de lampes g&eacute;n&eacute;riques ou compatibles, mais seulement des lampes <?php echo $videoprojecteur ?> d'origine.<br><br>
+
+<a href="http://www.rienquedeslampes.fr" target="_blank"><img src="img\img-lampe\pub_rqdl.jpg" alt="Achat avec Rienquedeslampes" border="0" width="650px"title="lampes <?php echo $videoprojecteur ?>"></a>
+<?php } ?>
+</font>
+<font color="#FF7F00">Votre publicit&eacute; ici !</font> Vous vendez des lampes ou ampoules pour video projecteurs <span  style="color:#C0C0C0;"><b><?php echo $videoprojecteur ?></b></span> ?  <a href="vente-lampe-videoprojecteur-<?php echo $videoprojecteur ?>.html">Cliquez ici</a><hr>
+Un lien ne fonctionne plus ?<br>Merci de nous le signaler <a href="mailto:contact@lampe-videoprojecteur.info?subject=Lien brisé sur la page <?php echo $videoprojecteur ?>">en cliquant ici</a> ou en utilisant le <a href="contact.php">formulaire de contact</a>
+<br><br><br>
+</div> 
+    </div>
+    <!-- End Contenu -->
+     <!-- Bloc left -->
+    <div class="bloc_right">
+      <div class="selecteur">
+            <h3>RECHERCHEZ VOTRE VIDEOPROJECTEUR</h3>
+            <form>
+                <select id="marque" name="marque">
+                    <option value="">--Marque de vid&eacute;oproj&eacute;cteur--</option>
+                </select>
+                <select id="model" name="model">
+                    <option value="">--Mod&egrave;le de vidéoproj&eacute;cteur--</option>
+                </select>
+                <p style="margin-top:15px;">
+                <div onclick="href_info_produit();"  class="info-video" title="LampeVideoProjecteur info">Infos sur le vid&eacute;oprojecteur</div>
+
+                <div class="prix-lampe" onclick="href_fiche_produit();" class="prix-lampe" title="LampeVideoProjecteur comprarer les prix">Prix de la lampe</div>
+                </p>
+            </form>
+        </div>
+      <div class="partenaire">
+          <h3>Partenariat</h3>
+            <p>Devenez partenaire de notre site d&acute;information sur le vid&eacute;projecteur et sa lampe et affichez votre site sur toutes nos pages</p>
+          <form>
+              <a href="partenariat.php" title="Lampe VideoProjecteur partenariat"><div  class="btn-partenaire" onclick="location.href=annuaire-audiovisuel"/>Devenir partenaire</div></a>
+            </form>
+        </div>
+        <div class="boutique">
+          <h3>Nos trois boutiques</h3>
+          <div class="list_carousel">
+        <ul id="foo0">
+          <li>
+                        <p><img src="images/logo-partenaire/boutik1.jpg" alt="Lampe VideoProjecteur partenariat"  title="Lampe VideoProjecteur partenariat"/>
+                        Distributeur europ&eacute;en de lampes de vid&eacute;oprojecteur : originales, Original Inside et Genius. Une moyenne de 4.6/5 avec le service d'avis clients Ekomi (Calcul&eacute; &agrave; partir de 816 avis). Possibilit&eacute; de retrait sur place. </p>
+                    </li>
+          <li>
+                        <p><img src="images/logo-partenaire/boutik2.png" alt="Lampe VideoProjecteur partenariat" title="Lampe VideoProjecteur partenariat" />
+                        Sp&eacute;cialiste dans la vente de lampes Originales pour vid&eacute;oprojecteur. Lampe exp&eacute;di&eacute;e le jour même si la commande se fait avant 16h.</p>
+                    </li>
+          <li>
+                        <p><img src="images/logo-partenaire/boutik3.jpg" alt="Lampe VideoProjecteur partenariat" title="Lampe VideoProjecteur partenariat" />
+                        Site de vente de lampes Original Inside. Service fiable et paiement en ligne s&eacute;curis&eacute;. 176 avis clients positifs. Toutes les lampes sont garanties 5 mois. </p>
+                    </li>
+        </ul>
+        <div class="clearfix"></div>
+      </div>
+        </div>
+    </div>
+    <!-- End left -->
+    <div class="spacer"></div>
+</div>
+<!-- End Conteneur -->

@@ -1,0 +1,60 @@
+#ErrorDocument 401 /page_not_found.php
+#ErrorDocument 403 /page_not_found.php
+#ErrorDocument 404 /page_not_found.php
+
+#.htaccess to prevent unauthorized directory browsing or access to .php files
+#   IndexIgnore */*
+
+######################
+# GP restauration des autorisation
+######################
+#AuthUserFile /home/easylamp/.htpasswd
+#AuthGroupFile /dev/null
+#AuthName "Accés sécurisé en administration"
+#AuthType Basic
+#Require valid-user
+
+Options +FollowSymlinks
+RewriteEngine on
+#RewriteBase /lampe-videoprojecteur/
+
+######################
+# FV mettre en cmm  pour test Local UK ES
+######################
+RewriteCond %{QUERY_STRING} ^main_page=index&cPath=(.*)
+RewriteRule ^(.*)$ /?  [R=301,L]
+
+
+
+######################
+# FV pour le robots.txt
+######################
+RewriteRule robots.txt http://%{SERVER_NAME}/bot_%{SERVER_NAME}.txt [L]
+
+
+SetEnv PHP_VER 5
+
+
+######################
+# GP: 	Tests (désactivé car op?rationnel pr?sentement) pour v?rifier que la r??criture est op?rationnelle sur le serveur
+# 		Un fichier testsGP_trouve.html est pr?sent dans la racine mais nexistepas.html est absent
+######################
+
+
+#--------------------------------------------------
+# Règles de réécriture d'URL :
+#--------------------------------------------------
+
+RewriteRule ^video-projecteur-([0-9A-z]+)-([0-9A-z\ \-\_]+)\.html$ /video-projecteur.php?videoprojecteur=$1&modele=$2
+RewriteRule ^reference-lampe-videoprojecteur-([0-9A-z\ \-\_]+)\.html$ reference-lampe-videoprojecteur.php?videoprojecteur=$1
+RewriteRule ^infos-lampe-videoprojecteur-([0-9A-z\ \-\_]+)\.html$ /infos-lampe-videoprojecteur.php?videoprojecteur=$1 
+RewriteRule ^duree-lampe-videoprojecteur-([0-9A-z\ \-\_]+)\.html$ /duree-lampe-videoprojecteur.php?videoprojecteur=$1 
+RewriteRule ^prix-lampe-videoprojecteur-([0-9A-z\ \-\_]+)\.html$ /prix-lampe-videoprojecteur.php?videoprojecteur=$1 
+RewriteRule ^lampes-videoprojecteur-([0-9A-z\ \-\_]+)\.html$ /lampes-videoprojecteur.php?videoprojecteur=$1 
+RewriteRule ^vente-lampe-videoprojecteur-([0-9A-z\ \-\_]+)\.html$ /vente-lampe-videoprojecteur.php?videoprojecteur=$1 
+RewriteRule ^acheter-lampe-videoprojecteur-([0-9A-z\ \-\_]+)\.html$ /acheter-lampe-videoprojecteur.php?videoprojecteur=$1 [L]
+
+RewriteCond %{REQUEST_FILENAME} ((png)|(jpe?g)|(gif))$
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /erreur.gif [R]

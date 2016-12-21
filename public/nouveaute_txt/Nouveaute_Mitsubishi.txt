@@ -1,0 +1,26 @@
+<span  style="color:#C0C0C0;"><b><a href="video-projecteur-Mitsubishi-XD8100U.html">XD8100U</a> - <a href="video-projecteur-Mitsubishi-WD8200U.html">WD8200U</a> - <a href="video-projecteur-Mitsubishi-UD8350U.html">UD8350U</a> - <a href="video-projecteur-Mitsubishi-UD8400U.html">UD8400U</a></b></span><br><br>
+
+Le XD8100U (XGA), le WD8200U (WXGA) et les UD8350U/UD8400U, projecteurs &agrave; double lampe, viennent compl&eacute;ter le haut de la gamme des vid&eacute;oprojecteurs professionnels de la marque "Made in Japan". <br><br>
+
+<p align="justify">
+Caract&eacute;ris&eacute;s par un design totalement repens&eacute; et des sp&eacute;cifications haute performances, ils conviennent parfaitement &agrave; l'affichage dans les endroits spacieux et lumineux, comme un auditorium, les salles de spectacle ou les amphith&eacute;&acirc;tres des universit&eacute;s. Ces projecteurs sont aussi destin&eacute;s aux prestataires de service gr&acirc;ce &agrave; leurs fonctionnalit&eacute;s haut de gamme.<br>
+
+Mitsubishi a soign&eacute; comme &agrave; son habitude le niveau de bruit de ventilation avec seulement 29dBa en mode &eacute;co ce qui fait un rapport bruit de fonctionnement/puissance exceptionnel.
+
+<center><img src="images/projecteurs-mitsubishi.gif" alt="videoprojecteurs"></center><br>
+
+D&eacute;livrant respectivement 7000 Lumens et 6500 Lumens, les projecteurs XD8100U, UD8350U,UD8400U et WD8200U sont parfaitement con&ccedil;us pour les grandes salles de r&eacute;union et autres salles de conf&eacute;rence. Ils int&egrave;grent tout deux, un algorithme de traitement d'image unique brevet&eacute; par la marque, qui analyse le signal d'entr&eacute;e et extrapole en temps r&eacute;el les donn&eacute;es haute d&eacute;finition manquantes de l'image d'origine.<br>
+
+Les images sont claires, &eacute;clatantes, et parfaitement d&eacute;taill&eacute;es. Le Natural Colour Matrix (NCM) de Mitsubishi permet aux couleurs interm&eacute;diaires, comme le jaune, le cyan et le magenta, d'&ecirc;tre contr&ocirc;l&eacute;es ind&eacute;pendamment du rouge, vert et bleu, reproduisant ainsi de fa&ccedil;on tr&egrave;s pr&eacute;cise, les couleurs vives du spectre. Les fonctions d'Edge Blending et de color matching font partie de la panoplie de fonctionnalit&eacute;s embarqu&eacute;es par ce vaisseau amiral de Mitsubishi Electric. Le constructeur mise sur la polyvalence de  ses machines en proposant une gamme d'optique compl&egrave;te, allant du rapport 0,8 : 1 au rapport 9 :1 couvrant ainsi le spectre des demandes d'installation.
+Les fonctions de correction g&eacute;om&eacute;trique de l'image permettront &agrave; l'utilisateur de projeter des images sur surfaces concaves ou convexe et ceci sur un axe vertical de 360&deg; gr&acirc;ce a un syst&egrave;me de ventilation &eacute;volu&eacute; &eacute;tudi&eacute; pour ce genre de positionnement. Sans oublier un shutter m&eacute;canique permettant de r&eacute;aliser le noir complet lors d'absence de projection ainsi qu'un filtre permanent pour diminuer les co&ucirc;ts de maintenance tout en privil&eacute;giant la fiabilit&eacute; reconnue de Mitsubishi Electric.<br>
+
+Le projecteur UD8400U WUXGA b&eacute;n&eacute;ficie en plus d'une entr&eacute;e 3G HD SDI pour les signaux broadcast.<br>
+Mitsubishi Electric a &eacute;tudi&eacute; particuli&egrave;rement les demandes de certains utilisateurs souhaitant des couleurs de ch&acirc;ssis noir pour la prestation par exemple, ainsi l'ensemble de la gamme sera disponible en version noir et blanc avec capot cache c&acirc;ble pour des installations soign&eacute;es.<br>
+La long&eacute;vit&eacute; est un des &eacute;l&eacute;ments cl&eacute;s de ces projecteurs d'installation. En effet, le XD8100U et le WD8200U XD8350U et UD8400U ont &eacute;t&eacute; con&ccedil;us pour &agrave; la fois b&eacute;n&eacute;ficier d'une dur&eacute;e de vie allong&eacute;e et r&eacute;duire les co&ucirc;ts d'entretien au maximum. Le syst&egrave;me de refroidissement par dissipateur de Mitsubishi garantit une &eacute;vacuation de la chaleur par une m&eacute;thode fiable et d&eacute;nu&eacute;e de risque de panne.<br>
+
+Le syst&egrave;me &agrave; double lampe garantit un fonctionnement en continu, gr&acirc;ce notamment &agrave; une lampe dont la dur&eacute;e de vie est pr&eacute;vue pour 4000 heures. En cas de d&eacute;faillance, les lampes s'intervertissent automatiquement mais  peuvent &eacute;galement &ecirc;tre chang&eacute;es p&eacute;riodiquement afin d'am&eacute;liorer de mani&egrave;re consid&eacute;rable leur dur&eacute;e de vie.<br>
+
+Pour des int&eacute;grations haut de gamme, les vid&eacute;oprojecteurs sont &eacute;quip&eacute;s d'un terminal RJ-45 LAN et son pleinement compatibles avec Crestron&reg; RoomView/e-Control, AMX Device Discovery et les suites de gestion &agrave; distance PJLink.  La t&eacute;l&eacute;commande sans fil peut traiter jusqu'&agrave; 63 projecteurs dans une installation multi-projecteurs et fonctionner &agrave; une port&eacute;e maximale de 30m.<br>
+Enfin Mitsubishi Electric se targe de pouvoir faire fonctionner ses projecteurs 24h sur 24, 7 jours sur 7 garantissant ainsi l'extr&ecirc;me fiabilit&eacute; de ses machines et leur qualit&eacute; de fabrication digne du constructeur.
+
+</p>

@@ -1,0 +1,159 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Script d'échange de liens automatique - Lisezmoi.html</title>
+<meta name="Description" content="Procédure d'installation du script automatique d'échanges de liens en dur." />
+<meta name="robots" content="index,follow" />
+<meta name="copyright" content="ADIFCO www.adifco.fr" />
+<meta http-equiv="content-style-type" content="text/css2" />
+<style type="text/css">
+<!--
+body,td,th {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #333333;
+}
+body {
+	background-color: #FFFFFF;
+	margin-left: 5px;
+	margin-top: 5px;
+	margin-right: 5px;
+	margin-bottom: 5px;
+}
+a:link {
+	color: #0000FF;
+}
+a:visited {
+	color: #0000FF;
+}
+a:hover {
+	color: #FF0000;
+}
+a:active {
+	color: #0000FF;
+}
+h1,h2,h3,h4,h5,h6 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+}
+h1 {
+	font-size: 18px;
+	color: #666666;
+}
+h2 {
+	font-size: 16px;
+	color: #666666;
+}
+h3 {
+	font-size: 14px;
+	color: #666666;
+}
+-->
+</style></head>
+
+<body>
+<p><img src="http://www.adifco.fr/images/logo-Adifco-2.jpg" alt="ADIFCO sarl" longdesc="http://www.adifco.fr/societe-adifco/societe-adifco.html" /></p>
+<h1>Script d'&eacute;changes de liens en durs automatique</h1>
+<ol>
+  <li><a href="#1">Fonctionalit&eacute;s du script.</a></li>
+  <li><a href="#2">Minimum requis.</a></li>
+  <li><a href="#3">Installation / Configuration</a>.</li>
+  <li><a href="#4">Administration</a>.</li>
+  <li><a href="#5">Personnalisation</a>.</li>
+  <li><a href="#6">Informations importantes</a>.</li>
+</ol>
+<hr />
+<h2><a name="1" id="1"></a>Fonctionalit&eacute;s du script</h2>
+<p>Le script permet de pratiquer de fa&ccedil;on automatis&eacute;e et s&eacute;curis&eacute;e des &eacute;changes de liens imm&eacute;diat avec n'importe quel site. Le script a &eacute;galement &eacute;t&eacute; fait de fa&ccedil;on a optimiser votre r&eacute;f&eacute;rencement sur des mots-cl&eacute;s (ou expressions) que vous pouvez librement choisir. Vous pouvez en personnaliser l'aspect facilement en modifiant la feuille de styles.<br />
+Chaque webmaster  peut inscrire son site via le formulaire disponible. Si le webmaster a au pr&eacute;alable mis en place un lien vers votre site, son site est accept&eacute; sinon il est refus&eacute;. Le script poss&egrave;de une interface d'administration ainsi que la possibilit&eacute; de faire diff&eacute;rents r&eacute;glages sans qu'aucune connaissances particuli&egrave;res soient n&eacute;cessaires.</p>
+<p><strong>Les principales fonctionalit&eacute;s :</strong></p>
+<ul>
+  <li>Echange de liens en dur ou non (au choix).</li>
+  <li>Filtrage d'URL par inscription sur liste noire.</li>
+  <li>Autoriser ou non les URL avec param&egrave;tres.</li>
+  <li>Autoriser ou non les URL vers les pages internes d'un site.</li>
+  <li>Doublon d'inscription interdit.</li>
+  <li>Script de v&eacute;rification de la r&eacute;ciprocit&eacute; des &eacute;changes de liens.</li>
+  <li>Possibilit&eacute; d'envoyer un email pour informer de la validit&eacute; de l'&eacute;change de lien</li>
+  <li>etc.</li>
+</ul>
+<hr />
+<h2><a name="2" id="2"></a>Minimum requis</h2>
+<p><strong>H&eacute;bergement :</strong></p>
+<ul>
+  <li>PHP 4 et +.</li>
+  <li>Acc&egrave;s FTP &agrave; l'h&eacute;bergement de votre site.</li>
+</ul>
+<p><strong>Connaissances :</strong></p>
+<ul>
+  <li>Savoir &eacute;diter un fichier php (aucune connaissance en php n'est requise).</li>
+  <li>Savoir mettre en ligne des fichiers via FTP.</li>
+  <li>Savoir modifier les autorisations d'acc&egrave;s &agrave; un fichier via FTP (voir ci-dessous) ou SSH (chmod).</li>
+</ul>
+<p><strong>Logiciels</strong></p>
+<ul>
+  <li>Bloc Note de Windows ou &eacute;diteur HTML/PHP pour modifier la configuration du script (1 seule fois).</li>
+  <li>Logiciel client FTP permettant le changement des autorisations d'acc&egrave;s (FileZilla en <a href="http://filezilla-project.org/download.php?type=client" target="_blank">t&eacute;l&eacute;chargemement gratuit</a>)</li>
+</ul>
+<hr />
+<h2><a name="3" id="3"></a>Installation / Configuration</h2>
+<ul>
+  <li>D&eacute;zippez le contenu de l'archive <strong>autolien_v5.zip</strong> dans un dossier temporaire.</li>
+  <li>Coupez-collez le dossier <strong>partenaires</strong> dans le dossier local de votre site, si possible au m&ecirc;me niveau que votre page d'accueil.</li>
+  <li>Editez le fichier <strong>settings.php</strong> pour faire les r&eacute;glages suivants entre &quot;DEBUT DE LA CONFIGURATION&quot; et &quot;FIN DE LA CONFIGURATION&quot; :
+    <ul>
+      <li>Choix de votre type d'h&eacute;bergement : 1 = UNIX (Linux), 2 = Windows, 3 = Mac.</li>
+      <li>Mot de passe pour acc&eacute;der &agrave; l'administration (veuillez choisir un mot de passe assez complexe pour s&eacute;curiser le script, au minimum 10 caract&egrave;res alphanum&eacute;riques).</li>
+      <li>Le nom de votre site.</li>
+      <li>L'URL de votre site <strong>sans</strong> / &agrave; la fin !</li>
+      <li>Le r&eacute;pertoire d'installation du script <strong>avec</strong> un / &agrave; la fin !</li>
+      <li>La liste des expressions cl&eacute;s (mots-cl&eacute;s) avec lesquels les liens r&eacute;ciproques seront faits vers votre site.</li>
+      <li>Votre adresse email (il est INDISPENSABLE de mettre une adresse valide).</li>
+      <li>Envoi d'un email au partenaire ayant ajout&eacute; son site : 1 = oui, 0 = non.</li>
+      <li>Nombre maximum de liens par page (20 maximum conseill&eacute;).</li>
+      <li>Nombre des derniers sites ajout&eacute;s &agrave; mettre en valeur (5 maximum conseill&eacute;) en premi&egrave;re page.</li>
+      <li>Les URL ajout&eacute;s doivent-&ecirc;tre celle de la page d'accueil du site partenaire : 1 = oui, 0 = non.</li>
+      <li>Les URL ajout&eacute;s peuvent avoir des param&egrave;tres : 1 = oui, 0 = non.</li>
+      <li>Autoriser les inscriptions multiples par domaine (concerne surtout les h&eacute;bergeurs gratuits) (ex. toto.free.fr, titi.free.fr, ...) ? 1 = oui, 0 = non. <strong>ATTENTION:</strong> en mettant oui, un webmaster pourrait faire un &eacute;change de liens sur toutes ses pages pour le m&ecirc;me site.</li>
+      <li>Utiliser la liste noire pour filtrer les inscriptions ? 1 = oui, 0 = non</li>
+      <li>Qualit&eacute; des liens, lien en dur </li>
+      <li>O&ugrave; placer les nouveaux liens ajout&eacute;s par l'administration ? 0 = en d&eacute;but de liste, 1 = en fin de liste</li>
+    </ul>
+  </li>
+  <li>Enregistrez le fichier<strong> settings.php</strong>.</li>
+  <li>Mettez en ligne par FTP le dossier <strong>partenaires</strong> et l'ensemble de son contenu.</li>
+  <li>Faites un chmod 666 sur <strong>dataliens1.txt</strong> (autorise l'&eacute;criture / lecture pour tous), ou utilisez la fonction de FileZilla <strong>Attribut du fichier</strong> (clique droit sur le fichier distant).</li>
+  <li>Faites un chmod 666 sur <strong>siterefuse.txt</strong>  (autorise l'&eacute;criture / lecture pour tous), ou utilisez la fonction de FileZilla <strong>Attribut du fichier</strong> (clique droit sur le fichier distant).</li>
+</ul>
+<hr />
+<h2><a name="4" id="4"></a>Administration</h2>
+<p>Pour acc&eacute;der &agrave; votre page d'&eacute;change de liens : http://www.domaine.com<strong>/partenaires/index.php</strong> (&agrave; personnaliser selon votre configuration)<br />
+Pour acc&eacute;der &agrave; l'administration du script : http://www.domaine.com<strong>/partenaires/admin.php</strong> (&agrave; personnaliser selon votre configuration)</p>
+<p><strong>Les fonctions de l'administration :</strong></p>
+<ul>
+  <li>Supprimer un lien.</li>
+  <li>Voir la page o&ugrave; se trouve votre lien r&eacute;ciproque sur les sites inscrits.</li>
+  <li>V&eacute;rifiez la r&eacute;ciprocit&eacute; des &eacute;changes de liens (les liens bris&eacute;s ou inexistant entra&icirc;nent la suppression automatique du site concern&eacute;).</li>
+  <li>Inscrire un URL dans la liste noire (blacklist&eacute;).</li>
+  <li>Ajouter un lien, avec ou sans lien r&eacute;ciproque obligatoire (pour vos propres sites par exemple).</li>
+</ul>
+<hr />
+<h2><a name="5" id="5"></a>Personnalisation</h2>
+<p>Vous pouvez personnaliser l'apparence du script en modifiant la feuille de styles <strong>style.css</strong>. Vous pouvez &eacute;galement modifier les fichiers header.php et footer.php pour les personnaliser en fonction de vos besoins. Il vous est recommand&eacute; d'agir avec pr&eacute;caution afin de ne pas alt&eacute;rer le fonctionnement du script.</p>
+<hr />
+<h2><a name="6" id="6"></a>Informations importantes</h2>
+<p>Ce script d'&eacute;change de liens automatiques est bas&eacute; sur un script US en distribution libre. Il a &eacute;t&eacute; am&eacute;lior&eacute; par le webmaster de l'ancien site  Webosdiscount (inconnu) et ensuite par Yvan Heilig.<br />
+  Cette nouvelle version am&eacute;lior&eacute;e et corrig&eacute;e est &eacute;dit&eacute;e par la soci&eacute;t&eacute; ADIFCO sarl.<br />
+  Le script est plac&eacute; sous copyright et de fait la reproduction, m&ecirc;me partielle et/ou distribution sont strictement interdites sans autorisation.<br />
+  Ce script a fait l'objet d'une d&eacute;claration de propri&eacute;t&eacute; et d'un d&eacute;pot &agrave; l'INPI.<br />
+Pour tout renseignement, <a href="http://www.adifco.fr/societe-adifco/contact.html" target="_blank">contactez l'&eacute;diteur</a>. <br />
+<strong>ATTENTION :</strong> aucun support technique ou commercial n'est fourni pour ce script. Il est livr&eacute; tel quel et en aucun cas la responsabilit&eacute; de l'&eacute;diteur ne peut &ecirc;tre engag&eacute;e m&ecirc;me en cas d'utilisation non conforme du script. L'utilisation de ce script se fait sous l'enti&egrave;re et unique responsabilit&eacute; de l'utilisateur lui-m&ecirc;me.</p>
+<p>si vous souhaitez posez des questions sue ce script, avoir des pr&eacute;cisions sur son fonctionnement; sugg&eacute;rer des am&eacute;liorations, signaler un bug, etc. rendez-vous sur le forum de la communaut&eacute; Utilisable (inscription libre &amp; gratuite) &agrave; l'adresse <a href="http://forum.utilisable.com" target="_blank">http://forum.utilisable.com</a>. Merci.</p>
+<p>R&eacute;f&eacute;rencement garanti en 1&egrave;re page de Google avec ADIFCO<a href="http://www.adifco.fr" target="_blank"> r&eacute;f&eacute;rencement</a> : http://www.adifco.fr<br />
+Recevez un devis gratuit pour un r&eacute;f&eacute;rencement professionnel (budget mini 490 &euro; HT), <a href="http://www.adifco.fr/referencement-sur-mesure/devis-gratuit-referencement.html" target="_blank">devis r&eacute;f&eacute;rencement</a> : http://www.adifco.fr/referencement-sur-mesure/devis-gratuit-referencement.html<br />
+<a href="http://www.analyse-trafic.fr" target="_blank">Analyse de trafic</a> : http://www.analyse-trafic.fr<br />
+<a href="http://www.comprendre-vos-internautes.com">Etude comportementale</a> de vos visiteurs : http://www.comprendre-vos-internautes.com</p>
+<p align="center">Copyright &copy; 2008. ADIFCO sarl.</p>
+</body>
+</html>
