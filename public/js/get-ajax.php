@@ -2,19 +2,17 @@
 
 if(isset($_GET['charger']) || isset($_GET['marque'])|| isset($_GET['model'])){
  try {
-        if ($_SERVER['SERVER_NAME']=="test"){
-            $bdd = new PDO('mysql:host=localhost;dbname=lvpi_fr', 'root', 'tizurin');
-        }elseif ($_SERVER['SERVER_NAME']=="127.0.0.1"){
+        if ($_SERVER['SERVER_NAME']=="127.0.0.1"){
             $bdd = new PDO('mysql:host=localhost;dbname=lvpi_fr', 'root', '');
         }else {
-            $bdd = new PDO('mysql:host=10.0.208.26;dbname=rqdl_fr', 'root', 'abidjan');
+            $bdd = new PDO('mysql:host=10.0.208.26;dbname=lvpi_fr', 'root', 'abidjan');
         }
     } catch(Exception $e) {
         exit('Impossible de se connecter à la base de données.');
     }
 
   if(isset($_GET['charger'])){
-	$requete = "SELECT distinct Manufacturer FROM fr_trade";
+	$requete = "SELECT distinct Manufacturer FROM fr_trade ORDER BY Manufacturer";
 	$resultat = $bdd->query($requete) or die(print_r($bdd->errorInfo()));
     while($donnees = $resultat->fetch(PDO::FETCH_ASSOC)) {
         $json[] = $donnees['Manufacturer'];
@@ -67,7 +65,7 @@ if(isset($_GET['charger']) || isset($_GET['marque'])|| isset($_GET['model'])){
     echo json_encode($array);
   }else if((isset($_GET['marque']))&&(!isset($_GET['model']))){
      $marque = $_GET['marque']; 
-    $requete = "SELECT distinct ModelNo FROM fr_trade where Manufacturer='$marque'";
+    $requete = "SELECT distinct ModelNo FROM fr_trade where Manufacturer='$marque' ORDER BY ModelNo";
     $resultat = $bdd->query($requete) or die(print_r($bdd->errorInfo()));
     while($donnees = $resultat->fetch(PDO::FETCH_ASSOC)) {
         $json[] = $donnees['ModelNo'];

@@ -111,7 +111,7 @@
 								dataType: 'json',
 								success: function(json) { 
 									if(json.nbr!=0){
-										lien=location.href='ficheProduit_'+marque+'_'+model+'.php';
+										lien=location.href='ficheProduit_'+marque+'_'+model+'.html';
 										return lien;
 									}
 								}
@@ -130,7 +130,7 @@
 								dataType: 'json',
 								success: function(json) {
 									if(json.nbr!=0){
-										lien='ficheProduit_'+marque+'_'+model+'.php';
+										lien='ficheProduit_'+marque+'_'+model+'.html';
 										return lien;
 									}
 								}
