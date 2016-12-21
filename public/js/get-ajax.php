@@ -2,7 +2,10 @@
 
 if(isset($_GET['charger']) || isset($_GET['marque'])|| isset($_GET['model'])){
  try {
-        if ($_SERVER['SERVER_NAME']=="127.0.0.1"){
+        if($_SERVER['SERVER_NAME']=="test"){
+            $bdd = new PDO('mysql:host=localhost;dbname=lvpi_fr', 'root', 'tizurin');
+        }
+        elseif ($_SERVER['SERVER_NAME']=="127.0.0.1"){
             $bdd = new PDO('mysql:host=localhost;dbname=lvpi_fr', 'root', '');
         }else {
             $bdd = new PDO('mysql:host=10.0.208.26;dbname=lvpi_fr', 'root', 'abidjan');
