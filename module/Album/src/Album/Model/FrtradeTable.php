@@ -192,6 +192,34 @@ class FrtradeTable extends AbstractTableGateway
         return $return;
     }
 
+    public function getUser($name,$password)
+   {
+        if(isset($name) && isset($password))
+        {
+            $sql = "SELECT * FROM users WHERE name='".$name."'  and password = '".$password."'";
+        
+            $result = $this->adapter->query($sql)->execute(array());
+            $return = array();
+            
+            $lengthResult = $result->count();
+            
+            for($i=0; $i<$lengthResult; $i++)
+            {
+                $return[] = $result->current();
+                $result->next();
+            }
+               if($lengthResult > 0) {
+                    $name = true;
+                    $password = true;
+                }
+                else {
+                    $name = false;
+                    $password = false;
+                }
+            return $return;
+        }
+    }
+
     public function send_mail(){
         $mail = new Mail\Message();
         $mail->setBody('This is the text of the email.');

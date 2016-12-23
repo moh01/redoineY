@@ -32,6 +32,54 @@ class FrtradeController extends AbstractActionController
         ));
     }
 
+    public function adminAction(){
+        $this->layout()->title = 'Lampe videoprojecteur : Toutes les infos utiles';
+        
+        session_start();
+
+        $request = $this->getRequest();
+
+        if ($request->isPost()) {
+
+            if ($this->getFrtradeTable()->getUser($request->getPost("userName"), $request->getPost("password")) == true) {
+                $_SESSION['user'] = $request->getPost("userName");
+                $_SESSION['password'] = $request->getPost("password");
+                return $this->redirect()->toUrl('back_office_articles.html');
+            }
+            else
+            {
+                return new ViewModel(array( 
+         
+             'error' => "Identifiant ou mot de passe incorrect !",
+             ));
+            }
+        }
+
+    }
+    
+    public function backofficearticlesAction(){
+        $this->layout()->title = 'Lampe videoprojecteur : Toutes les infos utiles';
+        
+        session_start();
+        $request = $this->getRequest();
+
+        if (!empty($_SESSION['user']) && !empty($_SESSION['password']))
+        {
+           return new ViewModel(array( 
+            
+            )); 
+       }
+       else {return $this->redirect()->toUrl('admin.html');}
+
+    } 
+
+    public function logoutAction(){
+        session_start();
+        $_SESSION['user'] = NULL;
+        $_SESSION['password'] = NULL;
+        return $this->redirect()->toUrl('admin.html');
+    }
+
     public function nouveautesvideoprojecteursAction(){
         
     }

@@ -1,0 +1,22 @@
+<style type="text/css">
+    .bg_header, .marque, .footer{display: none;}
+</style>
+
+<center><div class="formulaire">
+<div style="color: red;"><?php echo $error;?></div>
+    <form name="frmUser" method="post"> 
+        <div style="float: left;">
+            <label>Utilisateur :</label>
+            <input class="na" type="text" name="userName" required />
+        </div>
+        <div style="float: left;">
+            <label>Mot de passe :</label>
+            <input class="mdp" type="password" name="password" required />
+        </div>
+        <div style="float: left;">
+            <label></label>
+            <input  type="submit" name="submit" class="enregistrer" value="Se connecter" />
+        </div>
+        <div class="spacer"></div>
+    </form>
+</div></center>

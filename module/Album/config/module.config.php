@@ -295,6 +295,39 @@ return array(
                                 ),   
                         ),
 
+                        'admin' => array(
+                                'type'    => 'segment',
+                                'options' => array(
+                                    'route'    => '/admin.html',
+                                    'defaults' => array(
+                                        'controller' => 'Album\Controller\Frtrade',
+                                        'action'     => 'admin',
+                                    ),
+                                ),   
+                        ),
+
+                        'backofficearticles' => array(
+                                'type'    => 'segment',
+                                'options' => array(
+                                    'route'    => '/back_office_articles.html',
+                                    'defaults' => array(
+                                        'controller' => 'Album\Controller\Frtrade',
+                                        'action'     => 'backofficearticles',
+                                    ),
+                                ),   
+                        ),
+
+                        'logout' => array(
+                                'type'    => 'segment',
+                                'options' => array(
+                                    'route'    => '/logout.html',
+                                    'defaults' => array(
+                                        'controller' => 'Album\Controller\Frtrade',
+                                        'action'     => 'logout',
+                                    ),
+                                ),   
+                        ),
+
                             'nomodule' => array(
                                 'type' => 'Literal',
                                 'options' => array(
