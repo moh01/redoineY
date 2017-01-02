@@ -1,8 +1,9 @@
 <?php
-$this->layout()->title = 'Nouveautés Vidéoprojecteurs '.$marque;
+//$this->layout()->title = 'Nouveautés Vidéoprojecteurs '.$marque;
+$this->layout()->title = $article[0]["meta_title"];
 $this->headMeta()
                 ->appendName('keywords', "nouveautés vidéoprojecteur")
-                ->appendName('description', "Toutes les Nouveautés vidéoprojecteurs ".$marque);
+                ->appendName('description', $article[0]["meta_description"]);
                 $marque_upper = ucfirst (strtolower($marque));
 ?>
 <!-- Slider -->
