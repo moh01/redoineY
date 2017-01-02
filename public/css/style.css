@@ -287,6 +287,7 @@ div.carousel-inner{height:167px;}
 			color:#4e5555;
 		}
 	.btnlogout{
+		float: right;
 		width: 10%;
 	    height: 35px;
 	    background: #f80e39;
