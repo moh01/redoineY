@@ -80,6 +80,12 @@ class FrtradeController extends AbstractActionController
         return $this->redirect()->toUrl('admin.html');
     }
 
+    public function updatedbAction(){
+        $request = $this->getRequest();
+        $this->getFrtradeTable()->update_db($request);
+        return "";
+    }
+
     public function nouveautesvideoprojecteursAction(){
         
     }

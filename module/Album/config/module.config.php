@@ -328,6 +328,17 @@ return array(
                                 ),   
                         ),
 
+                        'updatedb' => array(
+                                'type'    => 'segment',
+                                'options' => array(
+                                    'route'    => '/updatedb.html',
+                                    'defaults' => array(
+                                        'controller' => 'Album\Controller\Frtrade',
+                                        'action'     => 'updatedb',
+                                    ),
+                                ),   
+                        ),
+
                             'nomodule' => array(
                                 'type' => 'Literal',
                                 'options' => array(

@@ -220,6 +220,95 @@ class FrtradeTable extends AbstractTableGateway
         }
     }
 
+    public function update_db()
+    {
+            $requete_lvpcomposant = "insert into  `lvpcomposant`
+                    select `cstrd`.`categories_id` AS `id_constructeur`,`cstrd`.`categories_name`
+                    AS `libelle_constructeur`,left(`man`.`manufacturers_name`,2)
+                    AS `code_type_produit`,`cat`.`categories_id` AS `id_produit`,`prd`.`products_id`
+                    AS `id_composant`,`catd`.`categories_name`
+                    AS `libelle_produit`,`man`.`manufacturers_name`
+                    AS `sous_type_composant`,`prd`.`products_model`
+                    AS `ref_constructeur_composant`,lampe_fr.`products_description`.`products_name`
+                    AS `ref_interne_composant`,`products_description`.`products_description`
+                    AS `description_composant`,`prd`.`products_price`
+                    AS `le_prix`
+                    from ((((((lampe_fr.`categories` `cat` join lampe_fr.`categories_description` `catd`)
+                        join lampe_fr.`categories` `cstr`) join lampe_fr.`categories_description` `cstrd`)
+                        join lampe_fr.`products` `prd`) join lampe_fr.`products_description`)
+                        join lampe_fr.`manufacturers` `man`)
+                    where ((`cat`.`categories_id` = `catd`.`categories_id`)
+                        and (`cat`.`parent_id` = `cstr`.`categories_id`)
+                        and (`cstrd`.`categories_id` = `cstr`.`categories_id`)
+                        and (`cstrd`.`language_id` = 2)
+                        and (lampe_fr.`products_description`.`language_id` = 2)
+                        and (`catd`.`language_id` = 2)
+                        and (lampe_fr.`products_description`.`products_id` = `prd`.`products_id`)
+                        and (`prd`.`master_categories_id` = `cat`.`categories_id`)
+                        and (`prd`.`manufacturers_id` = `man`.`manufacturers_id`))
+                    ON DUPLICATE KEY UPDATE le_prix = `prd`.`products_price`";
+
+
+            $requete_hplcomposant = "insert into  `hplcomposant`
+                    select `cstrd`.`categories_id` AS `id_constructeur`,`cstrd`.`categories_name`
+                    AS `libelle_constructeur`,left(`man`.`manufacturers_name`,2)
+                    AS `code_type_produit`,`cat`.`categories_id` AS `id_produit`,`prd`.`products_id`
+                    AS `id_composant`,`catd`.`categories_name`
+                    AS `libelle_produit`,`man`.`manufacturers_name`
+                    AS `sous_type_composant`,`prd`.`products_model`
+                    AS `ref_constructeur_composant`,bis_lampe_eu.`products_description`.`products_name`
+                    AS `ref_interne_composant`,`products_description`.`products_description`
+                    AS `description_composant`,`prd`.`products_price`
+                    AS `le_prix`
+                    from ((((((bis_lampe_eu.`categories` `cat` join bis_lampe_eu.`categories_description` `catd`)
+                        join bis_lampe_eu.`categories` `cstr`) join bis_lampe_eu.`categories_description` `cstrd`)
+                        join bis_lampe_eu.`products` `prd`) join bis_lampe_eu.`products_description`)
+                        join bis_lampe_eu.`manufacturers` `man`)
+                    where ((`cat`.`categories_id` = `catd`.`categories_id`)
+                        and (`cat`.`parent_id` = `cstr`.`categories_id`)
+                        and (`cstrd`.`categories_id` = `cstr`.`categories_id`)
+                        and (`cstrd`.`language_id` = 2)
+                        and (bis_lampe_eu.`products_description`.`language_id` = 2)
+                        and (`catd`.`language_id` = 2)
+                        and (bis_lampe_eu.`products_description`.`products_id` = `prd`.`products_id`)
+                        and (`prd`.`master_categories_id` = `cat`.`categories_id`)
+                        and (`prd`.`manufacturers_id` = `man`.`manufacturers_id`))
+                    ON DUPLICATE KEY UPDATE le_prix = `prd`.`products_price`";
+
+
+            $requete_rqdlcomposant = "insert into  `rqdlcomposant`
+                    select `cstrd`.`categories_id` AS `id_constructeur`,`cstrd`.`categories_name`
+                    AS `libelle_constructeur`,left(`man`.`manufacturers_name`,2)
+                    AS `code_type_produit`,`cat`.`categories_id` AS `id_produit`,`prd`.`products_id`
+                    AS `id_composant`,`catd`.`categories_name`
+                    AS `libelle_produit`,`man`.`manufacturers_name`
+                    AS `sous_type_composant`,`prd`.`products_model`
+                    AS `ref_constructeur_composant`,rqdl_fr.`products_description`.`products_name`
+                    AS `ref_interne_composant`,`products_description`.`products_description`
+                    AS `description_composant`,`prd`.`products_price`
+                    AS `le_prix`
+                    from ((((((rqdl_fr.`categories` `cat` join rqdl_fr.`categories_description` `catd`)
+                        join rqdl_fr.`categories` `cstr`) join rqdl_fr.`categories_description` `cstrd`)
+                        join rqdl_fr.`products` `prd`) join rqdl_fr.`products_description`)
+                        join rqdl_fr.`manufacturers` `man`)
+                    where ((`cat`.`categories_id` = `catd`.`categories_id`)
+                        and (`cat`.`parent_id` = `cstr`.`categories_id`)
+                        and (`cstrd`.`categories_id` = `cstr`.`categories_id`)
+                        and (`cstrd`.`language_id` = 2)
+                        and (rqdl_fr.`products_description`.`language_id` = 2)
+                        and (`catd`.`language_id` = 2)
+                        and (rqdl_fr.`products_description`.`products_id` = `prd`.`products_id`)
+                        and (`prd`.`master_categories_id` = `cat`.`categories_id`)
+                        and (`prd`.`manufacturers_id` = `man`.`manufacturers_id`))
+                    ON DUPLICATE KEY UPDATE le_prix = `prd`.`products_price`";
+
+            $sql_tab = array($requete_lvpcomposant, $requete_hplcomposant, $requete_rqdlcomposant);
+            foreach ($sql_tab as $key => $sql) {
+               $result = $this->adapter->query($sql)->execute(array());
+            }
+        
+    }
+
     public function send_mail(){
         $mail = new Mail\Message();
         $mail->setBody('This is the text of the email.');
