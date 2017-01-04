@@ -43,8 +43,8 @@ else{
     'db' => array(
         'driver'         => 'Pdo_mysql',
         'dsn'            => 'mysql:dbname=lvpi_fr_prod;host=vmeasyl3priv',
-        'username' => 'lmpvprojprod',
-        'password' => 'GGg1QzEARaro',
+        'username' => 'easydbadmin',
+        'password' => 'leslampesdemontreuil',
         'driver_options' => array(
             PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES \'UTF8\''
         ),
