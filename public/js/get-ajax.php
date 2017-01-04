@@ -11,7 +11,8 @@ if(isset($_GET['charger']) || isset($_GET['marque'])|| isset($_GET['model'])){
         elseif ($_SERVER['SERVER_NAME']=="dev.lampe-videoprojecteur.info"){
             $bdd = new PDO('mysql:host=vmeasyl3priv;dbname=lvpi_fr', 'lmpvideoproj', '5vGiC46G122S');
         }else {
-            $bdd = new PDO('mysql:host=10.0.208.26;dbname=lvpi_fr', 'root', 'abidjan');
+            //$bdd = new PDO('mysql:host=10.0.208.26;dbname=lvpi_fr', 'root', 'abidjan');
+            $bdd = new PDO('mysql:host=vmeasyl3priv;dbname=lvpi_fr_prod', 'lmpvprojprod', 'GGg1QzEARaro');
         }
     } catch(Exception $e) {
         exit('Impossible de se connecter à la base de données.');

@@ -12,7 +12,7 @@ if($_SERVER['SERVER_NAME'] =="test"){
     ),
 	);
 }
-if ($_SERVER['SERVER_NAME']=="127.0.0.1"){
+elseif ($_SERVER['SERVER_NAME']=="127.0.0.1"){
 	return array(
 	    'db' => array(
 	        'driver'         => 'Pdo_mysql',
@@ -24,8 +24,9 @@ if ($_SERVER['SERVER_NAME']=="127.0.0.1"){
 	        ),
 	    ),
 	);	
-}else{
-	return array(
+}
+elseif ($_SERVER['SERVER_NAME']=="dev.lampe-videoprojecteur.info") {
+    return array(
     'db' => array(
         'driver'         => 'Pdo_mysql',
         'dsn'            => 'mysql:dbname=lvpi_fr;host=mysqleasy3',
@@ -35,7 +36,21 @@ if ($_SERVER['SERVER_NAME']=="127.0.0.1"){
             PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES \'UTF8\''
         ),
     ),
-	);
+    );
+}
+else{
+    return array(
+    'db' => array(
+        'driver'         => 'Pdo_mysql',
+        'dsn'            => 'mysql:dbname=lvpi_fr_prod;host=vmeasyl3priv',
+        'username' => 'lmpvprojprod',
+        'password' => 'GGg1QzEARaro',
+        'driver_options' => array(
+            PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES \'UTF8\''
+        ),
+    ),
+    );
+	
 }
 
 
