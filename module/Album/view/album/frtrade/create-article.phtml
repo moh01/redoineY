@@ -1,0 +1,64 @@
+<style type="text/css">
+    .bg_header, .marque, .footer{display: none;}
+</style>
+
+<div class="formulaire_">
+<form method="post" action="logout.html">
+   <input type="submit" class="btnlogout" value="Se Déconnecter"/>
+</form>
+<h1 class="h1_bienvenue">Bienvenue dans le back office de lampe-videoprojecteur.info</h1>
+ <?php if ( isset($article)) { ?>
+  <form method="post" action="editarticle.html">
+<select name="article_a_modif" class="select-edit-art">
+   <?php foreach ($article as $key => $value):?>
+	<option value="<?php echo $key;?>"><?php echo $value["titre"];?></option>
+<?php endforeach; ?>
+</select>
+   <button type="submit" name="edit" class="modifarticle"/>Modifier l'article</button>
+</form>
+ <?php } ?>
+
+
+<center><div class="formulaire">
+    <form class="formArticle" name="frmArticle" method="post" action="create-article.html" enctype="multipart/form-data"> 
+        <div style="float: left;">
+            <label>Titre :</label>
+            <input class="champs_article" type="text" name="titre" required />
+        </div>
+        <div style="float: left;">
+            <label>Constructeur :</label>
+            <input class="champs_article" type="text" name="marque" required />
+        </div>
+        <div style="float: left;">
+            <label>Référence du produit :</label>
+            <input class="champs_article" type="text" name="ref_prod" required />
+        </div>
+        <div style="float: left;">
+            <label>Paragraphe :</label>
+            <textarea class="champs_article" type="text" name="paragraphe" required></textarea>
+        </div>
+        <div style="float: left;">
+            <label>Image :</label>
+            <input class="champs_article" type="file" name="img_article" required /><?php echo $error;?>
+        </div>
+		<div style="float: left;">
+            <label>Résumé de l'article :</label>
+            <textarea class="champs_article" type="text" name="resume_article" required></textarea>
+        </div>
+        <div style="float: left;">
+            <label>Meta  title :</label>
+            <input class="champs_article" type="text" name="meta_title" required />
+        </div>
+        <div style="float: left;">
+            <label>Meta Description :</label>
+            <input class="champs_article" type="text" name="meta_desc" required />
+        </div>
+        <div style="float: left;">
+            <label></label>
+            <input  type="submit" name="submit" class="enregistrer-article" value="Enregistrer" />
+        </div>
+        <div class="spacer"></div>
+    </form>
+</div></center>
+
+</div>

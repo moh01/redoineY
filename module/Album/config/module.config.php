@@ -306,13 +306,13 @@ return array(
                                 ),   
                         ),
 
-                        'backofficearticles' => array(
+                        'createArticle' => array(
                                 'type'    => 'segment',
                                 'options' => array(
-                                    'route'    => '/back_office_articles.html',
+                                    'route'    => '/create-article.html',
                                     'defaults' => array(
                                         'controller' => 'Album\Controller\Frtrade',
-                                        'action'     => 'backofficearticles',
+                                        'action'     => 'createArticle',
                                     ),
                                 ),   
                         ),
@@ -324,6 +324,28 @@ return array(
                                     'defaults' => array(
                                         'controller' => 'Album\Controller\Frtrade',
                                         'action'     => 'logout',
+                                    ),
+                                ),   
+                        ),
+
+                        'editarticle' => array(
+                                'type'    => 'segment',
+                                'options' => array(
+                                    'route'    => '/editarticle.html',
+                                    'defaults' => array(
+                                        'controller' => 'Album\Controller\Frtrade',
+                                        'action'     => 'editarticle',
+                                    ),
+                                ),   
+                        ),
+
+                        'uploadpdf' => array(
+                                'type'    => 'segment',
+                                'options' => array(
+                                    'route'    => '/uploadpdf.html',
+                                    'defaults' => array(
+                                        'controller' => 'Album\Controller\Frtrade',
+                                        'action'     => 'uploadpdf',
                                     ),
                                 ),   
                         ),

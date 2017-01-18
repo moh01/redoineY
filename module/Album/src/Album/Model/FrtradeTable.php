@@ -71,6 +71,28 @@ class FrtradeTable extends AbstractTableGateway
         return $return;
     }
 
+    public function getMarque__(){
+        $sql='  SELECT distinct ModelNo, MIN( rqdlcomposant.le_prix ) AS minrqdl, MAX( rqdlcomposant.le_prix ) AS maxrqdl,
+                MIN( lvpcomposant.le_prix ) AS minlvp, MAX( lvpcomposant.le_prix ) AS maxlvp, MIN( hplcomposant.le_prix ) AS minhpl,
+                MAX( hplcomposant.le_prix ) AS maxhpl, ManuPartCode, Manufacturer,
+                ID, Suffix, LampHours, Trade_Price, Available_Stock, Display, Wattage, LampType
+                FROM fr_trade
+                JOIN rqdlcomposant ON fr_trade.ModelNo = rqdlcomposant.libelle_produit
+                JOIN lvpcomposant ON fr_trade.ModelNo = lvpcomposant.libelle_produit
+                JOIN hplcomposant ON fr_trade.ModelNo = hplcomposant.libelle_produit
+                GROUP BY ManuPartCode, Manufacturer';
+
+        $result = $this->adapter->query($sql)->execute(array());
+        $return = array();
+        $lengthResult = $result->count();
+        for($i=0; $i<$lengthResult; $i++){
+            
+            $return[] = $result->current();
+            $result->next();
+        }
+        return $return;
+    }
+
     public function stock($lampe) {
         $sql = 'select qty FROM elstock join fr_trade on lamp_code = fr_trade.Manupartcode WHERE ModelNo = ?';
         $result = $this->adapter->query($sql)->execute(array($lampe));
@@ -173,13 +195,34 @@ class FrtradeTable extends AbstractTableGateway
         return $return;
     }
 
+    public function createArticle($ref_produit,$constructeur,$titre,$paragraphe,$image,$resume_article,$meta_title,$meta_description)
+    {
+        $insert_article = "INSERT INTO articles (ref_produit,constructeur,titre,paragraphe,image,resume_article,meta_title,meta_description,date_creation)
+                            VALUES (?,?,?,?,?,?,?,?,now())";
+        $result = $this->adapter->query($insert_article)->execute(array($ref_produit,$constructeur,$titre,$paragraphe,$image,$resume_article,$meta_title,$meta_description));
+        $return = array();
+
+        return $return;
+    }
+
+
+    public function editArticle($ref_produit,$constructeur,$titre,$paragraphe,$image,$resume_article,$meta_title,$meta_description,$id)
+    {
+
+        $insert_article = "UPDATE articles SET ref_produit = '".addslashes($ref_produit)."', constructeur = '".addslashes($constructeur)."', titre = '".addslashes($titre)."', paragraphe = '".addslashes($paragraphe)."', image = '".$image."', resume_article = '".addslashes($resume_article)."', meta_title = '".addslashes($meta_title)."', meta_description = '".addslashes($meta_description)."' WHERE id=".$id;
+        $result = $this->adapter->query($insert_article)->execute(array());
+        $return = array();
+
+        return $return;
+    }
+
     public function getArticle($marque)
    {
       if (isset($marque)) {
         $sql = "SELECT * FROM articles where constructeur = ? ";
       }
       else 
-        $sql = "SELECT * FROM articles ORDER BY date_creation DESC limit 8";
+        $sql = "SELECT * FROM articles ORDER BY date_creation DESC";
     
       $result = $this->adapter->query($sql)->execute(array($marque));
       $return = array();

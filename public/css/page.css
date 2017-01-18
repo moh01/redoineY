@@ -132,6 +132,26 @@ p.attention{
 	padding-left:40px;
 	color:#FF7900;
 }
+.champs_article{width: 500px!important;}
+.enregistrer-article{
+	background:green;
+	padding:10px 25px;
+	color:#ffffff;
+	font-family:"Comfortaa-bold", Arial;
+	float:right;
+	border:none;
+}
+#editeur-wiz,
+#resultat-wiz {
+  width: 500px;
+  height: 200px;
+  border: 1px solid #cccccc;
+  border-radius: 3px;
+  margin-left: 60%!important;
+  padding: 5px;
+  overflow: auto;
+  background-color: white; 
+}
 div.formulaire{
 	padding:15px;
 	background:#F3F3F8;

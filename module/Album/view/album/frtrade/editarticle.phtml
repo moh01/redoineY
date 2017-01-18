@@ -1,0 +1,73 @@
+<style type="text/css">
+    .bg_header, .marque, .footer{display: none;}
+</style>
+<script>
+function goBack() {
+    window.history.back();
+}
+</script>
+<button class="btngoback" onclick="goBack()">Annuler</button>
+<div class="formulaire_">
+<form method="post" action="logout.html">
+   <button type="submit" class="btnlogout"/>Se Déconnecter</button> 
+</form>
+
+<?php $indice = $_POST['article_a_modif']; $indice_a = $article[$indice]["id"];?>
+
+<center><h2>Modification de l'article : <?php echo $article[$indice]["titre"]; ?> </h2></center>
+<?php
+    if (isset($_POST['edit']))
+    {   
+?>   
+        <center><div class="formulaire">
+            <form class="formArticle" name="frmEditArticle" method="post" action="editarticle.html" enctype="multipart/form-data">  
+                <div style="float: left;">
+                    <label>Titre :</label>
+                    <input class="champs_article" type="text" name="titre" <?php echo 'value="'.$article[$indice]["titre"].'"';?> required />
+                </div>
+                <div style="float: left;">
+                    <label>Constructeur :</label>
+                    <input class="champs_article" type="text" name="marque" <?php echo 'value="'.$article[$indice]["constructeur"].'"';?> required />
+                </div>
+                <div style="float: left;">
+                    <label>Référence du produit :</label>
+                    <input class="champs_article" type="text" name="ref_prod" <?php echo 'value="'.$article[$indice]["ref_produit"].'"';?> required />
+                </div>
+                <div style="float: left;">
+                    <label>Paragraphe :</label>
+                    <textarea class="champs_article" type="text" name="paragraphe"  required><?php echo ''.$article[$indice]["paragraphe"].'';?></textarea>
+                </div>
+                <div style="float: left;">
+                    <label>Image actuelle :</label>
+                    <?php echo '<img src="images/photos/'.$article[$indice]["image"].'" style="width:50%;">';?>
+                </div>
+                <div style="float: left;">
+                    <label>Choisir une autre image :</label>
+                    <input class="champs_article" type="file" name="img_article"/>
+                </div>
+                <div style="float: left;">
+                    <label>Résumé de l\'article :</label>
+                    <textarea class="champs_article" type="text" name="resume_article" required><?php echo ''.$article[$indice]["resume_article"].'';?></textarea>
+                </div>
+                <div style="float: left;">
+                    <label>Meta  title :</label>
+                    <input class="champs_article" type="text" name="meta_title" <?php echo 'value="'.$article[$indice]["meta_title"].'"';?> required />
+                </div>
+                <div style="float: left;">
+                    <label>Meta Description :</label>
+                    <input class="champs_article" type="text" name="meta_desc" <?php echo 'value="'.$article[$indice]["meta_description"].'"';?> required />
+                </div>
+                <input type="hidden" name="id_article" value="<?php echo $indice_a;?>" >
+                <div style="float: left;">
+                    <label></label>
+                    <input  type="submit" name="submit_edit" class="enregistrer-article" value="Mettre à jour" />
+                </div>
+                <div class="spacer"></div>
+            </form>
+        </div></center>
+        </div>
+    <?php }
+    else { ?>
+    <META http-equiv="refresh" content="0; URL=create-article.html">
+    <?php } ?>
+

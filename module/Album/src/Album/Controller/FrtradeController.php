@@ -44,7 +44,7 @@ class FrtradeController extends AbstractActionController
             if ($this->getFrtradeTable()->getUser($request->getPost("userName"), $request->getPost("password")) == true) {
                 $_SESSION['user'] = $request->getPost("userName");
                 $_SESSION['password'] = $request->getPost("password");
-                return $this->redirect()->toUrl('back_office_articles.html');
+                return $this->redirect()->toUrl('create-article.html');
             }
             else
             {
@@ -57,7 +57,7 @@ class FrtradeController extends AbstractActionController
 
     }
     
-    public function backofficearticlesAction(){
+    public function createArticleAction(){
         $this->layout()->title = 'Lampe videoprojecteur : Toutes les infos utiles';
         
         session_start();
@@ -65,11 +65,73 @@ class FrtradeController extends AbstractActionController
 
         if (!empty($_SESSION['user']) && !empty($_SESSION['password']))
         {
-           return new ViewModel(array( 
-            
-            )); 
+           
+
+            if ($request->getPost("submit"))
+            { 
+                $extensions_valides = array( 'jpg' , 'jpeg' , 'gif' , 'png' );
+                //1. strrchr renvoie l'extension avec le point (« . »).
+                //2. substr(chaine,1) ignore le premier caractère de chaine.
+                //3. strtolower met l'extension en minuscules.
+                $extension_upload = strtolower(  substr(  strrchr($_FILES['img_article']['name'], '.')  ,1)  );
+                if ( in_array($extension_upload,$extensions_valides) )
+                {
+                    $uploaddir = 'public/images/photos/';
+                    $uploadfile = $uploaddir . basename($_FILES['img_article']['name']);
+
+                    move_uploaded_file($_FILES['img_article']['tmp_name'], $uploadfile);}
+                
+                else {
+                    return new ViewModel(array( 
+                    'error' => '<span style="color:red;">Extension incorrect,Veuillez choisir une image.</span>',
+                    ));  
+                }
+                    $this->getFrtradeTable()->createArticle($request->getPost("ref_prod"),$request->getPost("marque"),$request->getPost("titre"),$request->getPost("paragraphe"),basename($_FILES['img_article']['name']),$request->getPost("resume_article"),$request->getPost("meta_title"),$request->getPost("meta_desc"));     
+
+            }
+
+/*            elseif ($request->getPost("submit_edit"))
+            { 
+                $uploaddir = 'public/images/photos/';
+                $uploadfile = $uploaddir . basename($_FILES['img_article']['name']);
+
+                move_uploaded_file($_FILES['img_article']['tmp_name'], $uploadfile);
+
+                $this->getFrtradeTable()->editArticle($request->getPost("ref_prod"),$request->getPost("marque"),$request->getPost("titre"),$request->getPost("paragraphe"),basename($_FILES['img_article']['name']),$request->getPost("resume_article"),$request->getPost("meta_title"),$request->getPost("meta_desc"), $request->getPost("id_article"));
+            }*/
+
+
+           return new ViewModel(array('article' => $this->getFrtradeTable()->getArticle($marque),)); 
        }
        else {return $this->redirect()->toUrl('admin.html');}
+
+    } 
+
+
+    public function editarticleAction(){
+        
+        $this->layout()->title = 'Lampe videoprojecteur : Toutes les infos utiles';
+        
+        session_start();
+        $request = $this->getRequest();
+
+        if (!empty($_SESSION['user']) && !empty($_SESSION['password']))
+        {
+           
+           if ($request->getPost("submit_edit"))
+            { 
+                $uploaddir = 'public/images/photos/';
+                $uploadfile = $uploaddir . basename($_FILES['img_article']['name']);
+
+                move_uploaded_file($_FILES['img_article']['tmp_name'], $uploadfile);
+
+                $this->getFrtradeTable()->editArticle($request->getPost("ref_prod"),$request->getPost("marque"),$request->getPost("titre"),$request->getPost("paragraphe"),basename($_FILES['img_article']['name']),$request->getPost("resume_article"),$request->getPost("meta_title"),$request->getPost("meta_desc"), $request->getPost("id_article"));
+            }
+
+
+           return new ViewModel(array('article' => $this->getFrtradeTable()->getArticle($marque),)); 
+       }
+       //else {return $this->redirect()->toUrl('create-article.html');}
 
     } 
 
@@ -128,6 +190,26 @@ class FrtradeController extends AbstractActionController
              ));
 
     }
+
+
+    public function uploadpdfAction(){
+        $request = $this->getRequest();
+        $nom_pdf = $request->getPost("ref_model");
+
+        if ($request->getPost("setpdf"))
+            {
+                $uploaddir = 'public/manuels/manuels/';
+                $uploadfile = $uploaddir . basename($_FILES['uploadpdf']['name']);
+
+                move_uploaded_file($_FILES['uploadpdf']['tmp_name'], $uploaddir.$nom_pdf.'.pdf');
+
+            }
+        return new ViewModel(array(
+            /*'marque' => $marque,*/
+            'marques' => $this->getFrtradeTable()->getMarque__(),/*'marque' => $marque ,*/ 
+             ));
+    }
+    
 //aficher tous les marques
     public function lampevideoprojecteurAction(){
         $marque = $this->params('id');
