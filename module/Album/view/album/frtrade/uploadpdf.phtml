@@ -2,11 +2,11 @@
     /*.bg_header, .marque, .footer{display: none;}*/
 </style>
 
-        <div class="selecteur">
-        	<h3>RECHERCHEZ VOTRE VIDEOPROJECTEUR</h3>
-            <div>
+        <div class="selecteur-pdf">
+        	<h3 class="attr0">CHOISISSEZ VOTRE MODÈL PUIS INSÉREZ VOTRE FICHE PDF</h3>
+            <div class="attr1">
             <form method="post" action="uploadpdf.html" enctype="multipart/form-data">
-                <select id="marque" name="ref_model">
+                <select id="marque" name="ref_model" class="attr2">
                 <?php foreach ($marques as $key => $value):
                 	if (!file_exists('public/manuels/manuels/'.$value["Manufacturer"].'-'.$value["ModelNo"].'.pdf'))
     				{
@@ -15,52 +15,8 @@
 				<?php } endforeach; ?>
                    
                 </select>
-                <input type="file" name="uploadpdf" required>
-                <input type="submit" name="setpdf" value="Enregistrer">
+                <input type="file" class="attr3" name="uploadpdf" required>
+                <input type="submit" name="setpdf" class="attr4" value="Enregistrer">
                 </form>
             </div>
-        </div><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-
-<?php foreach ($marques as $key => $value):?>
-	<div><?php echo $value["Manufacturer"].'-'.$value["ModelNo"];?></div>
-
-<?php
-    if (file_exists('public/manuels/manuels/'.$value["Manufacturer"].'-'.$value["ModelNo"].'.pdf'))
-    { 
-?>
-    <a href="video-projecteur-<?php echo $value["Manufacturer"].'-'.$value["ModelNo"]; ?>.html" title="Manuel d'utilisation <?php echo $value["Manufacturer"].'-'.$value["ModelNo"]; ?>"><img src="images/manuel-ico.png"  width="20" height="18">
-    </a>
-<?php 
-    }
-    if (!file_exists('public/manuels/manuels/'.$value["Manufacturer"].'-'.$value["ModelNo"].'.pdf'))
-    { 
-?>
-    <input type="file" name="uploadpdf">
-<?php 
-    }
-?>
-
-	<?php //echo 'public/manuels/manuels/'.$value["Manufacturer"].'-'.$value["ModelNo"].'.pdf';?>
-<?php endforeach; ?>
-
-<?php
-                                 /* if($value['Manufacturer']!="3M")
-                                  {
-	                                  $marque_upper = ucfirst(strtolower($value['Manufacturer']));
-	                                  $model_upper = strtoupper($value['ModelNo']);
-                                  }
-                                  else
-                                  {
-                                    $marque_upper = $value['Manufacturer'];
-                                    $model_upper = $value['ModelNo'];
-                                  }
-                                   if ($_SERVER['SERVER_NAME']=="127.0.0.1")
-                                   {
-                                      $path_3shop = 'public/manuels/';
-                                   }*/
-                                   //else
-                                  //{
-                                     // $path_3shop = 'public/manuels/';
-                                     // $path_3shop = '/home/yeaslmps/www/lampe-videoprojecteur.info/';   
-                                  //}
-                              ?>
+        </div>
