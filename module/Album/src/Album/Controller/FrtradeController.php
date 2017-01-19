@@ -193,6 +193,8 @@ class FrtradeController extends AbstractActionController
 
 
     public function uploadpdfAction(){
+        $this->layout()->title = 'Lampe videoprojecteur : Toutes les infos utiles';
+        
         $request = $this->getRequest();
         $nom_pdf = $request->getPost("ref_model");
 
