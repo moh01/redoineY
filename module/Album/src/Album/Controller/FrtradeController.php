@@ -65,7 +65,6 @@ class FrtradeController extends AbstractActionController
 
         if (!empty($_SESSION['user']) && !empty($_SESSION['password']))
         {
-           
 
             if ($request->getPost("submit"))
             { 
@@ -76,10 +75,27 @@ class FrtradeController extends AbstractActionController
                 $extension_upload = strtolower(  substr(  strrchr($_FILES['img_article']['name'], '.')  ,1)  );
                 if ( in_array($extension_upload,$extensions_valides) )
                 {
+                    if ($_SERVER['SERVER_NAME'] == "http://lampe-videoprojecteur.info") {
+                        $uploaddir = 'http://lampe-videoprojecteur.info/images/photos/';
+                    $uploadfile = $uploaddir . basename($_FILES['img_article']['name']);
+
+                    move_uploaded_file($_FILES['img_article']['tmp_name'], $uploadfile);
+                    }
+
+                    elseif ($_SERVER['SERVER_NAME'] == "http://dev.lampe-videoprojecteur.info") {
+                        $uploaddir = 'http://dev.lampe-videoprojecteur.info/images/photos/';
+                    $uploadfile = $uploaddir . basename($_FILES['img_article']['name']);
+
+                    move_uploaded_file($_FILES['img_article']['tmp_name'], $uploadfile);
+                    }
+
+                    else{
                     $uploaddir = 'public/images/photos/';
                     $uploadfile = $uploaddir . basename($_FILES['img_article']['name']);
 
-                    move_uploaded_file($_FILES['img_article']['tmp_name'], $uploadfile);}
+                    move_uploaded_file($_FILES['img_article']['tmp_name'], $uploadfile);
+                    }
+                }
                 
                 else {
                     return new ViewModel(array( 
@@ -194,7 +210,7 @@ class FrtradeController extends AbstractActionController
 
     public function uploadpdfAction(){
         $this->layout()->title = 'Lampe videoprojecteur : Toutes les infos utiles';
-        
+
         $request = $this->getRequest();
         $nom_pdf = $request->getPost("ref_model");
 

@@ -345,7 +345,7 @@ class FrtradeTable extends AbstractTableGateway
                         and (`prd`.`manufacturers_id` = `man`.`manufacturers_id`))
                     ON DUPLICATE KEY UPDATE le_prix = `prd`.`products_price`";
 
-            $sql_tab = array($requete_rqdlcomposant);
+            $sql_tab = array($requete_lvpcomposant,$requete_hplcomposant,$requete_rqdlcomposant);
             foreach ($sql_tab as $key => $sql) {
                $result = $this->adapter->query($sql)->execute(array());
             }
