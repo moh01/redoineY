@@ -19,7 +19,7 @@ class FrtradeController extends AbstractActionController
         $this->layout()->title = 'Lampe videoprojecteur : Toutes les infos utiles';
         return new ViewModel(array(
             'categories' => $this->getFrtradeTable()->getCategorie(), 
-            'article' => $this->getFrtradeTable()->getArticle($marque),
+            'article' => $this->getFrtradeTable()->getArticleByRef($ref_prod),
 
         ));
     }
@@ -68,6 +68,18 @@ class FrtradeController extends AbstractActionController
 
             if ($request->getPost("submit"))
             { 
+                if ($request->getPost("marque")==NULL)
+                {
+                    $marque = $request->getPost("marque");
+                    $marque = "autre";
+                    $ref_prod = $request->getPost("ref_prod");
+                    $ref_prod = "autre";
+                }
+                else
+                {
+                    $marque = $request->getPost("marque");
+                    $ref_prod = $request->getPost("ref_prod");
+                }
                 $extensions_valides = array( 'jpg' , 'jpeg' , 'gif' , 'png' );
                 //1. strrchr renvoie l'extension avec le point (« . »).
                 //2. substr(chaine,1) ignore le premier caractère de chaine.
@@ -102,7 +114,7 @@ class FrtradeController extends AbstractActionController
                     'error' => '<span style="color:red;">Extension incorrect,Veuillez choisir une image.</span>',
                     ));  
                 }
-                    $this->getFrtradeTable()->createArticle($request->getPost("ref_prod"),$request->getPost("marque"),$request->getPost("titre"),$request->getPost("paragraphe"),basename($_FILES['img_article']['name']),$request->getPost("resume_article"),$request->getPost("meta_title"),$request->getPost("meta_desc"));     
+                    $this->getFrtradeTable()->createArticle($ref_prod,$marque,$request->getPost("titre"),$request->getPost("paragraphe"),basename($_FILES['img_article']['name']),$request->getPost("resume_article"),$request->getPost("meta_title"),$request->getPost("meta_desc"));     
 
             }
 
@@ -136,10 +148,32 @@ class FrtradeController extends AbstractActionController
            
            if ($request->getPost("submit_edit"))
             { 
-                $uploaddir = 'public/images/photos/';
+                /*$uploaddir = 'public/images/photos/';
                 $uploadfile = $uploaddir . basename($_FILES['img_article']['name']);
 
-                move_uploaded_file($_FILES['img_article']['tmp_name'], $uploadfile);
+                move_uploaded_file($_FILES['img_article']['tmp_name'], $uploadfile);*/
+
+
+                if ($_SERVER['SERVER_NAME'] == "http://lampe-videoprojecteur.info") {
+                        $uploaddir = 'http://lampe-videoprojecteur.info/images/photos/';
+                    $uploadfile = $uploaddir . basename($_FILES['img_article']['name']);
+
+                    move_uploaded_file($_FILES['img_article']['tmp_name'], $uploadfile);
+                    }
+
+                    elseif ($_SERVER['SERVER_NAME'] == "http://dev.lampe-videoprojecteur.info") {
+                        $uploaddir = 'http://dev.lampe-videoprojecteur.info/images/photos/';
+                    $uploadfile = $uploaddir . basename($_FILES['img_article']['name']);
+
+                    move_uploaded_file($_FILES['img_article']['tmp_name'], $uploadfile);
+                    }
+
+                    else{
+                    $uploaddir = 'public/images/photos/';
+                    $uploadfile = $uploaddir . basename($_FILES['img_article']['name']);
+
+                    move_uploaded_file($_FILES['img_article']['tmp_name'], $uploadfile);
+                    }
 
                 $this->getFrtradeTable()->editArticle($request->getPost("ref_prod"),$request->getPost("marque"),$request->getPost("titre"),$request->getPost("paragraphe"),basename($_FILES['img_article']['name']),$request->getPost("resume_article"),$request->getPost("meta_title"),$request->getPost("meta_desc"), $request->getPost("id_article"));
             }
@@ -276,9 +310,9 @@ class FrtradeController extends AbstractActionController
     
 
     public function nouveautesvideoprojecteurAction(){
-        $marque = $this->params('id');
+        $ref_prod = $this->params('id');
         return new ViewModel(array(
-            "article" => $this->getFrtradeTable()->getArticle($marque), "marque" => $marque ,
+            "article" => $this->getFrtradeTable()->getArticleByRef($ref_prod), "ref_prod" => $ref_prod ,
             ));
     }
 

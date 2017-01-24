@@ -235,6 +235,25 @@ class FrtradeTable extends AbstractTableGateway
         return $return;
     }
 
+        public function getArticleByRef($ref_prod)
+   {
+      if (isset($ref_prod)) {
+        $sql = "SELECT * FROM articles where ref_produit = ? ";
+      }
+      else 
+        $sql = "SELECT * FROM articles ORDER BY date_creation DESC";
+    
+      $result = $this->adapter->query($sql)->execute(array($ref_prod));
+      $return = array();
+
+        $lengthResult = $result->count();
+        for($i=0; $i<$lengthResult; $i++){
+            $return[] = $result->current();
+            $result->next();
+        }
+        return $return;
+    }
+
     public function getUser($name,$password)
    {
         if(isset($name) && isset($password))
