@@ -4,7 +4,7 @@ $this->layout()->title = $article[0]["meta_title"];
 $this->headMeta()
                 ->appendName('keywords', "nouveautés vidéoprojecteur")
                 ->appendName('description', $article[0]["meta_description"]);
-                $marque_upper = ucfirst (strtolower($ref_prod));
+                $ref_produit_upper = ucfirst (strtolower($ref_prod));
 ?>
 <!-- Slider -->
 <div class="box-line bg_slider">
@@ -62,13 +62,13 @@ $this->headMeta()
 <div class="ariane">
     <p>
         <a href="home"><img src="images/ico-home.png" alt="" width="16" height="14" /></a>
-        <span>&nbsp;&gt;&nbsp;<a href="nouveautes-videoprojecteurs.php" title="Nouveautés sur les lampes de vidéoprojecteurs par marques">Nouveautés sur les lampes de vidéoprojecteurs par marques</a></span><span>&nbsp;&gt;&nbsp;Nouveaut&eacute;s Videoprojecteurs <?php echo $marque_upper ?></span>
+        <span>&nbsp;&gt;&nbsp;<a href="nouveautes-videoprojecteurs.php" title="Nouveautés sur les lampes de vidéoprojecteurs par marques">Nouveautés sur les lampes de vidéoprojecteurs par marques</a></span><span>&nbsp;&gt;&nbsp;Nouveaut&eacute;s Videoprojecteurs <?php echo $ref_produit_upper ?></span>
     </p>
 </div>
 <div class="containeur">
   <!-- Contenu -->
   <div class="contenu">
-      <h1 class="titre_page">Nouveaut&eacute;s Videoprojecteurs <?php echo $marque_upper ?></h1>
+      <h1 class="titre_page">Nouveaut&eacute;s Videoprojecteurs <?php echo $ref_produit_upper ?></h1>
         <!-- D&eacute;but accordeon -->
 
         <?php
