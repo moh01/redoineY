@@ -217,12 +217,12 @@ class FrtradeTable extends AbstractTableGateway
     }
 
     public function getArticle($marque)
-   {
+   { 
      if (isset($marque)) {
         $sql = "SELECT * FROM articles where constructeur = ? ";
       }
-      else 
-        $sql = "SELECT * FROM articles ORDER BY date_creation DESC";
+      else {
+        $sql = "SELECT * FROM articles ORDER BY date_creation DESC";}
     
       $result = $this->adapter->query($sql)->execute(array($marque));
       $return = array();
