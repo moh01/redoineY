@@ -95,10 +95,11 @@ return array(
                         'liste-articles' => array(
                                         'type'    => 'segment',
                                         'options' => array(
-                                            'route'    => '/liste-articles-[:id].php',
+                                            'route'    => '/liste-articles-[:id].html',
                                             'defaults' => array(
                                                 'controller' => 'Album\Controller\Frtrade',
                                                 'action'     => 'listearticles',
+                                                'id'     => '[a-zA-Z][a-zA-Z0-9_-]*',
                                             ),
                                         ), 
                         ),

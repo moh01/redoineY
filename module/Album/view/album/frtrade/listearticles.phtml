@@ -71,11 +71,11 @@ $this->headMeta()
       <h1 class="titre_page">Nouveaut&eacute;s Videoprojecteurs de la marque <?php echo $marque ?></h1>
         <!-- Liste des marques -->
         <div class="box-mark">
-            
+           
                 
                 <?php
                     foreach ($article as $key => $value):
-                       if($value["constructeur"] == $marque){
+                       if($value["constructeur"] == $marque):
                 ?>
             
                 <div>
@@ -85,7 +85,7 @@ $this->headMeta()
                         <?php echo "<h3 style='color: black;'>".mb_strtoupper($value["titre"],'UTF-8')."</h3>";?>
                     </a>
                     </div>                 
-                <?php } //$const = $value["constructeur"]; 
+                <?php endif; //$const = $value["constructeur"]; 
                     endforeach;
                 ?>
               

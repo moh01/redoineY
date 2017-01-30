@@ -204,10 +204,10 @@ class FrtradeController extends AbstractActionController
     }
 
     public function listearticlesAction(){
-       
+       $marque = $this->params('id');
         return new ViewModel(array(
-            'article' => $this->getFrtradeTable()->getArticle($marque),
-            'marque' => $this->params('id'),
+            'marque' => $marque,
+            'article' => $this->getFrtradeTable()->getArticle($marque),      
             ));
     }
 
