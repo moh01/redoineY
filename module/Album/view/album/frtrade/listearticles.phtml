@@ -60,7 +60,7 @@ $this->headMeta()
 <div class="ariane">
     <p>
         <a href="home"><img src="images/ico-home.png" alt="" width="16" height="14" /></a>&nbsp;&gt;&nbsp;
-        <span>Nouveaut&eacute;s Videoprojecteurs par marques <?php //echo date('Y'); ?></span>
+        <span>Nouveaut&eacute;s Videoprojecteurs de la marque <?php echo $marque ?></span>
     </p>
 </div>
 
@@ -68,76 +68,28 @@ $this->headMeta()
 <div class="containeur">
   <!-- Contenu -->
   <div class="contenu">
-      <h1 class="titre_page">Nouveaut&eacute;s Videoprojecteurs par marques <?php //echo date('Y'); ?></h1>
+      <h1 class="titre_page">Nouveaut&eacute;s Videoprojecteurs de la marque <?php echo $marque ?></h1>
         <!-- Liste des marques -->
         <div class="box-mark">
-            <ul class="mark-list">
-                <li>
-                    <a href="achat-en-ligne.php" title="Achat videoprojecteur lampe">
-                    <img src="img/images/acheter.gif" border="0" alt="Achat videoprojecteur lampe"></a>
-                    <a class="name-mark" href="achat-en-ligne.php" title="EPSON">Achats en ligne</a>
-                </li>
+            
+                
                 <?php
                     foreach ($article as $key => $value):
-                    if($const == $value["constructeur"])continue;
+                    //if($const == $value["constructeur"])continue;
+                       if($value["constructeur"] == $marque){
                 ?>
             
-                <li>
-                    <a class="name-mark" href="liste-articles-<?php echo $value["constructeur"];?>.php?marque=<?php echo $value["constructeur"];?>" title="lampe videoprojecteur <?php echo $value["constructeur"];?>">
-                        <!--<div><?php //echo $value["constructeur"];?></div>-->
-                        <img src="img/img-lampe/lampe-<?php echo $value["constructeur"];?>.gif" border="0" alt="Achat videoprojecteur lampe"><?php echo strtoupper($value["constructeur"]);?>
+                <div>
+                    <a class="name-mark" href="nouveautes-videoprojecteurs-<?php echo $value["ref_produit"];?>.php?article=<?php echo $value["id"];?>" title="lampe videoprojecteur <?php echo $value["ref_produit"];?>">
+
+                        <img style="width: 50%;" src="images/photos/<?php echo $value["image"];?>" border="0" alt="Achat videoprojecteur lampe"><br/>
+                        <?php echo "<h3 style='color: black;'>".mb_strtoupper($value["titre"],'UTF-8')."</h3>";?>
                     </a>
-                </li>                     
-                <?php $const = $value["constructeur"]; endforeach;  ?>
-                <li class="spacer"></li>
-            </ul>
-            <!-- <ul class="mark-list">
-                <li>
-                    <a href="achat-en-ligne.php" title="Achat videoprojecteur lampe">
-                    <img src="img/images/acheter.gif" border="0" alt="Achat videoprojecteur lampe"></a>
-                    <a class="name-mark" href="achat-en-ligne.php" title="EPSON">Achats en ligne</a>
-                </li>
-                <li>
-                  <a href="nouveautes-videoprojecteurs-acer.php" title="lampe videoprojecteur Acer">
-                  <img src="img/img-lampe/lampe-Acer.gif" border="0" alt="Nouveautés videoprojecteurs Acer"></a>
-                    <a class="name-mark" href="nouveautes-videoprojecteurs-Acer.php" title="Acer">Acer</a>
-                </li>
-                <li>
-                    <a href="nouveautes-videoprojecteurs-benq.php" title="lampe videoprojecteur Benq">
-                    <img src="img/img-lampe/lampe-BenQ.gif" border="0" alt="Nouveautés videoprojecteurs Benq"></a>
-                    <a class="name-mark" href="nouveautes-videoprojecteurs-Benq.php" title="Benq">Benq</a>
-                </li>
-                <li>
-                    <a href="nouveautes-videoprojecteurs-casio.php" title="lampe videoprojecteur Casio">
-                    <img src="img/img-lampe/lampe-Casio.gif" border="0" alt="Nouveautés videoprojecteurs Casio"></a>
-                    <a class="name-mark" href="nouveautes-videoprojecteurs-Casio.php" title="Casio">Casio</a>
-                </li>
-                <li>
-                    <a href="nouveautes-videoprojecteurs-christie.php" title="lampe videoprojecteur Christie"><img src="img/img-lampe/lampe-Christie.gif" border="0" alt="Nouveautés videoprojecteurs Christie"></a>
-                    <a class="name-mark" href="nouveautes-videoprojecteurs-Christie.php" title="Christie">Christie</a>
-                </li>
-                <li>
-                  <a href="nouveautes-videoprojecteurs-mitsubishi.php" title="lampe videoprojecteur Mitsubishi">
-                  <img src="img/img-lampe/lampe-Mitsubishi.gif" border="0" alt="Nouveautés videoprojecteurs Mitsubishi"></a>
-                  <a class="name-mark" href="nouveautes-videoprojecteurs-Mitsubishi.php" title="Mitsubishi">Mitsubishi</a>
-                </li>
-                <li>
-                    <a href="nouveautes-videoprojecteurs-panasonic.php" title="lampe videoprojecteur Panasonic"><img src="img/img-lampe/lampe-Panasonic.gif" border="0" alt="Nouveautés videoprojecteurs Panasonic"></a>
-                    <a class="name-mark" href="nouveautes-videoprojecteurs-Panasonic.php" title="Panasonic">Panasonic</a>
-                </li>
-                <li>
-                  <a href="nouveautes-videoprojecteurs-sanyo.php" title="lampe videoprojecteur Sanyo">
-                  <img src="img/img-lampe/lampe-Sanyo.gif" border="0" alt="Nouveautés videoprojecteurs Sanyo"></a>
-                    <a class="name-mark" href="nouveautes-videoprojecteurs-SANYO.php" title="SANYO">Sanyo</a>
-                </li>
-                <li>
-                    <a href="nouveautes-videoprojecteurs-sony.php" title="lampe videoprojecteur Sony">
-                    <img src="img/img-lampe/lampe-Sony.gif" border="0" alt="Nouveautés videoprojecteurs Sanyo"></a>
-                    <a class="name-mark" href="nouveautes-videoprojecteurs-Sony.php" title="Sony">Sony</a>
-                </li>
-                
-                <li class="spacer"></li>
-            </ul> -->
+                    </div>                 
+                <?php } //$const = $value["constructeur"]; 
+                    endforeach;
+                ?>
+              
         </div>
         <!-- Fin accordeon -->
     </div>

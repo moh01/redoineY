@@ -218,7 +218,7 @@ class FrtradeTable extends AbstractTableGateway
 
     public function getArticle($marque)
    {
-      if (isset($marque)) {
+     if (isset($marque)) {
         $sql = "SELECT * FROM articles where constructeur = ? ";
       }
       else 
@@ -237,7 +237,10 @@ class FrtradeTable extends AbstractTableGateway
 
         public function getArticleByRef($ref_prod)
    {
-      if (isset($ref_prod)) {
+      if (isset($ref_prod) && isset($_GET['article'])) {
+        $sql = "SELECT * FROM articles where ref_produit = ? and id ='".$_GET['article']."'";
+      }
+      elseif (isset($ref_prod)) {
         $sql = "SELECT * FROM articles where ref_produit = ? ";
       }
       else 

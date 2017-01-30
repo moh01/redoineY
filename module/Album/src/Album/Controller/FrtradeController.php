@@ -199,7 +199,17 @@ class FrtradeController extends AbstractActionController
     }
 
     public function nouveautesvideoprojecteursAction(){
-        
+
+        return new ViewModel(array('article' => $this->getFrtradeTable()->getArticle($marque),));
+    }
+
+    public function listearticlesAction(){
+       
+
+        return new ViewModel(array(
+            'article' => $this->getFrtradeTable()->getArticle($marque),
+            'marque' => $this->params('id'),
+            ));
     }
 
     public function infosvideoprojecteurAction(){

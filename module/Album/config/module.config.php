@@ -92,6 +92,17 @@ return array(
                                         ), 
                         ),
 
+                        'liste-articles' => array(
+                                        'type'    => 'segment',
+                                        'options' => array(
+                                            'route'    => '/liste-articles-[:id].php',
+                                            'defaults' => array(
+                                                'controller' => 'Album\Controller\Frtrade',
+                                                'action'     => 'listearticles',
+                                            ),
+                                        ), 
+                        ),
+
                         'contact' => array(
                                 'type'    => 'literal',
                                 'options' => array(
