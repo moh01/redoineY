@@ -205,7 +205,6 @@ class FrtradeController extends AbstractActionController
 
     public function listearticlesAction(){
        
-
         return new ViewModel(array(
             'article' => $this->getFrtradeTable()->getArticle($marque),
             'marque' => $this->params('id'),
