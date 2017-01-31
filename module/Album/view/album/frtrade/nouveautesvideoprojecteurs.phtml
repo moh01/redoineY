@@ -79,13 +79,13 @@ $this->headMeta()
                 </li>
                 <?php
                     foreach ($article as $key => $value):
-                    if($const == strtoupper($value["constructeur"])) continue;
+                    if($const == $value["constructeur"])continue;
                 ?>
             
                 <li>
                     <a class="name-mark" href="liste-articles-<?php echo $value["constructeur"];?>.html" title="lampe videoprojecteur <?php echo $value["constructeur"];?>">
                         <!--<div><?php //echo $value["constructeur"];?></div>-->
-                        <img src="img/img-lampe/lampe-<?php echo ucfirst($value["constructeur"]);?>.gif" border="0" alt="Achat videoprojecteur lampe"><?php echo strtoupper($value["constructeur"]);?>
+                        <img src="img/img-lampe/lampe-<?php echo ucfirst(strtolower($value["constructeur"]));?>.gif" border="0" alt="Achat videoprojecteur lampe"><?php echo strtoupper($value["constructeur"]);?>
                     </a>
                 </li>                     
                 <?php $const = $value["constructeur"]; endforeach;  ?>
