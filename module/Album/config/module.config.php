@@ -99,7 +99,7 @@ return array(
                                             'defaults' => array(
                                                 'controller' => 'Album\Controller\Frtrade',
                                                 'action'     => 'listearticles',
-                                                'id'     => '[a-zA-Z][a-zA-Z0-9_-]*',
+                                                
                                             ),
                                         ), 
                         ),
