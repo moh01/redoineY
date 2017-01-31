@@ -67,8 +67,8 @@ class FrtradeController extends AbstractActionController
         {
 
             if ($request->getPost("submit"))
-            { 
-                if ($request->getPost("marque")==NULL)
+            {
+                if ($request->getPost("marque")=="autre")
                 {
                     $marque = $request->getPost("marque");
                     $marque = "autre";
