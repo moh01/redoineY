@@ -79,7 +79,7 @@ $this->headMeta()
                 </li>
                 <?php
                     foreach ($article as $key => $value):
-                    if($const == $value["constructeur"])continue;
+                    if($const == strtoupper($value["constructeur"])) continue;
                 ?>
             
                 <li>
