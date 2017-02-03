@@ -11,7 +11,7 @@
                 	if (!file_exists('public/manuels/manuels/'.$value["Manufacturer"].'-'.$value["ModelNo"].'.pdf'))
     				{
                 ?>
-					<option required><?php echo $value["Manufacturer"].'-'.$value["ModelNo"];?></option>
+					<option required><?php echo ucfirst(strtolower($value["Manufacturer"])).'-'.$value["ModelNo"];?></option>
 				<?php } endforeach; ?>
                    
                 </select>
