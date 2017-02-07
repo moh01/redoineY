@@ -87,14 +87,14 @@ class FrtradeController extends AbstractActionController
                 $extension_upload = strtolower(  substr(  strrchr($_FILES['img_article']['name'], '.')  ,1)  );
                 if ( in_array($extension_upload,$extensions_valides) )
                 {
-                    if ($_SERVER['SERVER_NAME'] == "http://lampe-videoprojecteur.info") {
+                    if ($_SERVER['SERVER_NAME'] == "lampe-videoprojecteur.info") {
                         $uploaddir = 'http://lampe-videoprojecteur.info/images/photos/';
                     $uploadfile = $uploaddir . basename($_FILES['img_article']['name']);
 
                     move_uploaded_file($_FILES['img_article']['tmp_name'], $uploadfile);
                     }
 
-                    elseif ($_SERVER['SERVER_NAME'] == "http://dev.lampe-videoprojecteur.info") {
+                    elseif ($_SERVER['SERVER_NAME'] == "dev.lampe-videoprojecteur.info") {
                         $uploaddir = 'http://dev.lampe-videoprojecteur.info/images/photos/';
                     $uploadfile = $uploaddir . basename($_FILES['img_article']['name']);
 
@@ -154,15 +154,17 @@ class FrtradeController extends AbstractActionController
                 move_uploaded_file($_FILES['img_article']['tmp_name'], $uploadfile);*/
 
 
-                if ($_SERVER['SERVER_NAME'] == "http://lampe-videoprojecteur.info") {
+                if ($_SERVER['SERVER_NAME'] == "lampe-videoprojecteur.info") {
                         $uploaddir = 'http://lampe-videoprojecteur.info/images/photos/';
                     $uploadfile = $uploaddir . basename($_FILES['img_article']['name']);
 
                     move_uploaded_file($_FILES['img_article']['tmp_name'], $uploadfile);
                     }
 
-                    elseif ($_SERVER['SERVER_NAME'] == "http://dev.lampe-videoprojecteur.info") {
-                        $uploaddir = 'http://dev.lampe-videoprojecteur.info/images/photos/';
+                    elseif ($_SERVER['SERVER_NAME'] == "dev.lampe-videoprojecteur.info") {
+                        $uploaddir = 'dev.lampe-videoprojecteur.info/images/photos/';
+                        
+                       // $uploaddir = 'http://dev.lampe-videoprojecteur.info/images/photos/';
                     $uploadfile = $uploaddir . basename($_FILES['img_article']['name']);
 
                     move_uploaded_file($_FILES['img_article']['tmp_name'], $uploadfile);
@@ -259,10 +261,23 @@ class FrtradeController extends AbstractActionController
 
         if ($request->getPost("setpdf"))
             {
+                if ($_SERVER['SERVER_NAME'] == "lampe-videoprojecteur.info") {
+                    $uploaddir = 'lampe-videoprojecteur.info/manuels/manuels/';            
+                    $uploadfile = $uploaddir . basename($_FILES['uploadpdf']['name']);
+
+                    move_uploaded_file($_FILES['uploadpdf']['tmp_name'], $uploaddir.$nom_pdf.'.pdf');
+                    }
+                elseif ($_SERVER['SERVER_NAME'] == "dev.lampe-videoprojecteur.info") {
+                    $uploaddir = 'dev.lampe-videoprojecteur.info/manuels/manuels/';            
+                    $uploadfile = $uploaddir . basename($_FILES['uploadpdf']['name']);
+
+                    move_uploaded_file($_FILES['uploadpdf']['tmp_name'], $uploaddir.$nom_pdf.'.pdf');
+                    }
+                else{
                 $uploaddir = 'public/manuels/manuels/';
                 $uploadfile = $uploaddir . basename($_FILES['uploadpdf']['name']);
 
-                move_uploaded_file($_FILES['uploadpdf']['tmp_name'], $uploaddir.$nom_pdf.'.pdf');
+                move_uploaded_file($_FILES['uploadpdf']['tmp_name'], $uploaddir.$nom_pdf.'.pdf');}
 
             }
         return new ViewModel(array(
