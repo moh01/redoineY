@@ -8,7 +8,7 @@
             <form method="post" action="uploadpdf.html" enctype="multipart/form-data">
                 <select id="marque" name="ref_model" class="attr2">
                 <?php foreach ($marques as $key => $value):
-                	if (!file_exists('public/manuels/manuels/'.$value["Manufacturer"].'-'.$value["ModelNo"].'.pdf'))
+                	if (!file_exists('public/manuels/manuels/'.ucfirst(strtolower($value["Manufacturer"])).'-'.$value["ModelNo"].'.pdf'))
     				{
                 ?>
 					<option required><?php echo ucfirst(strtolower($value["Manufacturer"])).'-'.$value["ModelNo"];?></option>

@@ -87,26 +87,9 @@ class FrtradeController extends AbstractActionController
                 $extension_upload = strtolower(  substr(  strrchr($_FILES['img_article']['name'], '.')  ,1)  );
                 if ( in_array($extension_upload,$extensions_valides) )
                 {
-                    if ($_SERVER['SERVER_NAME'] == "lampe-videoprojecteur.info") {
-                        $uploaddir = 'http://lampe-videoprojecteur.info/images/photos/';
-                    $uploadfile = $uploaddir . basename($_FILES['img_article']['name']);
-
-                    move_uploaded_file($_FILES['img_article']['tmp_name'], $uploadfile);
-                    }
-
-                    elseif ($_SERVER['SERVER_NAME'] == "dev.lampe-videoprojecteur.info") {
-                        $uploaddir = 'http://dev.lampe-videoprojecteur.info/images/photos/';
-                    $uploadfile = $uploaddir . basename($_FILES['img_article']['name']);
-
-                    move_uploaded_file($_FILES['img_article']['tmp_name'], $uploadfile);
-                    }
-
-                    else{
                     $uploaddir = 'public/images/photos/';
                     $uploadfile = $uploaddir . basename($_FILES['img_article']['name']);
-
-                    move_uploaded_file($_FILES['img_article']['tmp_name'], $uploadfile);
-                    }
+                    move_uploaded_file($_FILES['img_article']['tmp_name'], $uploaddir.basename($_FILES['img_article']['name']));                  
                 }
                 
                 else {
@@ -117,17 +100,6 @@ class FrtradeController extends AbstractActionController
                     $this->getFrtradeTable()->createArticle($ref_prod,$marque,$request->getPost("titre"),$request->getPost("paragraphe"),basename($_FILES['img_article']['name']),$request->getPost("resume_article"),$request->getPost("meta_title"),$request->getPost("meta_desc"));     
 
             }
-
-/*            elseif ($request->getPost("submit_edit"))
-            { 
-                $uploaddir = 'public/images/photos/';
-                $uploadfile = $uploaddir . basename($_FILES['img_article']['name']);
-
-                move_uploaded_file($_FILES['img_article']['tmp_name'], $uploadfile);
-
-                $this->getFrtradeTable()->editArticle($request->getPost("ref_prod"),$request->getPost("marque"),$request->getPost("titre"),$request->getPost("paragraphe"),basename($_FILES['img_article']['name']),$request->getPost("resume_article"),$request->getPost("meta_title"),$request->getPost("meta_desc"), $request->getPost("id_article"));
-            }*/
-
 
            return new ViewModel(array('article' => $this->getFrtradeTable()->getArticle($marque),)); 
        }
@@ -148,34 +120,10 @@ class FrtradeController extends AbstractActionController
            
            if ($request->getPost("submit_edit"))
             { 
-                /*$uploaddir = 'public/images/photos/';
-                $uploadfile = $uploaddir . basename($_FILES['img_article']['name']);
-
-                move_uploaded_file($_FILES['img_article']['tmp_name'], $uploadfile);*/
-
-
-                if ($_SERVER['SERVER_NAME'] == "lampe-videoprojecteur.info") {
-                        $uploaddir = 'http://lampe-videoprojecteur.info/images/photos/';
-                    $uploadfile = $uploaddir . basename($_FILES['img_article']['name']);
-
-                    move_uploaded_file($_FILES['img_article']['tmp_name'], $uploadfile);
-                    }
-
-                    elseif ($_SERVER['SERVER_NAME'] == "dev.lampe-videoprojecteur.info") {
-                        $uploaddir = 'dev.lampe-videoprojecteur.info/images/photos/';
-                        
-                       // $uploaddir = 'http://dev.lampe-videoprojecteur.info/images/photos/';
-                    $uploadfile = $uploaddir . basename($_FILES['img_article']['name']);
-
-                    move_uploaded_file($_FILES['img_article']['tmp_name'], $uploadfile);
-                    }
-
-                    else{
                     $uploaddir = 'public/images/photos/';
                     $uploadfile = $uploaddir . basename($_FILES['img_article']['name']);
-
-                    move_uploaded_file($_FILES['img_article']['tmp_name'], $uploadfile);
-                    }
+                    
+                    move_uploaded_file($_FILES['img_article']['tmp_name'], $uploaddir.basename($_FILES['img_article']['name'])); 
 
                 $this->getFrtradeTable()->editArticle($request->getPost("ref_prod"),$request->getPost("marque"),$request->getPost("titre"),$request->getPost("paragraphe"),basename($_FILES['img_article']['name']),$request->getPost("resume_article"),$request->getPost("meta_title"),$request->getPost("meta_desc"), $request->getPost("id_article"));
             }
@@ -261,23 +209,10 @@ class FrtradeController extends AbstractActionController
 
         if ($request->getPost("setpdf"))
             {
-                if ($_SERVER['SERVER_NAME'] == "lampe-videoprojecteur.info") {
-                    $uploaddir = 'lampe-videoprojecteur.info/manuels/manuels/';            
-                    $uploadfile = $uploaddir . basename($_FILES['uploadpdf']['name']);
-
-                    move_uploaded_file($_FILES['uploadpdf']['tmp_name'], $uploaddir.$nom_pdf.'.pdf');
-                    }
-                elseif ($_SERVER['SERVER_NAME'] == "dev.lampe-videoprojecteur.info") {
-                    $uploaddir = 'dev.lampe-videoprojecteur.info/manuels/manuels/';            
-                    $uploadfile = $uploaddir . basename($_FILES['uploadpdf']['name']);
-
-                    move_uploaded_file($_FILES['uploadpdf']['tmp_name'], $uploaddir.$nom_pdf.'.pdf');
-                    }
-                else{
                 $uploaddir = 'public/manuels/manuels/';
                 $uploadfile = $uploaddir . basename($_FILES['uploadpdf']['name']);
 
-                move_uploaded_file($_FILES['uploadpdf']['tmp_name'], $uploaddir.$nom_pdf.'.pdf');}
+                move_uploaded_file($_FILES['uploadpdf']['tmp_name'], $uploaddir.$nom_pdf.'.pdf');
 
             }
         return new ViewModel(array(
