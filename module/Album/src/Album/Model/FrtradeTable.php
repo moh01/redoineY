@@ -94,7 +94,7 @@ class FrtradeTable extends AbstractTableGateway
     }
 
     public function stock($lampe) {
-        $sql = 'select qty FROM elstock join fr_trade on lamp_code = fr_trade.Manupartcode WHERE ModelNo = ?';
+        $sql = 'SELECT qty FROM elstock JOIN fr_trade ON elstock.lamp_code = fr_trade.ModelNo WHERE ModelNo = ?';
         $result = $this->adapter->query($sql)->execute(array($lampe));
         $return = array();
         $lengthResult = $result->count();
