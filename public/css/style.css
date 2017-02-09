@@ -512,6 +512,7 @@ div.carousel-inner{height:167px;}
 	font-family:"Century", Arial;
 	font-size:13px;
 	padding:0 10px;
+	text-align: justify;
 }
 .article a{
 	display:block;
