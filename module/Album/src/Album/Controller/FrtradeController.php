@@ -214,9 +214,12 @@ class FrtradeController extends AbstractActionController
 
                 move_uploaded_file($_FILES['uploadpdf']['tmp_name'], $uploaddir.$nom_pdf.'.pdf');
 
+                $success = "Votre fichier PDF a bien été envoyé !";
             }
+
         return new ViewModel(array(
             /*'marque' => $marque,*/
+            'success' => $success,
             'marques' => $this->getFrtradeTable()->getMarque__(),/*'marque' => $marque ,*/ 
              ));
     }
