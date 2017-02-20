@@ -6,7 +6,7 @@
         	<h3 class="attr0">CHOISISSEZ VOTRE MODÈL PUIS INSÉREZ VOTRE FICHE PDF</h3>
             <div class="attr1">
             <form method="post" action="uploadpdf.html" enctype="multipart/form-data">
-                <select id="marque" name="ref_model" class="attr2">
+                <select id="marque-pdf" name="ref_model" class="attr2">
                 <?php foreach ($marques as $key => $value):
                 	if (!file_exists('public/manuels/manuels/'.ucfirst(strtolower($value["Manufacturer"])).'-'.strtoupper($value["ModelNo"]).'.pdf'))
     				{

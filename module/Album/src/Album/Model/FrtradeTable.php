@@ -80,7 +80,7 @@ class FrtradeTable extends AbstractTableGateway
                 JOIN rqdlcomposant ON fr_trade.ModelNo = rqdlcomposant.libelle_produit
                 JOIN lvpcomposant ON fr_trade.ModelNo = lvpcomposant.libelle_produit
                 JOIN hplcomposant ON fr_trade.ModelNo = hplcomposant.libelle_produit
-                GROUP BY ManuPartCode, Manufacturer ORDER BY Manufacturer';
+                GROUP BY ManuPartCode, Manufacturer ORDER BY Manufacturer,ModelNo';
 
         $result = $this->adapter->query($sql)->execute(array());
         $return = array();
