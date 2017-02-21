@@ -120,7 +120,7 @@ $this->headMeta()
                     <?php
                     $constructeur = $marque;
                           foreach($marques as $marque) : 
-                            $link = 'ficheProduit_'.$constructeur.'_'.$marque['ModelNo'].'.php';
+                            $link = 'ficheProduit_'.$constructeur.'_'.$marque['ModelNo'].'.html';
                                   if($marque['Manufacturer']!="3M"){
                                   $marque_upper = ucfirst(strtolower($marque['Manufacturer']));
                                   $model_upper = strtoupper($marque['ModelNo']);
