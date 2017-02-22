@@ -60,7 +60,7 @@ if(isset($_GET['charger']) || isset($_GET['marque'])|| isset($_GET['model'])){
     }
     if  ((file_exists($path_3shop.'photos/'.$marque.'-'.$model.'.gif'))|| 
         (file_exists($path_3shop.'presentation/'.$marque.'-'.$model.'.txt'))||
-        (file_exists($path_3shop.'manuels/'.$marque.'-'.$model.'.pdf'))||
+        (file_exists($path_3shop.'manuels/'.$marque.'-'.strtoupper($model).'.pdf'))||
         (file_exists($path_3shop.'brochures/'.$marque.'-'.$model.'.pdf'))||
         (file_exists($path_3shop.'technique/'.$marque_upper.'-'.$model.'.pdf')))
     {

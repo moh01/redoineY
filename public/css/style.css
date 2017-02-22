@@ -34,7 +34,8 @@
 }
 /* End font */
 *{margin:0; padding:0;}
-body, p, span, em, strong, label, input, textarea{font-family: "Century", Arial!important; line-height:140%; font-size:13px;}
+ul.navig {font-family: 'Raleway-Bold' , Arial!important;}
+body, p, span, em, strong, label, input, textarea{font-family: "Roboto-Regular", Arial!important; line-height:140%; font-size:13px;}
 .box-line{
 	width:100%;
 	clear:both;
@@ -76,13 +77,13 @@ a:focus{ outline:none;!important}
 	padding-left:10px;
 }
 	.slogan p.titre a span{
-		font-family:'Comfortaa-bold' , Arial;
-		font-size:30px!important;
+		font-family:'Raleway-Bold' , Arial !important;
+		font-size:37px!important;
 		margin-bottom:0;
 	}
 	.slogan p.slg a span{
-		font-family:'Comfortaa' , Arial;
-		font-size:18px!important;
+		font-family:'Roboto-Regular' , Arial !important;
+		font-size:20px!important;
 		margin-bottom:0;
 	}
 	.slogan p.titre a:hover, .slogan p.slg a:hover{text-decoration:none;}
@@ -93,7 +94,7 @@ a:focus{ outline:none;!important}
 		background: url("../images/post-it.png") no-repeat;
 }
 	.post-it p{
-		font-family:"Century", Arial;
+		font-family:'Raleway-Bold' , Arial !important;
 		font-size:10px;
 		color:#212121;
 		padding:25px 66px 2px 10px;
@@ -134,8 +135,8 @@ a:focus{ outline:none;!important}
 	display:block;
 	padding-left:55px;
 	padding-top:14px;
-	font-family: 'Comfortaa', Arial;
-	font-size:13px;
+	font-family: 'Raleway-Bold' , Arial;
+	font-size:14px;
 	color:#F8F21A;
 }
 .contact a:hover, .home a:hover{text-decoration:none;color:#F8F21A;}
@@ -155,11 +156,12 @@ ul.navig li{
 	position:relative;
 }
 ul.navig li:last-child{background-image:none;}
+
 ul.navig li a{
 	display:block;
 	padding: 12px 17px 0 17px;
 	height:32px;
-	font-family: 'Comfortaa', Arial;
+	font-family: 'Raleway-Bold' , Arial;
 	font-size:14px;
 	color:#4E5555;
 }
@@ -275,14 +277,16 @@ div.carousel-inner{height:167px;}
 		padding:0 10px 0 105px;
 }
 	.partenaire h3{
-			font-family:'Comfortaa-bold', Arial;
+			font-family:'Roboto-Regular', Arial;
 			font-size:18px;
 			color:#4e5555;
 			border-bottom:1px solid #4e5555;
 			padding-bottom:10px;
+			text-transform:uppercase;
+			margin-top: 7px;
 		}
 	.partenaire p{
-			font-family:"Century", Arial;
+			font-family:"Roboto-Regular", Arial!important;
 			font-size:13px;
 			color:#4e5555;
 		}
@@ -324,6 +328,7 @@ div.carousel-inner{height:167px;}
 		cursor: pointer;
 	}
 	.formArticle label{font-weight: bold!important;}
+	.btn-focuslight{font-family: 'Roboto-Regular', Arial!important;}
 	.btn-partenaire{
 			width:100%;
 			height:35px;
@@ -366,12 +371,13 @@ div.carousel-inner{height:167px;}
 }
 	.selecteur h3{
 			color:#ffffff;
-			font-family:'Comfortaa-bold', Arial;
-			font-size:15px;
-			padding-bottom:15px;
+			font-family:'Raleway-Bold', Arial;
+			font-size:20px;
+			padding-bottom:4px;
 			border-bottom:1px solid #ffffff;
 			margin-left:80px;
-			margin-top:10px;
+			margin-top:4px;
+			text-align: center;
 	}
 	.selecteur select{
 			width:98%;
@@ -380,7 +386,7 @@ div.carousel-inner{height:167px;}
 			padding-top:0px;
 			color:#aaaaaa;
 			font-size:13px;
-			font-family:"Century", Arial;
+			font-family:"Roboto-Regular", Arial;
 			border:1px solid #777777;
 			margin-top:10px;
 	}
@@ -396,7 +402,7 @@ div.carousel-inner{height:167px;}
 			float:left;
 			margin-left:8px;
 			cursor: default;
-			font-family:'Comfortaa-bold', Arial;
+			font-family:'Roboto-Regular', Arial;
 			font-size:12px;
 			font-weight:bold;
 
@@ -406,7 +412,7 @@ div.carousel-inner{height:167px;}
 			height:46px;
 			background: url("../images/bg_prix2.jpg") left no-repeat #ffffff;
 			border:none;
-			font-family:'Comfortaa-bold', Arial;
+			font-family:'Roboto-Regular', Arial;
 			font-size:14px;
 			color:#EA0B0B;
 			text-transform:uppercase;
@@ -431,29 +437,30 @@ div.carousel-inner{height:167px;}
 	margin-top:0;
 }
 .welcome{
-	width:980px;
+	width:100%;
 	margin:auto;
 	background:url("../images/welcome_bg.jpg") center top no-repeat #FD871A;
 	text-align:center;
 	padding:98px 0 25px 0;
+	background-size: cover;
 }
 .welcome h3{
 	margin:0;
 	color:#ffffff;
-	font-family:'Comfortaa', Arial;
+	font-family:'Raleway-Bold', Arial;
 	font-size:28px;
 	margin:0 0 15px 0;
 }
 .welcome h1{
 	margin:0 0 25px 0;
 	color:#ffffff;
-	font-family:'Comfortaa', Arial;
+	font-family:'Raleway-Bold', Arial;
 	font-size:40px;
 }
 .welcome p{
 	margin:0;
 	color:#ffffff;
-	font-family:"Century", Arial;
+	font-family:"Roboto-Regular", Arial!important;
 	font-size:16px;
 }
 /* End Bienvenue */
@@ -469,10 +476,10 @@ div.carousel-inner{height:167px;}
 	background:url("../images/actu_bg.jpg") center top no-repeat #f9f9f9;
 	padding:98px 0 25px 0;
 }
-.box-actus h1{
+.box-actus h2{
 	margin:0 0 25px 0;
 	color:#4ABDD6;
-	font-family:'Comfortaa', Arial;
+	font-family:'Raleway-Bold', Arial;
 	font-size:40px;
 	width:100%;
 	text-align:center;
@@ -499,9 +506,9 @@ div.carousel-inner{height:167px;}
 		border-right:1px solid #eeeeee;
 		background:#cccccc;
 }
-.article h4{
+.article h3{
 	color:#4e5555;
-	font-family:"Century", Arial;
+	font-family:"Raleway-Bold", Arial;
 	font-size:14px;
 	font-weight:bold;
 	padding:0 7px;
@@ -509,14 +516,14 @@ div.carousel-inner{height:167px;}
 }
 .article p{
 	color:#4e5555;
-	font-family:"Century", Arial;
+	font-family:"Roboto-Regular", Arial!important;
 	font-size:13px;
 	padding:0 10px;
 	text-align: justify;
 }
 .article a{
 	display:block;
-	font-family:'Comfortaa', Arial;
+	font-family:'Raleway-Bold', Arial;
 	font-size:14px;
 	background:url("../images/suite.jpg") right no-repeat #4ABDD6;
 	position:absolute;
@@ -546,10 +553,10 @@ div.carousel-inner{height:167px;}
 	background:url("../images/marque_bg.jpg") center top no-repeat #ffffff;
 	padding:90px 20px 20px 20px;
 }
-.slider_marque h3{
+.slider_marque h2{
 	margin:0 0 25px 0;
 	color:#FD871A;
-	font-family:'Comfortaa', Arial;
+	font-family:'Raleway-Bold', Arial;
 	font-size:30px;
 	width:100%;
 	text-align:center;
@@ -579,7 +586,7 @@ ul.footer_nav li{
 }
 ul.footer_nav li a{
 	color:#4e5555;
-	font-family:"Century", Arial;
+	font-family:"Roboto-Regular", Arial;
 	font-size:12px;
 }
 ul.footer_nav li a:hover{text-decoration:none;}
@@ -604,7 +611,7 @@ ul.footer_nav li a:hover{text-decoration:none;}
 }
 .all-right span{
 	color:#010101;
-	font-family:"Century", Arial;
+	font-family:"Roboto-Regular", Arial;
 	font-size:11px;
 }
 .xiti{

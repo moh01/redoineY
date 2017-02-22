@@ -3,7 +3,7 @@
 .titre_page{
 	color:#FF7900;
 	font-size:26px;
-	font-family:"Comfortaa-bold", Arial;
+	font-family:"Raleway-Bold", Arial;
 	clear:both;
 	padding-bottom:10px;
 	border-bottom:1px solid #FF7900;
@@ -98,7 +98,7 @@ ul.list-annuaire li{
 	transition: background .4s;
 	}
 ul.list-annuaire li:hover{ background:#F2F2F2; transition: background .4s;}
-ul.list-annuaire li h4 a{font-family:"Comfortaa-bold", Arial; font-size:16px;}
+ul.list-annuaire li h4 a{font-family:"Raleway-Bold", Arial; font-size:16px;}
 ul.list-annuaire li h4 a:hover{ text-decoration:none; color:#00BEFD;}
 
 div.souscription{
@@ -107,7 +107,7 @@ div.souscription{
 }
 div.souscription h5{
 	font-size:14px;
-	font-family:"Comfortaa-bold", Arial;
+	font-family:"Raleway-Bold", Arial;
 	color:#FF7900;
 	padding-bottom:10px;
 	border-bottom:1px solid #FF7900;

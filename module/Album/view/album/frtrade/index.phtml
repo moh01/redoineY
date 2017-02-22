@@ -27,8 +27,8 @@ $this->headMeta()
                 
                 <!--Slide 2 -->
                 <div class="item">
-                    <a href="http://www.projopourtous.com" target="_blank">
-                        <img src="images/slider/slide2.jpg" alt="projopourtous" title="projopourtous" />
+                    <a href="http://www.focuslight.fr" target="_blank">
+                        <img src="images/slider/slide2.jpg" alt="Focuslight" title="Focuslight" />
                     </a>
                 </div>
                 <!--Slide 3 -->
@@ -61,10 +61,10 @@ $this->headMeta()
 <div class="box-line trois">
 	<div class="three_blocs">
         <div class="partenaire">
-        	<h3>Partenariat</h3>
-            <p>Devenez partenaire de notre site d&acute;information sur le vid&eacute;projecteur et sa lampe et affichez votre site sur toutes nos pages</p>
+        	<h3>Choisir son vidéoprojecteur</h3>
+            <p> Le vidéoprojecteur est un appareil complexe. Entre la luminosité, le contraste etc. il n'est pas simple de s'y retrouver. Focuslight vous aide à y voir plus clair.</p>
          	<form>
-                <a href="partenariat.php" title="Lampe VideoProjecteur devenir partenaire"><div  class="btn-partenaire" onclick="location.href=partenariat.php"/>Devenir partenaire</div></a>
+                <a href="http://www.focuslight.fr/conseils/choisir-son-videoprojecteur.html" title="Focuslight-choisir-son-videoprojecteur"><div  class="btn-focuslight btn-partenaire" onclick="location.href=partenariat.php"/>Devenir partenaire</div></a>
             </form>
         </div>
         
@@ -104,12 +104,12 @@ $this->headMeta()
 <!-- Actus -->
 <div class="box-line actus">
 	<div class="box-actus">
-        <h1>Nouveaut&eacute;s &amp; actualit&eacute;s !</h1>
+        <h2>Nouveaut&eacute;s &amp; actualit&eacute;s !</h2>
         <div class="boite-a-actu">
         	<!-- 1 -->
         	<div class="article">
             	<img src="images/photos/<?php echo $article[0]["image"];?>" width="215" height="215" alt="" />
-                 <?php echo '<h4>'.$article[0]["titre"].'</h4>'; 
+                 <?php echo '<h3>'.$article[0]["titre"].'</h3>'; 
                         echo '<p>'.$article[0]["resume_article"].'</p>'; 
                  ?>
                 <a href="nouveautes-videoprojecteurs-<?php echo $article[0]["ref_produit"];?>.php?article=<?php echo $article[0]["id"];?>">Lire la suite</a>
@@ -117,7 +117,7 @@ $this->headMeta()
             <!-- 2 -->
             <div class="article">
                 <img src="images/photos/<?php echo $article[1]["image"];?>" width="215" height="215" alt="" />
-                <?php echo '<h4>'.$article[1]["titre"].'</h4>'; 
+                <?php echo '<h3>'.$article[1]["titre"].'</h3>'; 
                         echo '<p>'.$article[1]["resume_article"].'</p>'; 
                  ?>
                 <a href="nouveautes-videoprojecteurs-<?php echo $article[1]["ref_produit"];?>.php?article=<?php echo $article[1]["id"];?>">Lire la suite</a>
@@ -125,7 +125,7 @@ $this->headMeta()
             <!-- 3 -->
         	   <div class="article">
                <img src="images/photos/<?php echo $article[2]["image"];?>" width="215" height="215" alt="" />
-                <?php echo '<h4>'.$article[2]["titre"].'</h4>'; 
+                <?php echo '<h3>'.$article[2]["titre"].'</h3>'; 
                         echo '<p>'.$article[2]["resume_article"].'</p>'; 
                  ?>
                 <a href="nouveautes-videoprojecteurs-<?php echo $article[2]["ref_produit"];?>.php?article=<?php echo $article[2]["id"];?>">Lire la suite</a>
@@ -134,7 +134,7 @@ $this->headMeta()
             <!-- 4 -->
         	<div class="article">
                 <img src="images/photos/<?php echo $article[3]["image"];?>" width="215" height="215" alt="" />
-                <?php echo '<h4>'.$article[3]["titre"].'</h4>'; 
+                <?php echo '<h3>'.$article[3]["titre"].'</h3>'; 
                         echo '<p>'.$article[3]["resume_article"].'</p>'; 
                  ?>
                 <a href="nouveautes-videoprojecteurs-<?php echo $article[3]["ref_produit"];?>.php?article=<?php echo $article[3]["id"];?>">Lire la suite</a>
@@ -144,7 +144,7 @@ $this->headMeta()
         	<!-- 5 -->
         	<div class="article premier">
                 <img src="images/photos/<?php echo $article[4]["image"];?>" width="215" height="215" alt="" />
-                <?php echo '<h4>'.$article[4]["titre"].'</h4>'; 
+                <?php echo '<h3>'.$article[4]["titre"].'</h3>'; 
                         echo '<p>'.$article[4]["resume_article"].'</p>'; 
                  ?>
                 <a href="nouveautes-videoprojecteurs-<?php echo $article[4]["ref_produit"];?>.php?article=<?php echo $article[4]["id"];?>">Lire la suite</a>
@@ -154,7 +154,7 @@ $this->headMeta()
                 <!-- 6 -->
             	<div class="article">
                     <img src="images/photos/<?php echo $article[5]["image"];?>" width="215" height="215" alt="" />
-                    <?php echo '<h4>'.$article[5]["titre"].'</h4>'; 
+                    <?php echo '<h3>'.$article[5]["titre"].'</h3>'; 
                             echo '<p>'.$article[5]["resume_article"].'</p>'; 
                      ?>
                     <a href="nouveautes-videoprojecteurs-<?php echo $article[5]["ref_produit"];?>.php?article=<?php echo $article[5]["id"];?>">Lire la suite</a>
@@ -164,7 +164,7 @@ $this->headMeta()
                 <!-- 7 -->
                 <div class="article">
                     <img src="images/photos/<?php echo $article[6]["image"];?>" width="215" height="215" alt="" />
-                    <?php echo '<h4>'.$article[6]["titre"].'</h4>'; 
+                    <?php echo '<h3>'.$article[6]["titre"].'</h3>'; 
                             echo '<p>'.$article[6]["resume_article"].'</p>'; 
                      ?>
                     <a href="nouveautes-videoprojecteurs-<?php echo $article[6]["ref_produit"];?>.php?article=<?php echo $article[6]["id"];?>">Lire la suite</a>
@@ -174,7 +174,7 @@ $this->headMeta()
                 <!-- 8 -->
                 <div class="article">
                     <img src="images/photos/<?php echo $article[7]["image"];?>" width="215" height="215" alt="" />
-                    <?php echo '<h4>'.$article[7]["titre"].'</h4>'; 
+                    <?php echo '<h3>'.$article[7]["titre"].'</h3>'; 
                             echo '<p>'.$article[7]["resume_article"].'</p>'; 
                      ?>
                     <a href="nouveautes-videoprojecteurs-<?php echo $article[7]["ref_produit"];?>.php?article=<?php echo $article[7]["id"];?>">Lire la suite</a>
