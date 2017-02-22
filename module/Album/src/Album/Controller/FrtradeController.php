@@ -205,21 +205,35 @@ class FrtradeController extends AbstractActionController
         $this->layout()->title = 'Lampe videoprojecteur : Toutes les infos utiles';
 
         $request = $this->getRequest();
-        $nom_pdf = $request->getPost("ref_model");
+        
 
-        if ($request->getPost("setpdf"))
-            {
+        if ($request->getPost("setpdf_manuel"))
+            {   
+                $nom_pdf = $request->getPost("ref_model_manuel");
                 $uploaddir = 'public/manuels/manuels/';
-                $uploadfile = $uploaddir . basename($_FILES['uploadpdf']['name']);
+                $uploadfile = $uploaddir . basename($_FILES['uploadpdf_manuel']['name']);
 
-                move_uploaded_file($_FILES['uploadpdf']['tmp_name'], $uploaddir.$nom_pdf.'.pdf');
+                move_uploaded_file($_FILES['uploadpdf_manuel']['tmp_name'], $uploaddir.$nom_pdf.'.pdf');
 
-                $success = "Votre fichier PDF a bien été envoyé !";
+                $success_manuel = "Votre manuel PDF a bien été envoyé !";
+            }
+
+
+        elseif ($request->getPost("setpdf_fiche"))
+            {
+                $nom_pdf = $request->getPost("ref_model_fiche");
+                $uploaddir = 'public/manuels/technique/';
+                $uploadfile = $uploaddir . basename($_FILES['uploadpdf_fiche']['name']);
+
+                move_uploaded_file($_FILES['uploadpdf_fiche']['tmp_name'], $uploaddir.$nom_pdf.'.pdf');
+
+                $success_fiche = "Votre fiche technique a bien été envoyé !";
             }
 
         return new ViewModel(array(
             /*'marque' => $marque,*/
-            'success' => $success,
+            'success_manuel' => $success_manuel,
+            'success_fiche' => $success_fiche,
             'marques' => $this->getFrtradeTable()->getMarque__(),/*'marque' => $marque ,*/ 
              ));
     }

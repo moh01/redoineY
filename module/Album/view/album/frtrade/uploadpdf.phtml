@@ -1,9 +1,9 @@
 
         <div class="selecteur-pdf">
-        	<h3 class="attr0">CHOISISSEZ VOTRE MODÈL PUIS INSÉREZ VOTRE FICHE PDF</h3>
+        	<h3 class="attr0">CHOISISSEZ VOTRE MODÈL PUIS INSÉREZ VOTRE MANUEL D'UTILISATION</h3>
             <div class="attr1">
             <form method="post" action="uploadpdf.html" enctype="multipart/form-data">
-                <select id="marque-pdf" name="ref_model" class="attr2">
+                <select id="marque-pdf" name="ref_model_manuel" class="attr2">
                 <?php foreach ($marques as $key => $value):
                 	if (!file_exists('public/manuels/manuels/'.ucfirst(strtolower($value["Manufacturer"])).'-'.strtoupper($value["ModelNo"]).'.pdf'))
     				{
@@ -12,8 +12,30 @@
 				<?php } endforeach; ?>
                    
                 </select>
-                <input type="file" class="attr3" name="uploadpdf" required>
-                <input type="submit" name="setpdf" class="attr4" value="Enregistrer"><h3 class="msg_confirm"><?php  echo $success; ?></h3>
+                <input type="file" class="attr3" name="uploadpdf_manuel" required>
+                <input type="submit" name="setpdf_manuel" class="attr4" value="Enregistrer"><h3 class="msg_confirm"><?php  echo $success_manuel; ?></h3>
+                </form>
+                
+            </div> <center><h3 style="margin-left: -60px;">OU</h3></center>
+        </div>
+ 
+
+
+        <div class="selecteur-pdf">
+            <h3 class="attr0">CHOISISSEZ VOTRE MODÈL PUIS INSÉREZ VOTRE FICHE TECHNIQUE</h3>
+            <div class="attr1">
+            <form method="post" action="uploadpdf.html" enctype="multipart/form-data">
+                <select id="marque-pdf" name="ref_model_fiche" class="attr2">
+                <?php foreach ($marques as $key => $value):
+                    if (!file_exists('public/manuels/technique/'.ucfirst(strtolower($value["Manufacturer"])).'-'.strtoupper($value["ModelNo"]).'.pdf'))
+                    {
+                ?>
+                    <option required><?php echo ucfirst(strtolower($value["Manufacturer"])).'-'.strtoupper($value["ModelNo"]);?></option>
+                <?php } endforeach; ?>
+                   
+                </select>
+                <input type="file" class="attr3" name="uploadpdf_fiche" required>
+                <input type="submit" name="setpdf_fiche" class="attr4" value="Enregistrer"><h3 class="msg_confirm"><?php  echo $success_fiche; ?></h3>
                 </form>
                 
             </div>

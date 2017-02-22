@@ -60,9 +60,11 @@ if(isset($_GET['charger']) || isset($_GET['marque'])|| isset($_GET['model'])){
     }
     if  ((file_exists($path_3shop.'photos/'.$marque.'-'.$model.'.gif'))|| 
         (file_exists($path_3shop.'presentation/'.$marque.'-'.$model.'.txt'))||
+        (file_exists($path_3shop.'manuels/'.$marque.'-'.$model.'.pdf'))||
         (file_exists($path_3shop.'manuels/'.$marque.'-'.strtoupper($model).'.pdf'))||
         (file_exists($path_3shop.'brochures/'.$marque.'-'.$model.'.pdf'))||
-        (file_exists($path_3shop.'technique/'.$marque_upper.'-'.$model.'.pdf')))
+        (file_exists($path_3shop.'technique/'.$marque_upper.'-'.$model.'.pdf'))||
+        (file_exists($path_3shop.'technique/'.$marque_upper.'-'.strtoupper($model).'.pdf')))
     {
         $array['exist'] = "true";
      }else{
@@ -75,7 +77,7 @@ if(isset($_GET['charger']) || isset($_GET['marque'])|| isset($_GET['model'])){
     $requete = "SELECT distinct ModelNo FROM fr_trade where Manufacturer='$marque' ORDER BY ModelNo";
     $resultat = $bdd->query($requete) or die(print_r($bdd->errorInfo()));
     while($donnees = $resultat->fetch(PDO::FETCH_ASSOC)) {
-        $json[] = $donnees['ModelNo'];
+        $json[] = strtoupper($donnees['ModelNo']);
     }
     echo json_encode($json);
     }
