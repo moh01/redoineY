@@ -276,7 +276,14 @@ div.carousel-inner{height:167px;}
 		background: url("../images/partner_bg.png") left top no-repeat #DFDFDF;
 		padding:0 10px 0 105px;
 }
-	.partenaire h3{
+.partenaire_focuslight{
+		float:left;
+		width:300px;
+		height:224px;
+		background: url("../images/partner_bg0.png") left top no-repeat #DFDFDF;
+		padding:0 10px 0 105px;
+}
+	.partenaire h3, .partenaire_focuslight h3{
 			font-family:'Roboto-Regular', Arial;
 			font-size:18px;
 			color:#4e5555;
@@ -285,7 +292,7 @@ div.carousel-inner{height:167px;}
 			text-transform:uppercase;
 			margin-top: 7px;
 		}
-	.partenaire p{
+	.partenaire p, .partenaire_focuslight p{
 			font-family:"Roboto-Regular", Arial!important;
 			font-size:13px;
 			color:#4e5555;
