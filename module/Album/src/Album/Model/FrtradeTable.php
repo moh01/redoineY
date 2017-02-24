@@ -74,8 +74,8 @@ class FrtradeTable extends AbstractTableGateway
     public function getMarque__(){
         $sql='  SELECT distinct ModelNo, MIN( rqdlcomposant.le_prix ) AS minrqdl, MAX( rqdlcomposant.le_prix ) AS maxrqdl,
                 MIN( lvpcomposant.le_prix ) AS minlvp, MAX( lvpcomposant.le_prix ) AS maxlvp, MIN( hplcomposant.le_prix ) AS minhpl,
-                MAX( hplcomposant.le_prix ) AS maxhpl, ManuPartCode, Manufacturer,
-                ID, Suffix, LampHours, Trade_Price, Available_Stock, Display, Wattage, LampType
+                MAX( hplcomposant.le_prix ) AS maxhpl, Manupartcode, Manufacturer,
+                ID, Suffix, Lamphours, Trade_Price, Available_Stock, Display, Wattage, LampType
                 FROM fr_trade
                 JOIN rqdlcomposant ON fr_trade.ModelNo = rqdlcomposant.libelle_produit
                 JOIN lvpcomposant ON fr_trade.ModelNo = lvpcomposant.libelle_produit
