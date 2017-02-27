@@ -107,7 +107,7 @@ class FrtradeTable extends AbstractTableGateway
     
     public function getRqdl($video, $marque) {
         $sql = 'SELECT distinct code_type_produit,libelle_produit,ref_constructeur_composant,
-                libelle_constructeur,le_prix,description_composant
+                libelle_constructeur,le_prix,description_composant,le_stock
                 FROM rqdlcomposant where libelle_produit = ? and libelle_constructeur=? group by code_type_produit';
         $result = $this->adapter->query($sql)->execute(array($video, $marque));
         $return = array();
@@ -155,7 +155,7 @@ class FrtradeTable extends AbstractTableGateway
     
     public function getLvp($video, $marque){
         $sql = 'SELECT distinct code_type_produit,libelle_produit,ref_constructeur_composant,
-                libelle_constructeur,le_prix,description_composant
+                libelle_constructeur,le_prix,description_composant,le_stock
                 FROM lvpcomposant where libelle_produit = ? and libelle_constructeur=? group by code_type_produit';
         $result = $this->adapter->query($sql)->execute(array($video, $marque));
         $return = array();
@@ -169,7 +169,7 @@ class FrtradeTable extends AbstractTableGateway
 
     public function getHpl($video, $marque) {
         $sql = 'SELECT distinct code_type_produit,libelle_produit,ref_constructeur_composant,
-                libelle_constructeur,le_prix,description_composant
+                libelle_constructeur,le_prix,description_composant,le_stock
                 FROM hplcomposant where libelle_produit = ? and libelle_constructeur=? group by code_type_produit';
         $result = $this->adapter->query($sql)->execute(array($video, $marque));
         $return = array();
@@ -297,7 +297,7 @@ class FrtradeTable extends AbstractTableGateway
                     AS `ref_constructeur_composant`,lampe_fr.`products_description`.`products_name`
                     AS `ref_interne_composant`,`products_description`.`products_description`
                     AS `description_composant`,`prd`.`products_price`
-                    AS `le_prix`
+                    AS `le_prix`, `prd`.`products_quantity` AS `le_stock`
                     from ((((((lampe_fr.`categories` `cat` join lampe_fr.`categories_description` `catd`)
                         join lampe_fr.`categories` `cstr`) join lampe_fr.`categories_description` `cstrd`)
                         join lampe_fr.`products` `prd`) join lampe_fr.`products_description`)
@@ -311,7 +311,8 @@ class FrtradeTable extends AbstractTableGateway
                         and (lampe_fr.`products_description`.`products_id` = `prd`.`products_id`)
                         and (`prd`.`master_categories_id` = `cat`.`categories_id`)
                         and (`prd`.`manufacturers_id` = `man`.`manufacturers_id`))
-                    ON DUPLICATE KEY UPDATE le_prix = `prd`.`products_price`";
+                    ON DUPLICATE KEY UPDATE le_prix = `prd`.`products_price`, le_stock = `prd`.`products_quantity`";
+
 
 
             $requete_hplcomposant = "insert into  `hplcomposant`
@@ -324,7 +325,7 @@ class FrtradeTable extends AbstractTableGateway
                     AS `ref_constructeur_composant`,bis_lampe_eu.`products_description`.`products_name`
                     AS `ref_interne_composant`,`products_description`.`products_description`
                     AS `description_composant`,`prd`.`products_price`
-                    AS `le_prix`
+                    AS `le_prix`, `prd`.`products_quantity` AS `le_stock`
                     from ((((((bis_lampe_eu.`categories` `cat` join bis_lampe_eu.`categories_description` `catd`)
                         join bis_lampe_eu.`categories` `cstr`) join bis_lampe_eu.`categories_description` `cstrd`)
                         join bis_lampe_eu.`products` `prd`) join bis_lampe_eu.`products_description`)
@@ -338,7 +339,7 @@ class FrtradeTable extends AbstractTableGateway
                         and (bis_lampe_eu.`products_description`.`products_id` = `prd`.`products_id`)
                         and (`prd`.`master_categories_id` = `cat`.`categories_id`)
                         and (`prd`.`manufacturers_id` = `man`.`manufacturers_id`))
-                    ON DUPLICATE KEY UPDATE le_prix = `prd`.`products_price`";
+                    ON DUPLICATE KEY UPDATE le_prix = `prd`.`products_price`, le_stock = `prd`.`products_quantity`";
 
 
             $requete_rqdlcomposant = "insert into  `rqdlcomposant`
@@ -351,7 +352,7 @@ class FrtradeTable extends AbstractTableGateway
                     AS `ref_constructeur_composant`,rqdl_fr.`products_description`.`products_name`
                     AS `ref_interne_composant`,`products_description`.`products_description`
                     AS `description_composant`,`prd`.`products_price`
-                    AS `le_prix`
+                    AS `le_prix`, `prd`.`products_quantity` AS `le_stock`
                     from ((((((rqdl_fr.`categories` `cat` join rqdl_fr.`categories_description` `catd`)
                         join rqdl_fr.`categories` `cstr`) join rqdl_fr.`categories_description` `cstrd`)
                         join rqdl_fr.`products` `prd`) join rqdl_fr.`products_description`)
@@ -365,7 +366,7 @@ class FrtradeTable extends AbstractTableGateway
                         and (rqdl_fr.`products_description`.`products_id` = `prd`.`products_id`)
                         and (`prd`.`master_categories_id` = `cat`.`categories_id`)
                         and (`prd`.`manufacturers_id` = `man`.`manufacturers_id`))
-                    ON DUPLICATE KEY UPDATE le_prix = `prd`.`products_price`";
+                    ON DUPLICATE KEY UPDATE le_prix = `prd`.`products_price`, le_stock = `prd`.`products_quantity`";
 
             $sql_tab = array($requete_lvpcomposant,$requete_hplcomposant,$requete_rqdlcomposant);
             foreach ($sql_tab as $key => $sql) {

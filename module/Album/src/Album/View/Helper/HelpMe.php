@@ -68,6 +68,13 @@ return $img;
     	return $existe;
 	}
 
+public function le_stock($var){
+    if ($var > 0) {
+        $le_stock = 'En stock';
+    }else $le_stock = 'En cours d’approvisionnement';
+    return $le_stock;
+}
+
 	public function title($title){
 		$this->title = $title;
 	}
