@@ -19,7 +19,11 @@ if(isset($_GET['charger']) || isset($_GET['marque'])|| isset($_GET['model'])){
     }
 
   if(isset($_GET['charger'])){
-	$requete = "SELECT distinct Manufacturer FROM fr_trade ORDER BY Manufacturer";
+	$requete = "SELECT distinct fr_trade.Manufacturer 
+                FROM fr_trade
+                JOIN lvpcomposant ON fr_trade.ModelNo = lvpcomposant.libelle_produit
+                WHERE fr_trade.Manufacturer IN (lvpcomposant.libelle_constructeur)
+                ORDER BY Manufacturer";
 	$resultat = $bdd->query($requete) or die(print_r($bdd->errorInfo()));
     while($donnees = $resultat->fetch(PDO::FETCH_ASSOC)) {
         $json[] = $donnees['Manufacturer'];
