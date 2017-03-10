@@ -368,7 +368,166 @@ class FrtradeTable extends AbstractTableGateway
                         and (`prd`.`manufacturers_id` = `man`.`manufacturers_id`))
                     ON DUPLICATE KEY UPDATE le_prix = `prd`.`products_price`, le_stock = `prd`.`products_quantity`";
 
-            $sql_tab = array($requete_lvpcomposant,$requete_hplcomposant,$requete_rqdlcomposant);
+
+
+
+            $fr_trade = "insert into `fr_trade`(Manufacturer,ModelNo,Wattage,LampType,Lamphours,Display)
+                        select  `cstrd`.`categories_name`
+                        AS `libelle_constructeur`,catd.`categories_name`
+                        AS `libelle_produit`,
+                        (CASE
+                            WHEN  (`prd`.`products_price` < 100) THEN '80'
+                            WHEN  (`prd`.`products_price` < 200) THEN '100'
+                            WHEN  (`prd`.`products_price` < 300) THEN '130'
+                            WHEN  (`prd`.`products_price` < 400) THEN '200'
+                            WHEN  (`prd`.`products_price` < 500) THEN '320'
+                            WHEN  (`prd`.`products_price` > 500) THEN '600'
+                            END),
+                        (CASE
+                            WHEN (`cstrd`.`categories_name` = 'EPSON') THEN 'UHE'
+                            WHEN (`cstrd`.`categories_name` = 'NEC') THEN 'NSH'
+                            WHEN (`cstrd`.`categories_name` = 'HITACHI') THEN 'UHB'
+                            WHEN (`cstrd`.`categories_name` = 'PANASONIC') THEN 'UHM'
+                            WHEN (`cstrd`.`categories_name` = 'CHRISTIE') THEN 'XENON'
+                            ELSE 'UHP'
+                            END),
+                        (CASE
+                            WHEN (`cstrd`.`categories_name` = 'EPSON') THEN '2800'
+                            WHEN (`cstrd`.`categories_name` = 'NEC') THEN '2000'
+                            WHEN (`cstrd`.`categories_name` = 'HITACHI') THEN '2100'
+                            WHEN (`cstrd`.`categories_name` = 'CHRISTIE') THEN '910'
+                            WHEN (`cstrd`.`categories_name` = 'PANASONIC') THEN '2100'
+                            ELSE '2800'
+                            END),'Videoproj'
+                        from ((((((bis_lampe_eu.`categories` `cat` join bis_lampe_eu.`categories_description` `catd`)
+                            join bis_lampe_eu.`categories` `cstr`) join bis_lampe_eu.`categories_description` `cstrd`)
+                            join bis_lampe_eu.`products` `prd`) join bis_lampe_eu.`products_description`)
+                            join bis_lampe_eu.`manufacturers` `man`)
+                        where ((`cat`.`categories_id` = `catd`.`categories_id`)
+                            and (`cat`.`parent_id` = `cstr`.`categories_id`)
+                            and (`cstrd`.`categories_id` = `cstr`.`categories_id`)
+                            and (`cstrd`.`language_id` = 2)
+                            and (bis_lampe_eu.`products_description`.`language_id` = 2)
+                            and (`catd`.`language_id` = 2)
+                            and (bis_lampe_eu.`products_description`.`products_id` = `prd`.`products_id`)
+                            and (`prd`.`master_categories_id` = `cat`.`categories_id`)
+                            and (`prd`.`manufacturers_id` = `man`.`manufacturers_id`))
+                            ON DUPLICATE KEY UPDATE `Lamphours` = (
+                                  CASE
+                                    WHEN `catd`.`categories_name` = 'EPSON' THEN '2800'
+                                    WHEN `catd`.`categories_name` = 'NEC' THEN '2000'
+                                    WHEN `catd`.`categories_name` = 'HITACHI' THEN '2100'
+                                    WHEN `catd`.`categories_name` = 'CHRISTIE' THEN '910'
+                                    WHEN `catd`.`categories_name` = 'PANASONIC' THEN '2100'
+                                    ELSE '2800'
+                                  END
+                                );
+                    insert into `fr_trade`(Manufacturer,ModelNo,Wattage,LampType,Lamphours,Display)
+                        select  `cstrd`.`categories_name`
+                        AS `libelle_constructeur`,catd.`categories_name`
+                        AS `libelle_produit`,
+                        (CASE
+                            WHEN  (`prd`.`products_price` < 100) THEN '80'
+                            WHEN  (`prd`.`products_price` < 200) THEN '100'
+                            WHEN  (`prd`.`products_price` < 300) THEN '130'
+                            WHEN  (`prd`.`products_price` < 400) THEN '200'
+                            WHEN  (`prd`.`products_price` < 500) THEN '320'
+                            WHEN  (`prd`.`products_price` > 500) THEN '600'
+                            END),
+                        (CASE
+                            WHEN (`cstrd`.`categories_name` = 'EPSON') THEN 'UHE'
+                            WHEN (`cstrd`.`categories_name` = 'NEC') THEN 'NSH'
+                            WHEN (`cstrd`.`categories_name` = 'HITACHI') THEN 'UHB'
+                            WHEN (`cstrd`.`categories_name` = 'PANASONIC') THEN 'UHM'
+                            WHEN (`cstrd`.`categories_name` = 'CHRISTIE') THEN 'XENON'
+                            ELSE 'UHP'
+                            END),
+                        (CASE
+                            WHEN (`cstrd`.`categories_name` = 'EPSON') THEN '2800'
+                            WHEN (`cstrd`.`categories_name` = 'NEC') THEN '2000'
+                            WHEN (`cstrd`.`categories_name` = 'HITACHI') THEN '2100'
+                            WHEN (`cstrd`.`categories_name` = 'CHRISTIE') THEN '910'
+                            WHEN (`cstrd`.`categories_name` = 'PANASONIC') THEN '2100'
+                            ELSE '2800'
+                            END),'Videoproj'
+                        from ((((((rqdl_fr.`categories` `cat` join rqdl_fr.`categories_description` `catd`)
+                            join rqdl_fr.`categories` `cstr`) join rqdl_fr.`categories_description` `cstrd`)
+                            join rqdl_fr.`products` `prd`) join rqdl_fr.`products_description`)
+                            join rqdl_fr.`manufacturers` `man`)
+                        where ((`cat`.`categories_id` = `catd`.`categories_id`)
+                            and (`cat`.`parent_id` = `cstr`.`categories_id`)
+                            and (`cstrd`.`categories_id` = `cstr`.`categories_id`)
+                            and (`cstrd`.`language_id` = 2)
+                            and (rqdl_fr.`products_description`.`language_id` = 2)
+                            and (`catd`.`language_id` = 2)
+                            and (rqdl_fr.`products_description`.`products_id` = `prd`.`products_id`)
+                            and (`prd`.`master_categories_id` = `cat`.`categories_id`)
+                            and (`prd`.`manufacturers_id` = `man`.`manufacturers_id`))
+                            ON DUPLICATE KEY UPDATE `Lamphours` = (
+                                  CASE
+                                    WHEN `catd`.`categories_name` = 'EPSON' THEN '2800'
+                                    WHEN `catd`.`categories_name` = 'NEC' THEN '2000'
+                                    WHEN `catd`.`categories_name` = 'HITACHI' THEN '2100'
+                                    WHEN `catd`.`categories_name` = 'CHRISTIE' THEN '910'
+                                    WHEN `catd`.`categories_name` = 'PANASONIC' THEN '2100'
+                                    ELSE '2800'
+                                  END
+                                );
+
+                    insert into `fr_trade`(Manufacturer,ModelNo,Wattage,LampType,Lamphours,Display)
+                        select  `cstrd`.`categories_name`
+                        AS `libelle_constructeur`,catd.`categories_name`
+                        AS `libelle_produit`,
+                        (CASE
+                            WHEN  (`prd`.`products_price` < 100) THEN '80'
+                            WHEN  (`prd`.`products_price` < 200) THEN '100'
+                            WHEN  (`prd`.`products_price` < 300) THEN '130'
+                            WHEN  (`prd`.`products_price` < 400) THEN '200'
+                            WHEN  (`prd`.`products_price` < 500) THEN '320'
+                            WHEN  (`prd`.`products_price` > 500) THEN '600'
+                            END),
+                        (CASE
+                            WHEN (`cstrd`.`categories_name` = 'EPSON') THEN 'UHE'
+                            WHEN (`cstrd`.`categories_name` = 'NEC') THEN 'NSH'
+                            WHEN (`cstrd`.`categories_name` = 'HITACHI') THEN 'UHB'
+                            WHEN (`cstrd`.`categories_name` = 'PANASONIC') THEN 'UHM'
+                            WHEN (`cstrd`.`categories_name` = 'CHRISTIE') THEN 'XENON'
+                            ELSE 'UHP'
+                            END),
+                        (CASE
+                            WHEN (`cstrd`.`categories_name` = 'EPSON') THEN '2800'
+                            WHEN (`cstrd`.`categories_name` = 'NEC') THEN '2000'
+                            WHEN (`cstrd`.`categories_name` = 'HITACHI') THEN '2100'
+                            WHEN (`cstrd`.`categories_name` = 'CHRISTIE') THEN '910'
+                            WHEN (`cstrd`.`categories_name` = 'PANASONIC') THEN '2100'
+                            ELSE '2800'
+                            END),'Videoproj'
+                        from ((((((lampe_fr.`categories` `cat` join lampe_fr.`categories_description` `catd`)
+                            join lampe_fr.`categories` `cstr`) join lampe_fr.`categories_description` `cstrd`)
+                            join lampe_fr.`products` `prd`) join lampe_fr.`products_description`)
+                            join lampe_fr.`manufacturers` `man`)
+                        where ((`cat`.`categories_id` = `catd`.`categories_id`)
+                            and (`cat`.`parent_id` = `cstr`.`categories_id`)
+                            and (`cstrd`.`categories_id` = `cstr`.`categories_id`)
+                            and (`cstrd`.`language_id` = 2)
+                            and (lampe_fr.`products_description`.`language_id` = 2)
+                            and (`catd`.`language_id` = 2)
+                            and (lampe_fr.`products_description`.`products_id` = `prd`.`products_id`)
+                            and (`prd`.`master_categories_id` = `cat`.`categories_id`)
+                            and (`prd`.`manufacturers_id` = `man`.`manufacturers_id`))
+                            ON DUPLICATE KEY UPDATE `Lamphours` = (
+                                  CASE
+                                    WHEN `catd`.`categories_name` = 'EPSON' THEN '2800'
+                                    WHEN `catd`.`categories_name` = 'NEC' THEN '2000'
+                                    WHEN `catd`.`categories_name` = 'HITACHI' THEN '2100'
+                                    WHEN `catd`.`categories_name` = 'CHRISTIE' THEN '910'
+                                    WHEN `catd`.`categories_name` = 'PANASONIC' THEN '2100'
+                                    ELSE '2800'
+                                  END
+                                )";
+  
+            $sql_tab = array($requete_lvpcomposant,$requete_hplcomposant,$requete_rqdlcomposant,$fr_trade);
+          
             foreach ($sql_tab as $key => $sql) {
                $result = $this->adapter->query($sql)->execute(array());
             }
