@@ -412,7 +412,7 @@ class FrtradeTable extends AbstractTableGateway
                             and (bis_lampe_eu.`products_description`.`products_id` = `prd`.`products_id`)
                             and (`prd`.`master_categories_id` = `cat`.`categories_id`)
                             and (`prd`.`manufacturers_id` = `man`.`manufacturers_id`))
-                            ON DUPLICATE KEY UPDATE `Lamphours` = (
+                            ON DUPLICATE KEY UPDATE `Manupartcode`= `prd`.`products_price`, `Lamphours` = (
                                   CASE
                                     WHEN `catd`.`categories_name` = 'EPSON' THEN '2800'
                                     WHEN `catd`.`categories_name` = 'NEC' THEN '2000'
@@ -463,7 +463,7 @@ class FrtradeTable extends AbstractTableGateway
                             and (rqdl_fr.`products_description`.`products_id` = `prd`.`products_id`)
                             and (`prd`.`master_categories_id` = `cat`.`categories_id`)
                             and (`prd`.`manufacturers_id` = `man`.`manufacturers_id`))
-                            ON DUPLICATE KEY UPDATE `Lamphours` = (
+                            ON DUPLICATE KEY UPDATE `Manupartcode`= `prd`.`products_price`, `Lamphours` = (
                                   CASE
                                     WHEN `catd`.`categories_name` = 'EPSON' THEN '2800'
                                     WHEN `catd`.`categories_name` = 'NEC' THEN '2000'
@@ -515,7 +515,7 @@ class FrtradeTable extends AbstractTableGateway
                             and (lampe_fr.`products_description`.`products_id` = `prd`.`products_id`)
                             and (`prd`.`master_categories_id` = `cat`.`categories_id`)
                             and (`prd`.`manufacturers_id` = `man`.`manufacturers_id`))
-                            ON DUPLICATE KEY UPDATE `Lamphours` = (
+                            ON DUPLICATE KEY UPDATE `Manupartcode`= `prd`.`products_price`, `Lamphours` = (
                                   CASE
                                     WHEN `catd`.`categories_name` = 'EPSON' THEN '2800'
                                     WHEN `catd`.`categories_name` = 'NEC' THEN '2000'
